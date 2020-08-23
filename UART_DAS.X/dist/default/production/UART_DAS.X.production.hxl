@@ -6,7 +6,7 @@
   10000h - 1000Dh
   10012h - 1003Fh
   
- dist/default/production\Base_Config.X.production.hex ranges:
+ dist/default/production\UART_DAS.X.production.hex ranges:
   0h - 7h
   F9Eh - FFFh
   1000Eh - 10011h
@@ -22,7 +22,7 @@
   T = Trailing code
   & = Find & replace opcode
   X = Find & delete opcode
-  1 = dist/default/production\Base_Config.X.production.hex
+  1 = dist/default/production\UART_DAS.X.production.hex
 00000000: 11111111--------------------------------------------------------
 00000F80: ------------------------------1111111111111111111111111111111111
 00000FC0: 1111111111111111111111111111111111111111111111111111111111111111
