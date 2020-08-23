@@ -17,7 +17,7 @@ void main(void)
     IO_First_Init();
     Configure_Clock();    
     
-    init_data_out(19200);
+    init_data_out(9600);
     init_timebase();
     
     while(1){

@@ -11,7 +11,7 @@
 
 //define the number of bytes to send, maximum of 10
 //take into account the counter
-#define bytes_to_send 2
+#define bytes_to_send 3
 
 //define the sendperiod of the data output:
 //available: 100ms,25ms,10ms 
@@ -125,29 +125,31 @@ void init_data_out(long baud_rate){
     switch(baud_rate)
     {
      case 9600:
-        SPBRG1=103;//103
+        SPBRG1=207;//103
         break;
      case 19200:
-        SPBRG1=207;
+        SPBRG1=103;
         break;
      case 57600:
-        SPBRG1=68;
+        SPBRG1=34;
         break;
      case 115200:
-        SPBRG1=34;
+        SPBRG1=16;
         break;
     }
     //TXSTA
-    TXSTA1bits.TX9=0;  //8 bit transmission
-    TXSTA1bits.TXEN=1; //Transmit enable
-    TXSTA1bits.SYNC=0; //Async mode
-    TXSTA1bits.BRGH=1; //High speed baud rate
+    TXSTAbits.TX9=0;  //8 bit transmission
+    TXSTAbits.TXEN=1; //Transmit enable
+    TXSTAbits.SYNC=0; //Async mode
+    TXSTAbits.BRGH=1; //High speed baud rate
+ 
+    BAUDCONbits.BRG16 = 0; // 16-bit Baud Rate Generator bit
 
     //RCSTA
-    RCSTA1bits.SPEN=1;   //Serial port enabled
-    RCSTA1bits.RX9=0;    //8 bit mode
-    RCSTA1bits.CREN=1;   //Enable receive
-    RCSTA1bits.ADDEN=0;  //Disable address detection
+    RCSTAbits.SPEN=1;   //Serial port enabled
+    RCSTAbits.RX9=0;    //8 bit mode
+    RCSTAbits.CREN=1;   //Enable receive
+    RCSTAbits.ADDEN=0;  //Disable address detection
     TRISCbits.TRISC7 = 1;
     
     PEIE = 1; 

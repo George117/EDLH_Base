@@ -10409,11 +10409,14 @@ void main(void)
     IO_First_Init();
     Configure_Clock();
 
-    init_data_out(19200);
+    init_data_out(9600);
     init_timebase();
 
     while(1){
-
+        LATCbits.LATC1 = 0;
+        _delay((unsigned long)((1)*(32000000/4000000.0)));
+        LATCbits.LATC1 = 1;
+        _delay((unsigned long)((1)*(32000000/4000000.0)));
     }
 
 

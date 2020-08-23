@@ -37,21 +37,6 @@ Version 4.0 HI-TECH Software Intermediate Code
 "922
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16lf1788.h: 922: extern volatile unsigned char TMR1H __attribute__((address(0x017)));
 [v _TMR1H `Vuc ~T0 @X0 0 e@23 ]
-"2477
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16lf1788.h: 2477:     struct {
-[s S131 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S131 . LATC0 LATC1 LATC2 LATC3 LATC4 LATC5 LATC6 LATC7 ]
-"2487
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16lf1788.h: 2487:     struct {
-[s S132 :8 `uc 1 ]
-[n S132 . LATC ]
-"2476
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16lf1788.h: 2476: typedef union {
-[u S130 `S131 1 `S132 1 ]
-[n S130 . . . ]
-"2491
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16lf1788.h: 2491: extern volatile LATCbits_t LATCbits __attribute__((address(0x10E)));
-[v _LATCbits `VS130 ~T0 @X0 0 e@270 ]
 "351
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16lf1788.h: 351: extern volatile unsigned char INTCON __attribute__((address(0x00B)));
 [v _INTCON `Vuc ~T0 @X0 0 e@11 ]
@@ -96,28 +81,39 @@ Version 4.0 HI-TECH Software Intermediate Code
 "4185
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16lf1788.h: 4185: extern volatile unsigned char SPBRG1 __attribute__((address(0x19B)));
 [v _SPBRG1 `Vuc ~T0 @X0 0 e@411 ]
-"4550
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16lf1788.h: 4550:     struct {
-[s S234 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S234 . TX9D TRMT BRGH SENDB SYNC TXEN TX9 CSRC ]
-"4549
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16lf1788.h: 4549: typedef union {
-[u S233 `S234 1 ]
-[n S233 . . ]
-"4561
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16lf1788.h: 4561: extern volatile TXSTA1bits_t TXSTA1bits __attribute__((address(0x19E)));
-[v _TXSTA1bits `VS233 ~T0 @X0 0 e@414 ]
-"4370
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16lf1788.h: 4370:     struct {
-[s S228 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S228 . RX9D OERR FERR ADDEN CREN SREN RX9 SPEN ]
-"4369
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16lf1788.h: 4369: typedef union {
-[u S227 `S228 1 ]
-[n S227 . . ]
-"4381
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16lf1788.h: 4381: extern volatile RCSTA1bits_t RCSTA1bits __attribute__((address(0x19D)));
-[v _RCSTA1bits `VS227 ~T0 @X0 0 e@413 ]
+"4604
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16lf1788.h: 4604:     struct {
+[s S236 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S236 . TX9D TRMT BRGH SENDB SYNC TXEN TX9 CSRC ]
+"4603
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16lf1788.h: 4603: typedef union {
+[u S235 `S236 1 ]
+[n S235 . . ]
+"4615
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16lf1788.h: 4615: extern volatile TXSTAbits_t TXSTAbits __attribute__((address(0x19E)));
+[v _TXSTAbits `VS235 ~T0 @X0 0 e@414 ]
+"4816
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16lf1788.h: 4816:     struct {
+[s S244 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S244 . ABDEN WUE . BRG16 SCKP . RCIDL ABDOVF ]
+"4815
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16lf1788.h: 4815: typedef union {
+[u S243 `S244 1 ]
+[n S243 . . ]
+"4827
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16lf1788.h: 4827: extern volatile BAUDCONbits_t BAUDCONbits __attribute__((address(0x19F)));
+[v _BAUDCONbits `VS243 ~T0 @X0 0 e@415 ]
+"4424
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16lf1788.h: 4424:     struct {
+[s S230 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S230 . RX9D OERR FERR ADDEN CREN SREN RX9 SPEN ]
+"4423
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16lf1788.h: 4423: typedef union {
+[u S229 `S230 1 ]
+[n S229 . . ]
+"4435
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16lf1788.h: 4435: extern volatile RCSTAbits_t RCSTAbits __attribute__((address(0x19D)));
+[v _RCSTAbits `VS229 ~T0 @X0 0 e@413 ]
 "1341
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16lf1788.h: 1341:     struct {
 [s S79 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
@@ -1138,12 +1134,12 @@ Version 4.0 HI-TECH Software Intermediate Code
 "35
 [p x LVP = ON ]
 "20 data_out.c
-[; ;data_out.c: 20: char out_buffer[10]={0,0,0,0,0,0,0,0,0,0};
+[; ;data_out.c: 20: char out_buffer[10]={68,69,0,0,0,0,0,0,0,0};
 [v _out_buffer `uc ~T0 @X0 -> 10 `i e ]
 [i _out_buffer
 :U ..
--> -> 0 `i `uc
--> -> 0 `i `uc
+-> -> 68 `i `uc
+-> -> 69 `i `uc
 -> -> 0 `i `uc
 -> -> 0 `i `uc
 -> -> 0 `i `uc
@@ -1182,8 +1178,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;data_out.c: 27:     counter_tx++;
 [e ++ _counter_tx -> -> 1 `i `uc ]
 "28
-[; ;data_out.c: 28:     if(counter_tx > (2 -1)){
-[e $ ! > -> _counter_tx `i - -> 2 `i -> 1 `i 715  ]
+[; ;data_out.c: 28:     if(counter_tx > (3 -1)){
+[e $ ! > -> _counter_tx `i - -> 3 `i -> 1 `i 715  ]
 {
 "29
 [; ;data_out.c: 29:         counter_tx = 0;
@@ -1193,14 +1189,14 @@ Version 4.0 HI-TECH Software Intermediate Code
 }
 [e :U 715 ]
 "31
-[; ;data_out.c: 31:     out_buffer[(2 -1)] = counter_tx;
-[e = *U + &U _out_buffer * -> -> - -> 2 `i -> 1 `i `ui `ux -> -> # *U &U _out_buffer `ui `ux _counter_tx ]
+[; ;data_out.c: 31:     out_buffer[(3 -1)] = counter_tx;
+[e = *U + &U _out_buffer * -> -> - -> 3 `i -> 1 `i `ui `ux -> -> # *U &U _out_buffer `ui `ux _counter_tx ]
 "34
-[; ;data_out.c: 34:     for(char i=0;i<2;i++)
+[; ;data_out.c: 34:     for(char i=0;i<3;i++)
 {
 [v _i `uc ~T0 @X0 1 a ]
 [e = _i -> -> 0 `i `uc ]
-[e $ < -> _i `i -> 2 `i 716  ]
+[e $ < -> _i `i -> 3 `i 716  ]
 [e $U 717  ]
 [e :U 716 ]
 "35
@@ -1213,7 +1209,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;data_out.c: 37:     }
 }
 [e ++ _i -> -> 1 `i `uc ]
-[e $ < -> _i `i -> 2 `i 716  ]
+[e $ < -> _i `i -> 3 `i 716  ]
 [e :U 717 ]
 }
 "38
@@ -1346,141 +1342,138 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;data_out.c: 81:             int_counter=0;
 [e = _int_counter -> -> 0 `i `uc ]
 "82
-[; ;data_out.c: 82:             LATCbits.LATC1 = ! LATCbits.LATC1;
-[e = . . _LATCbits 0 1 -> -> ! != -> . . _LATCbits 0 1 `i -> 0 `i `i `uc ]
-"83
-[; ;data_out.c: 83:         }
+[; ;data_out.c: 82:         }
 }
 [e :U 731 ]
-"85
-[; ;data_out.c: 85:     int_counter++;
+"84
+[; ;data_out.c: 84:     int_counter++;
 [e ++ _int_counter -> -> 1 `i `uc ]
-"86
-[; ;data_out.c: 86:     T1CONbits.TMR1ON=1;
+"85
+[; ;data_out.c: 85:     T1CONbits.TMR1ON=1;
 [e = . . _T1CONbits 0 0 -> -> 1 `i `uc ]
-"88
-[; ;data_out.c: 88:     }
+"87
+[; ;data_out.c: 87:     }
 }
 [e :U 724 ]
-"89
-[; ;data_out.c: 89: }
+"88
+[; ;data_out.c: 88: }
 [e :UE 723 ]
 }
-"92
-[; ;data_out.c: 92: void init_timebase(void){
+"91
+[; ;data_out.c: 91: void init_timebase(void){
 [v _init_timebase `(v ~T0 @X0 1 ef ]
 {
 [e :U _init_timebase ]
 [f ]
-"94
-[; ;data_out.c: 94:     TMR1L=0;
+"93
+[; ;data_out.c: 93:     TMR1L=0;
 [e = _TMR1L -> -> 0 `i `uc ]
-"95
-[; ;data_out.c: 95:     TMR1H=61;
+"94
+[; ;data_out.c: 94:     TMR1H=61;
 [e = _TMR1H -> -> 61 `i `uc ]
-"96
-[; ;data_out.c: 96:     T1CONbits.T1CKPS1=1;
+"95
+[; ;data_out.c: 95:     T1CONbits.T1CKPS1=1;
 [e = . . _T1CONbits 0 5 -> -> 1 `i `uc ]
-"97
-[; ;data_out.c: 97:     T1CONbits.T1CKPS0=0;
+"96
+[; ;data_out.c: 96:     T1CONbits.T1CKPS0=0;
 [e = . . _T1CONbits 0 4 -> -> 0 `i `uc ]
-"100
-[; ;data_out.c: 100:     T1CONbits.TMR1CS0=0;
+"99
+[; ;data_out.c: 99:     T1CONbits.TMR1CS0=0;
 [e = . . _T1CONbits 0 6 -> -> 0 `i `uc ]
-"101
-[; ;data_out.c: 101:     T1CONbits.TMR1CS1=0;
+"100
+[; ;data_out.c: 100:     T1CONbits.TMR1CS1=0;
 [e = . . _T1CONbits 0 7 -> -> 0 `i `uc ]
-"103
-[; ;data_out.c: 103:     T1CONbits.T1OSCEN=0;
+"102
+[; ;data_out.c: 102:     T1CONbits.T1OSCEN=0;
 [e = . . _T1CONbits 0 3 -> -> 0 `i `uc ]
-"104
-[; ;data_out.c: 104:     T1CONbits.TMR1ON=0;
+"103
+[; ;data_out.c: 103:     T1CONbits.TMR1ON=0;
 [e = . . _T1CONbits 0 0 -> -> 0 `i `uc ]
-"105
-[; ;data_out.c: 105:     T1CONbits.TMR1ON=1;
+"104
+[; ;data_out.c: 104:     T1CONbits.TMR1ON=1;
 [e = . . _T1CONbits 0 0 -> -> 1 `i `uc ]
-"109
-[; ;data_out.c: 109:     INTCON=0x00;
+"108
+[; ;data_out.c: 108:     INTCON=0x00;
 [e = _INTCON -> -> 0 `i `uc ]
-"110
-[; ;data_out.c: 110:     PIR1=0x00;
+"109
+[; ;data_out.c: 109:     PIR1=0x00;
 [e = _PIR1 -> -> 0 `i `uc ]
-"111
-[; ;data_out.c: 111:     PIR2=0x00;
+"110
+[; ;data_out.c: 110:     PIR2=0x00;
 [e = _PIR2 -> -> 0 `i `uc ]
-"112
-[; ;data_out.c: 112:     PIE1=0x00;
+"111
+[; ;data_out.c: 111:     PIE1=0x00;
 [e = _PIE1 -> -> 0 `i `uc ]
-"113
-[; ;data_out.c: 113:     PIE2=0x00;
+"112
+[; ;data_out.c: 112:     PIE2=0x00;
 [e = _PIE2 -> -> 0 `i `uc ]
-"115
-[; ;data_out.c: 115:     INTCONbits.GIE=1;
+"114
+[; ;data_out.c: 114:     INTCONbits.GIE=1;
 [e = . . _INTCONbits 0 7 -> -> 1 `i `uc ]
-"116
-[; ;data_out.c: 116:     INTCONbits.PEIE=1;
+"115
+[; ;data_out.c: 115:     INTCONbits.PEIE=1;
 [e = . . _INTCONbits 0 6 -> -> 1 `i `uc ]
-"117
-[; ;data_out.c: 117:     PIE1bits.TMR1IE=1;
+"116
+[; ;data_out.c: 116:     PIE1bits.TMR1IE=1;
 [e = . . _PIE1bits 0 0 -> -> 1 `i `uc ]
-"118
-[; ;data_out.c: 118:     PIR1bits.TMR1IF=0;
+"117
+[; ;data_out.c: 117:     PIR1bits.TMR1IF=0;
 [e = . . _PIR1bits 0 0 -> -> 0 `i `uc ]
-"120
-[; ;data_out.c: 120: }
+"119
+[; ;data_out.c: 119: }
 [e :UE 732 ]
 }
-"123
-[; ;data_out.c: 123: void init_data_out(long baud_rate){
+"122
+[; ;data_out.c: 122: void init_data_out(long baud_rate){
 [v _init_data_out `(v ~T0 @X0 1 ef1`l ]
 {
 [e :U _init_data_out ]
 [v _baud_rate `l ~T0 @X0 1 r1 ]
 [f ]
-"126
-[; ;data_out.c: 126:     switch(baud_rate)
+"125
+[; ;data_out.c: 125:     switch(baud_rate)
 [e $U 735  ]
-"127
-[; ;data_out.c: 127:     {
+"126
+[; ;data_out.c: 126:     {
 {
-"128
-[; ;data_out.c: 128:      case 9600:
+"127
+[; ;data_out.c: 127:      case 9600:
 [e :U 736 ]
-"129
-[; ;data_out.c: 129:         SPBRG1=103;
-[e = _SPBRG1 -> -> 103 `i `uc ]
-"130
-[; ;data_out.c: 130:         break;
-[e $U 734  ]
-"131
-[; ;data_out.c: 131:      case 19200:
-[e :U 737 ]
-"132
-[; ;data_out.c: 132:         SPBRG1=207;
+"128
+[; ;data_out.c: 128:         SPBRG1=207;
 [e = _SPBRG1 -> -> 207 `i `uc ]
+"129
+[; ;data_out.c: 129:         break;
+[e $U 734  ]
+"130
+[; ;data_out.c: 130:      case 19200:
+[e :U 737 ]
+"131
+[; ;data_out.c: 131:         SPBRG1=103;
+[e = _SPBRG1 -> -> 103 `i `uc ]
+"132
+[; ;data_out.c: 132:         break;
+[e $U 734  ]
 "133
-[; ;data_out.c: 133:         break;
-[e $U 734  ]
-"134
-[; ;data_out.c: 134:      case 57600:
+[; ;data_out.c: 133:      case 57600:
 [e :U 738 ]
-"135
-[; ;data_out.c: 135:         SPBRG1=68;
-[e = _SPBRG1 -> -> 68 `i `uc ]
-"136
-[; ;data_out.c: 136:         break;
-[e $U 734  ]
-"137
-[; ;data_out.c: 137:      case 115200:
-[e :U 739 ]
-"138
-[; ;data_out.c: 138:         SPBRG1=34;
+"134
+[; ;data_out.c: 134:         SPBRG1=34;
 [e = _SPBRG1 -> -> 34 `i `uc ]
-"139
-[; ;data_out.c: 139:         break;
+"135
+[; ;data_out.c: 135:         break;
 [e $U 734  ]
-"140
-[; ;data_out.c: 140:     }
+"136
+[; ;data_out.c: 136:      case 115200:
+[e :U 739 ]
+"137
+[; ;data_out.c: 137:         SPBRG1=16;
+[e = _SPBRG1 -> -> 16 `i `uc ]
+"138
+[; ;data_out.c: 138:         break;
+[e $U 734  ]
+"139
+[; ;data_out.c: 139:     }
 }
 [e $U 734  ]
 [e :U 735 ]
@@ -1490,40 +1483,43 @@ Version 4.0 HI-TECH Software Intermediate Code
  , $ -> 115200 `l 739
  734 ]
 [e :U 734 ]
+"141
+[; ;data_out.c: 141:     TXSTAbits.TX9=0;
+[e = . . _TXSTAbits 0 6 -> -> 0 `i `uc ]
 "142
-[; ;data_out.c: 142:     TXSTA1bits.TX9=0;
-[e = . . _TXSTA1bits 0 6 -> -> 0 `i `uc ]
+[; ;data_out.c: 142:     TXSTAbits.TXEN=1;
+[e = . . _TXSTAbits 0 5 -> -> 1 `i `uc ]
 "143
-[; ;data_out.c: 143:     TXSTA1bits.TXEN=1;
-[e = . . _TXSTA1bits 0 5 -> -> 1 `i `uc ]
+[; ;data_out.c: 143:     TXSTAbits.SYNC=0;
+[e = . . _TXSTAbits 0 4 -> -> 0 `i `uc ]
 "144
-[; ;data_out.c: 144:     TXSTA1bits.SYNC=0;
-[e = . . _TXSTA1bits 0 4 -> -> 0 `i `uc ]
-"145
-[; ;data_out.c: 145:     TXSTA1bits.BRGH=1;
-[e = . . _TXSTA1bits 0 2 -> -> 1 `i `uc ]
-"148
-[; ;data_out.c: 148:     RCSTA1bits.SPEN=1;
-[e = . . _RCSTA1bits 0 7 -> -> 1 `i `uc ]
+[; ;data_out.c: 144:     TXSTAbits.BRGH=1;
+[e = . . _TXSTAbits 0 2 -> -> 1 `i `uc ]
+"146
+[; ;data_out.c: 146:     BAUDCONbits.BRG16 = 0;
+[e = . . _BAUDCONbits 0 3 -> -> 0 `i `uc ]
 "149
-[; ;data_out.c: 149:     RCSTA1bits.RX9=0;
-[e = . . _RCSTA1bits 0 6 -> -> 0 `i `uc ]
+[; ;data_out.c: 149:     RCSTAbits.SPEN=1;
+[e = . . _RCSTAbits 0 7 -> -> 1 `i `uc ]
 "150
-[; ;data_out.c: 150:     RCSTA1bits.CREN=1;
-[e = . . _RCSTA1bits 0 4 -> -> 1 `i `uc ]
+[; ;data_out.c: 150:     RCSTAbits.RX9=0;
+[e = . . _RCSTAbits 0 6 -> -> 0 `i `uc ]
 "151
-[; ;data_out.c: 151:     RCSTA1bits.ADDEN=0;
-[e = . . _RCSTA1bits 0 3 -> -> 0 `i `uc ]
+[; ;data_out.c: 151:     RCSTAbits.CREN=1;
+[e = . . _RCSTAbits 0 4 -> -> 1 `i `uc ]
 "152
-[; ;data_out.c: 152:     TRISCbits.TRISC7 = 1;
+[; ;data_out.c: 152:     RCSTAbits.ADDEN=0;
+[e = . . _RCSTAbits 0 3 -> -> 0 `i `uc ]
+"153
+[; ;data_out.c: 153:     TRISCbits.TRISC7 = 1;
 [e = . . _TRISCbits 0 7 -> -> 1 `i `uc ]
-"154
-[; ;data_out.c: 154:     PEIE = 1;
+"155
+[; ;data_out.c: 155:     PEIE = 1;
 [e = _PEIE -> -> 1 `i `b ]
-"157
-[; ;data_out.c: 157:     PIE1bits.RCIE=1;
-[e = . . _PIE1bits 0 5 -> -> 1 `i `uc ]
 "158
-[; ;data_out.c: 158: }
+[; ;data_out.c: 158:     PIE1bits.RCIE=1;
+[e = . . _PIE1bits 0 5 -> -> 1 `i `uc ]
+"159
+[; ;data_out.c: 159: }
 [e :UE 733 ]
 }

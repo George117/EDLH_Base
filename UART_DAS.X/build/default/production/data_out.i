@@ -10398,7 +10398,7 @@ void timebase_interrupt(void);
 #pragma config LVP = ON
 # 10 "data_out.c" 2
 # 20 "data_out.c"
-char out_buffer[10]={0,0,0,0,0,0,0,0,0,0};
+char out_buffer[10]={68,69,0,0,0,0,0,0,0,0};
 char int_counter=0;
 char counter_max = 0;
 char counter_tx = 0;
@@ -10406,13 +10406,13 @@ char counter_tx = 0;
 void send_data(void) {
 
     counter_tx++;
-    if(counter_tx > (2 -1)){
+    if(counter_tx > (3 -1)){
         counter_tx = 0;
     }
-    out_buffer[(2 -1)] = counter_tx;
+    out_buffer[(3 -1)] = counter_tx;
 
 
-    for(char i=0;i<2;i++)
+    for(char i=0;i<3;i++)
     {
         write_raw(out_buffer[i]);
     }
@@ -10460,7 +10460,6 @@ void timebase_interrupt(void){
         {
             send_data();
             int_counter=0;
-            LATCbits.LATC1 = ! LATCbits.LATC1;
         }
 
     int_counter++;
@@ -10507,29 +10506,31 @@ void init_data_out(long baud_rate){
     switch(baud_rate)
     {
      case 9600:
-        SPBRG1=103;
-        break;
-     case 19200:
         SPBRG1=207;
         break;
+     case 19200:
+        SPBRG1=103;
+        break;
      case 57600:
-        SPBRG1=68;
+        SPBRG1=34;
         break;
      case 115200:
-        SPBRG1=34;
+        SPBRG1=16;
         break;
     }
 
-    TXSTA1bits.TX9=0;
-    TXSTA1bits.TXEN=1;
-    TXSTA1bits.SYNC=0;
-    TXSTA1bits.BRGH=1;
+    TXSTAbits.TX9=0;
+    TXSTAbits.TXEN=1;
+    TXSTAbits.SYNC=0;
+    TXSTAbits.BRGH=1;
+
+    BAUDCONbits.BRG16 = 0;
 
 
-    RCSTA1bits.SPEN=1;
-    RCSTA1bits.RX9=0;
-    RCSTA1bits.CREN=1;
-    RCSTA1bits.ADDEN=0;
+    RCSTAbits.SPEN=1;
+    RCSTAbits.RX9=0;
+    RCSTAbits.CREN=1;
+    RCSTAbits.ADDEN=0;
     TRISCbits.TRISC7 = 1;
 
     PEIE = 1;
