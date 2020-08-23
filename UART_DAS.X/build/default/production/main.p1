@@ -12,28 +12,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 "38
 [; ;./data_out.h: 38: void init_timebase(void);
 [v _init_timebase `(v ~T0 @X0 0 ef ]
-"2477 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16lf1788.h
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16lf1788.h: 2477:     struct {
-[s S131 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S131 . LATC0 LATC1 LATC2 LATC3 LATC4 LATC5 LATC6 LATC7 ]
-"2487
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16lf1788.h: 2487:     struct {
-[s S132 :8 `uc 1 ]
-[n S132 . LATC ]
-"2476
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16lf1788.h: 2476: typedef union {
-[u S130 `S131 1 `S132 1 ]
-[n S130 . . . ]
-"2491
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16lf1788.h: 2491: extern volatile LATCbits_t LATCbits __attribute__((address(0x10E)));
-[v _LATCbits `VS130 ~T0 @X0 0 e@270 ]
-[v F5616 `(v ~T0 @X0 1 tf1`ul ]
-"92 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic.h
-[v __delay `JF5616 ~T0 @X0 0 e ]
-[p i __delay ]
 [t ~ __interrupt . k ]
 [t T1 __interrupt ]
-"39 ./data_out.h
+"39
 [; ;./data_out.h: 39: void timebase_interrupt(void);
 [v _timebase_interrupt `(v ~T0 @X0 0 ef ]
 "19378 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16lf1788.h
@@ -1071,55 +1052,43 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 23:     while(1){
 [e :U 716 ]
 {
-"24
-[; ;main.c: 24:         LATCbits.LATC1 = 0;
-[e = . . _LATCbits 0 1 -> -> 0 `i `uc ]
 "25
-[; ;main.c: 25:         _delay((unsigned long)((1)*(32000000/4000000.0)));
-[e ( __delay (1 -> * -> -> 1 `i `d / -> -> 32000000 `l `d .4000000.0 `ul ]
-"26
-[; ;main.c: 26:         LATCbits.LATC1 = 1;
-[e = . . _LATCbits 0 1 -> -> 1 `i `uc ]
-"27
-[; ;main.c: 27:         _delay((unsigned long)((1)*(32000000/4000000.0)));
-[e ( __delay (1 -> * -> -> 1 `i `d / -> -> 32000000 `l `d .4000000.0 `ul ]
-"28
-[; ;main.c: 28:     }
+[; ;main.c: 25:     }
 }
 [e :U 715 ]
 [e $U 716  ]
 [e :U 717 ]
-"32
-[; ;main.c: 32: }
+"29
+[; ;main.c: 29: }
 [e :UE 714 ]
 }
 [v $root$_timer `(v ~T0 @X0 0 e ]
-"34
-[; ;main.c: 34: void __attribute__((picinterrupt(("")))) timer(void)
+"31
+[; ;main.c: 31: void __attribute__((picinterrupt(("")))) timer(void)
 [v _timer `(v ~T1 @X0 1 ef ]
-"35
-[; ;main.c: 35: {
+"32
+[; ;main.c: 32: {
 {
 [e :U _timer ]
 [f ]
-"36
-[; ;main.c: 36:     timebase_interrupt();
+"33
+[; ;main.c: 33:     timebase_interrupt();
 [e ( _timebase_interrupt ..  ]
-"38
-[; ;main.c: 38:     if(RCIF){
+"35
+[; ;main.c: 35:     if(RCIF){
 [e $ ! _RCIF 719  ]
 {
-"39
-[; ;main.c: 39:         receive_buffer = RC1REG;
+"36
+[; ;main.c: 36:         receive_buffer = RC1REG;
 [e = _receive_buffer -> _RC1REG `uc ]
-"40
-[; ;main.c: 40:         RCIF = 0;
+"37
+[; ;main.c: 37:         RCIF = 0;
 [e = _RCIF -> -> 0 `i `b ]
-"41
-[; ;main.c: 41:     }
+"38
+[; ;main.c: 38:     }
 }
 [e :U 719 ]
-"42
-[; ;main.c: 42: }
+"39
+[; ;main.c: 39: }
 [e :UE 718 ]
 }

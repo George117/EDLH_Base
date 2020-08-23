@@ -11,7 +11,7 @@
 
 //define the number of bytes to send, maximum of 10
 //take into account the counter
-#define bytes_to_send 5
+#define bytes_to_send 2
 
 //define the sendperiod of the data output:
 //available: 100ms,25ms,10ms 
@@ -53,19 +53,19 @@ void timebase_interrupt(void){
         switch(send_period_ms){
             case 100:
                 TMR1L=0;//~33 ms
-                TMR1H=61;
+                TMR1H=54;
                 counter_max=4; 
                 break;
                 
             case 25:
-                TMR1L=0;//~25 ms
-                TMR1H=60;
+                TMR1L=48;//~25 ms
+                TMR1H=78;
                 counter_max=1; 
                 break;
                 
             case 10:
-                TMR1L=128;//~10 ms
-                TMR1H=177;
+                TMR1L=64;//~10 ms
+                TMR1H=175;
                 counter_max=1; 
                 break;
             default:
@@ -92,9 +92,13 @@ void init_timebase(void){
             ///////////tmr1 timer/////////////////////
     TMR1L=0;//~33 ms
     TMR1H=61;
-    T1CONbits.T1CKPS1=1;////prescaler 1/8/
-    T1CONbits.T1CKPS0=1;
-    T1CONbits.TMR1CS=0;
+    T1CONbits.T1CKPS1=1;////prescaler 1/4/
+    T1CONbits.T1CKPS0=0;
+    
+    // FOSC/4 Internal Clock
+    T1CONbits.TMR1CS0=0;
+    T1CONbits.TMR1CS1=0;
+    
     T1CONbits.T1OSCEN=0;
     T1CONbits.TMR1ON=0;
     T1CONbits.TMR1ON=1;///tmr1 on

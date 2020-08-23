@@ -10413,10 +10413,7 @@ void main(void)
     init_timebase();
 
     while(1){
-        LATCbits.LATC1 = 0;
-        _delay((unsigned long)((1)*(32000000/4000000.0)));
-        LATCbits.LATC1 = 1;
-        _delay((unsigned long)((1)*(32000000/4000000.0)));
+
     }
 
 

@@ -10406,13 +10406,13 @@ char counter_tx = 0;
 void send_data(void) {
 
     counter_tx++;
-    if(counter_tx > (5 -1)){
+    if(counter_tx > (2 -1)){
         counter_tx = 0;
     }
-    out_buffer[(5 -1)] = counter_tx;
+    out_buffer[(2 -1)] = counter_tx;
 
 
-    for(char i=0;i<5;i++)
+    for(char i=0;i<2;i++)
     {
         write_raw(out_buffer[i]);
     }
@@ -10434,19 +10434,19 @@ void timebase_interrupt(void){
         switch(100){
             case 100:
                 TMR1L=0;
-                TMR1H=61;
+                TMR1H=54;
                 counter_max=4;
                 break;
 
             case 25:
-                TMR1L=0;
-                TMR1H=60;
+                TMR1L=48;
+                TMR1H=78;
                 counter_max=1;
                 break;
 
             case 10:
-                TMR1L=128;
-                TMR1H=177;
+                TMR1L=64;
+                TMR1H=175;
                 counter_max=1;
                 break;
             default:
@@ -10460,6 +10460,7 @@ void timebase_interrupt(void){
         {
             send_data();
             int_counter=0;
+            LATCbits.LATC1 = ! LATCbits.LATC1;
         }
 
     int_counter++;
@@ -10474,8 +10475,12 @@ void init_timebase(void){
     TMR1L=0;
     TMR1H=61;
     T1CONbits.T1CKPS1=1;
-    T1CONbits.T1CKPS0=1;
-    T1CONbits.TMR1CS=0;
+    T1CONbits.T1CKPS0=0;
+
+
+    T1CONbits.TMR1CS0=0;
+    T1CONbits.TMR1CS1=0;
+
     T1CONbits.T1OSCEN=0;
     T1CONbits.TMR1ON=0;
     T1CONbits.TMR1ON=1;
