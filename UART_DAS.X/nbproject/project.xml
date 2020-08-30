@@ -3,7 +3,7 @@
     <type>com.microchip.mplab.nbide.embedded.makeproject</type>
     <configuration>
         <data xmlns="http://www.netbeans.org/ns/make-project/1">
-            <name>Base_Config</name>
+            <name>UART_DAS</name>
             <creation-uuid>701f1827-a1b4-4889-b908-8efbf9b761c6</creation-uuid>
             <make-project-type>0</make-project-type>
             <c-extensions>c</c-extensions>
