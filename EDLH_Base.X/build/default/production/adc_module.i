@@ -1,4 +1,4 @@
-# 1 "data_out.c"
+# 1 "adc_module.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 288 "<built-in>" 3
@@ -6,119 +6,16 @@
 # 1 "<built-in>" 2
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "data_out.c" 2
+# 1 "adc_module.c" 2
 
 
 
 
 
 
-# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\stdint.h" 1 3
 
-
-
-# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\musl_xc8.h" 1 3
-# 4 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\stdint.h" 2 3
-# 22 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\stdint.h" 3
-# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\bits/alltypes.h" 1 3
-# 127 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef unsigned long uintptr_t;
-# 142 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef long intptr_t;
-# 158 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef signed char int8_t;
-
-
-
-
-typedef short int16_t;
-
-
-
-
-typedef __int24 int24_t;
-
-
-
-
-typedef long int32_t;
-
-
-
-
-
-typedef long long int64_t;
-# 188 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef long long intmax_t;
-
-
-
-
-
-typedef unsigned char uint8_t;
-
-
-
-
-typedef unsigned short uint16_t;
-
-
-
-
-typedef __uint24 uint24_t;
-
-
-
-
-typedef unsigned long uint32_t;
-
-
-
-
-
-typedef unsigned long long uint64_t;
-# 229 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef unsigned long long uintmax_t;
-# 22 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\stdint.h" 2 3
-
-
-typedef int8_t int_fast8_t;
-
-typedef int64_t int_fast64_t;
-
-
-typedef int8_t int_least8_t;
-typedef int16_t int_least16_t;
-
-typedef int24_t int_least24_t;
-
-typedef int32_t int_least32_t;
-
-typedef int64_t int_least64_t;
-
-
-typedef uint8_t uint_fast8_t;
-
-typedef uint64_t uint_fast64_t;
-
-
-typedef uint8_t uint_least8_t;
-typedef uint16_t uint_least16_t;
-
-typedef uint24_t uint_least24_t;
-
-typedef uint32_t uint_least32_t;
-
-typedef uint64_t uint_least64_t;
-# 139 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\stdint.h" 3
-# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\bits/stdint.h" 1 3
-typedef int32_t int_fast16_t;
-typedef int32_t int_fast32_t;
-typedef uint32_t uint_fast16_t;
-typedef uint32_t uint_fast32_t;
-# 139 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\stdint.h" 2 3
-# 7 "data_out.c" 2
-
+# 1 "./adc_module.h" 1
+# 34 "./adc_module.h"
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\xc.h" 1 3
 # 18 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\xc.h" 3
 extern const char __xc8_OPTIM_SPEED;
@@ -132,7 +29,17 @@ extern double __fpnormalize(double);
 
 
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\stdlib.h" 1 3
-# 10 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\stdlib.h" 3
+
+
+
+# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\musl_xc8.h" 1 3
+# 4 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\stdlib.h" 2 3
+
+
+
+
+
+
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\features.h" 1 3
 # 10 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\stdlib.h" 2 3
 # 21 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\stdlib.h" 3
@@ -141,6 +48,10 @@ extern double __fpnormalize(double);
 typedef long int wchar_t;
 # 122 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\bits/alltypes.h" 3
 typedef unsigned size_t;
+# 168 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef __int24 int24_t;
+# 204 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef __uint24 uint24_t;
 # 21 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\stdlib.h" 2 3
 
 
@@ -10365,16 +10276,16 @@ extern __bank0 unsigned char __resetbits;
 extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 27 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\xc.h" 2 3
-# 8 "data_out.c" 2
+# 34 "./adc_module.h" 2
 
-# 1 "./data_out.h" 1
-# 35 "./data_out.h"
-void write_raw(char ch);
-void send_data(void);
-void init_data_out(long baud_rate);
-void init_timebase(void);
-void timebase_interrupt(void);
-# 9 "data_out.c" 2
+
+void Configure_ADC_Module(void);
+void Configure_ADC_Channel(unsigned char channel);
+
+int Get_Value_From_Channel(unsigned char channel);
+# 69 "./adc_module.h"
+unsigned char channel_mapping[14] = {0, 1, 2, 3, 5, 0, 0, 0, 2, 3, 1, 4, 0, 5};
+# 8 "adc_module.c" 2
 
 # 1 "./bit_settings.h" 1
 # 18 "./bit_settings.h"
@@ -10396,145 +10307,76 @@ void timebase_interrupt(void);
 #pragma config BORV = LO
 #pragma config LPBOR = OFF
 #pragma config LVP = ON
-# 10 "data_out.c" 2
-# 20 "data_out.c"
-char out_buffer[10]={68,69,0,0,0,0,0,0,0,0};
-char int_counter=0;
-char counter_max = 0;
-char counter_tx = 0;
-
-void send_data(void) {
-
-    counter_tx++;
-    if(counter_tx > (3 -1)){
-        counter_tx = 0;
-    }
-    out_buffer[(3 -1)] = counter_tx;
+# 9 "adc_module.c" 2
 
 
-    for(char i=0;i<3;i++)
-    {
-        write_raw(out_buffer[i]);
-    }
+
+
+
+
+
+
+void Configure_ADC_Module(void)
+{
+    ADCON0bits.ADRMD = 0;
+
+    ADCON1bits.ADFM = 0;
+
+    ADCON1bits.ADCS2 = 1;
+    ADCON1bits.ADCS1 = 1;
+    ADCON1bits.ADCS0 = 0;
+
+    ADCON1bits.ADNREF = 0;
+
+    ADCON1bits.ADPREF1 = 0;
+    ADCON1bits.ADPREF0 = 0;
+
+    ADCON2bits.TRIGSEL = 0;
+
+    ADCON2bits.CHSN3 = 1;
+    ADCON2bits.CHSN2 = 1;
+    ADCON2bits.CHSN1 = 1;
+    ADCON2bits.CHSN0 = 1;
+
+    ADCON0bits.ADON = 1;
 }
 
 
-void write_raw(char ch){
-    while(!PIR1bits.TXIF);
-    TXREG=ch;
-}
 
-
-void timebase_interrupt(void){
-    if(PIR1bits.TMR1IF==1)
-    {
-        PIR1bits.TMR1IF=0;
-        T1CONbits.TMR1ON=0;
-
-        switch(100){
-            case 100:
-                TMR1L=0;
-                TMR1H=54;
-                counter_max=4;
-                break;
-
-            case 25:
-                TMR1L=48;
-                TMR1H=78;
-                counter_max=1;
-                break;
-
-            case 10:
-                TMR1L=64;
-                TMR1H=175;
-                counter_max=1;
-                break;
-            default:
-                TMR1L=0;
-                TMR1H=61;
-                counter_max=4;
-                break;
-        }
-
-        if(int_counter==counter_max)
-        {
-            send_data();
-            int_counter=0;
-        }
-
-    int_counter++;
-    T1CONbits.TMR1ON=1;
-
+void Configure_ADC_Channel(unsigned char channel)
+{
+    if(channel & 0b1000){
+        TRISB = TRISB | (1 << channel_mapping[channel]);
+        ANSELB = ANSELB | (1 << channel_mapping[channel]);
+        WPUB = WPUB & (~(1 << channel_mapping[channel]));
+    }
+    else{
+        TRISA = TRISA | (1 << channel_mapping[channel]);
+        ANSELA = ANSELA | (1 << channel_mapping[channel]);
+        WPUA = WPUA & (~(1 << channel_mapping[channel]));
     }
 }
 
 
-void init_timebase(void){
+int Get_Value_From_Channel(unsigned char channel)
+{
+    unsigned short rez_adc = 0;
+    unsigned short high_reg = 0;
+    unsigned short low_reg = 0;
 
-    TMR1L=0;
-    TMR1H=61;
-    T1CONbits.T1CKPS1=1;
-    T1CONbits.T1CKPS0=0;
+    ADCON0bits.CHS = channel;
 
-
-    T1CONbits.TMR1CS0=0;
-    T1CONbits.TMR1CS1=0;
-
-    T1CONbits.T1OSCEN=0;
-    T1CONbits.TMR1ON=0;
-    T1CONbits.TMR1ON=1;
+    _delay((unsigned long)((100)*(32000000/4000000.0)));
 
 
-
-    INTCON=0x00;
-    PIR1=0x00;
-    PIR2=0x00;
-    PIE1=0x00;
-    PIE2=0x00;
-
-    INTCONbits.GIE=1;
-    INTCONbits.PEIE=1;
-    PIE1bits.TMR1IE=1;
-    PIR1bits.TMR1IF=0;
-
-}
+    ADCON0bits.GO = 1;
+    while(ADCON0bits.GO == 1){};
 
 
-void init_data_out(long baud_rate){
+    high_reg = ADRESH;
+    low_reg = ADRESL;
+    rez_adc = ((high_reg << 8) | low_reg);
+    rez_adc = rez_adc >> 4;
 
-
-    switch(baud_rate)
-    {
-     case 9600:
-        SPBRG1=207;
-        break;
-     case 19200:
-        SPBRG1=103;
-        break;
-     case 57600:
-        SPBRG1=34;
-        break;
-     case 115200:
-        SPBRG1=16;
-        break;
-    }
-
-    TXSTAbits.TX9=0;
-    TXSTAbits.TXEN=1;
-    TXSTAbits.SYNC=0;
-    TXSTAbits.BRGH=1;
-
-    BAUDCONbits.BRG16 = 0;
-
-
-    RCSTAbits.SPEN=1;
-    RCSTAbits.RX9=0;
-    RCSTAbits.CREN=1;
-    RCSTAbits.ADDEN=0;
-    TRISCbits.TRISC7 = 1;
-
-    PEIE = 1;
-
-
-    PIE1bits.RCIE=1;
+    return rez_adc;
 }

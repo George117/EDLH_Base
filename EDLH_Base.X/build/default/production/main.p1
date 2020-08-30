@@ -1,137 +1,68 @@
 Version 4.0 HI-TECH Software Intermediate Code
-"35 ./data_out.h
-[; ;./data_out.h: 35: void write_raw(char ch);
-[v _write_raw `(v ~T0 @X0 0 ef1`uc ]
-"674 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16lf1788.h
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16lf1788.h: 674:     struct {
-[s S46 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S46 . TMR1IF TMR2IF CCP1IF SSP1IF TXIF RCIF ADIF TMR1GIF ]
-"673
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16lf1788.h: 673: typedef union {
-[u S45 `S46 1 ]
-[n S45 . . ]
-"685
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16lf1788.h: 685: extern volatile PIR1bits_t PIR1bits __attribute__((address(0x011)));
-[v _PIR1bits `VS45 ~T0 @X0 0 e@17 ]
-"4124
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16lf1788.h: 4124: extern volatile unsigned char TXREG __attribute__((address(0x19A)));
-[v _TXREG `Vuc ~T0 @X0 0 e@410 ]
-"948
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16lf1788.h: 948:     struct {
-[s S60 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S60 . TMR1ON . nT1SYNC T1OSCEN T1CKPS0 T1CKPS1 TMR1CS0 TMR1CS1 ]
-"958
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16lf1788.h: 958:     struct {
-[s S61 :4 `uc 1 :2 `uc 1 :2 `uc 1 ]
-[n S61 . . T1CKPS TMR1CS ]
-"947
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16lf1788.h: 947: typedef union {
-[u S59 `S60 1 `S61 1 ]
-[n S59 . . . ]
-"964
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16lf1788.h: 964: extern volatile T1CONbits_t T1CONbits __attribute__((address(0x018)));
-[v _T1CONbits `VS59 ~T0 @X0 0 e@24 ]
-"902
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16lf1788.h: 902: extern volatile unsigned char TMR1L __attribute__((address(0x016)));
-[v _TMR1L `Vuc ~T0 @X0 0 e@22 ]
-"922
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16lf1788.h: 922: extern volatile unsigned char TMR1H __attribute__((address(0x017)));
-[v _TMR1H `Vuc ~T0 @X0 0 e@23 ]
-"351
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16lf1788.h: 351: extern volatile unsigned char INTCON __attribute__((address(0x00B)));
-[v _INTCON `Vuc ~T0 @X0 0 e@11 ]
-"668
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16lf1788.h: 668: extern volatile unsigned char PIR1 __attribute__((address(0x011)));
-[v _PIR1 `Vuc ~T0 @X0 0 e@17 ]
-"730
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16lf1788.h: 730: extern volatile unsigned char PIR2 __attribute__((address(0x012)));
-[v _PIR2 `Vuc ~T0 @X0 0 e@18 ]
-"1434
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16lf1788.h: 1434: extern volatile unsigned char PIE1 __attribute__((address(0x091)));
-[v _PIE1 `Vuc ~T0 @X0 0 e@145 ]
-"1496
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16lf1788.h: 1496: extern volatile unsigned char PIE2 __attribute__((address(0x092)));
-[v _PIE2 `Vuc ~T0 @X0 0 e@146 ]
-"357
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16lf1788.h: 357:     struct {
-[s S31 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S31 . IOCIF INTF TMR0IF IOCIE INTE TMR0IE PEIE GIE ]
-"367
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16lf1788.h: 367:     struct {
-[s S32 :2 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 ]
-[n S32 . . T0IF . T0IE ]
-"356
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16lf1788.h: 356: typedef union {
-[u S30 `S31 1 `S32 1 ]
-[n S30 . . . ]
-"374
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16lf1788.h: 374: extern volatile INTCONbits_t INTCONbits __attribute__((address(0x00B)));
-[v _INTCONbits `VS30 ~T0 @X0 0 e@11 ]
-"1440
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16lf1788.h: 1440:     struct {
-[s S85 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S85 . TMR1IE TMR2IE CCP1IE SSP1IE TXIE RCIE ADIE TMR1GIE ]
-"1439
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16lf1788.h: 1439: typedef union {
-[u S84 `S85 1 ]
-[n S84 . . ]
-"1451
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16lf1788.h: 1451: extern volatile PIE1bits_t PIE1bits __attribute__((address(0x091)));
-[v _PIE1bits `VS84 ~T0 @X0 0 e@145 ]
-"4185
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16lf1788.h: 4185: extern volatile unsigned char SPBRG1 __attribute__((address(0x19B)));
-[v _SPBRG1 `Vuc ~T0 @X0 0 e@411 ]
-"4604
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16lf1788.h: 4604:     struct {
-[s S236 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S236 . TX9D TRMT BRGH SENDB SYNC TXEN TX9 CSRC ]
-"4603
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16lf1788.h: 4603: typedef union {
-[u S235 `S236 1 ]
-[n S235 . . ]
-"4615
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16lf1788.h: 4615: extern volatile TXSTAbits_t TXSTAbits __attribute__((address(0x19E)));
-[v _TXSTAbits `VS235 ~T0 @X0 0 e@414 ]
-"4816
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16lf1788.h: 4816:     struct {
-[s S244 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S244 . ABDEN WUE . BRG16 SCKP . RCIDL ABDOVF ]
-"4815
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16lf1788.h: 4815: typedef union {
-[u S243 `S244 1 ]
-[n S243 . . ]
-"4827
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16lf1788.h: 4827: extern volatile BAUDCONbits_t BAUDCONbits __attribute__((address(0x19F)));
-[v _BAUDCONbits `VS243 ~T0 @X0 0 e@415 ]
-"4424
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16lf1788.h: 4424:     struct {
-[s S230 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S230 . RX9D OERR FERR ADDEN CREN SREN RX9 SPEN ]
-"4423
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16lf1788.h: 4423: typedef union {
-[u S229 `S230 1 ]
-[n S229 . . ]
-"4435
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16lf1788.h: 4435: extern volatile RCSTAbits_t RCSTAbits __attribute__((address(0x19D)));
-[v _RCSTAbits `VS229 ~T0 @X0 0 e@413 ]
-"1341
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16lf1788.h: 1341:     struct {
-[s S79 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S79 . TRISC0 TRISC1 TRISC2 TRISC3 TRISC4 TRISC5 TRISC6 TRISC7 ]
-"1351
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16lf1788.h: 1351:     struct {
-[s S80 :8 `uc 1 ]
-[n S80 . TRISC ]
-"1340
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16lf1788.h: 1340: typedef union {
-[u S78 `S79 1 `S80 1 ]
-[n S78 . . . ]
-"1355
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16lf1788.h: 1355: extern volatile TRISCbits_t TRISCbits __attribute__((address(0x08E)));
-[v _TRISCbits `VS78 ~T0 @X0 0 e@142 ]
-"18001
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16lf1788.h: 18001: extern volatile __bit PEIE __attribute__((address(0x5E)));
-[v _PEIE `Vb ~T0 @X0 0 e@94 ]
+[p mainexit ]
+"37 ./config.h
+[; ;./config.h: 37: void IO_First_Init(void);
+[v _IO_First_Init `(v ~T0 @X0 0 ef ]
+"38
+[; ;./config.h: 38: void Configure_Clock(void);
+[v _Configure_Clock `(v ~T0 @X0 0 ef ]
+"36 ./adc_module.h
+[; ;./adc_module.h: 36: void Configure_ADC_Module(void);
+[v _Configure_ADC_Module `(v ~T0 @X0 0 ef ]
+"37
+[; ;./adc_module.h: 37: void Configure_ADC_Channel(unsigned char channel);
+[v _Configure_ADC_Channel `(v ~T0 @X0 0 ef1`uc ]
+"218 ./oled.h
+[; ;./oled.h: 218: void OLED_Init(char address);
+[v _OLED_Init `(v ~T0 @X0 0 ef1`uc ]
+"221
+[; ;./oled.h: 221: void OLED_clear(void);
+[v _OLED_clear `(v ~T0 @X0 0 ef ]
+"223
+[; ;./oled.h: 223: void OLED_string(char* str, short x, short y);
+[v _OLED_string `(v ~T0 @X0 0 ef3`*uc`s`s ]
+"220
+[; ;./oled.h: 220: void OLED_write(void);
+[v _OLED_write `(v ~T0 @X0 0 ef ]
+"37 ./data_out.h
+[; ;./data_out.h: 37: void init_data_out(long baud_rate);
+[v _init_data_out `(v ~T0 @X0 0 ef1`l ]
+"38
+[; ;./data_out.h: 38: void init_timebase(void);
+[v _init_timebase `(v ~T0 @X0 0 ef ]
+"39 ./adc_module.h
+[; ;./adc_module.h: 39: int Get_Value_From_Channel(unsigned char channel);
+[v _Get_Value_From_Channel `(i ~T0 @X0 0 ef1`uc ]
+"2477 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16lf1788.h
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16lf1788.h: 2477:     struct {
+[s S131 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S131 . LATC0 LATC1 LATC2 LATC3 LATC4 LATC5 LATC6 LATC7 ]
+"2487
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16lf1788.h: 2487:     struct {
+[s S132 :8 `uc 1 ]
+[n S132 . LATC ]
+"2476
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16lf1788.h: 2476: typedef union {
+[u S130 `S131 1 `S132 1 ]
+[n S130 . . . ]
+"2491
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16lf1788.h: 2491: extern volatile LATCbits_t LATCbits __attribute__((address(0x10E)));
+[v _LATCbits `VS130 ~T0 @X0 0 e@270 ]
+[v F5616 `(v ~T0 @X0 1 tf1`ul ]
+"92 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic.h
+[v __delay `JF5616 ~T0 @X0 0 e ]
+[p i __delay ]
+[t ~ __interrupt . k ]
+[t T1 __interrupt ]
+"39 ./data_out.h
+[; ;./data_out.h: 39: void timebase_interrupt(void);
+[v _timebase_interrupt `(v ~T0 @X0 0 ef ]
+"19378 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16lf1788.h
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16lf1788.h: 19378: extern volatile __bit RCIF __attribute__((address(0x8D)));
+[v _RCIF `Vb ~T0 @X0 0 e@141 ]
+"4061
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16lf1788.h: 4061: extern volatile unsigned char RC1REG __attribute__((address(0x199)));
+[v _RC1REG `Vuc ~T0 @X0 0 e@409 ]
 "54 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16lf1788.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16lf1788.h: 54: __asm("INDF0 equ 00h");
 [; <" INDF0 equ 00h ;# ">
@@ -1133,13 +1064,1018 @@ Version 4.0 HI-TECH Software Intermediate Code
 [p x LPBOR = OFF ]
 "35
 [p x LVP = ON ]
-"20 data_out.c
-[; ;data_out.c: 20: char out_buffer[10]={68,69,0,0,0,0,0,0,0,0};
-[v _out_buffer `uc ~T0 @X0 -> 10 `i e ]
-[i _out_buffer
+"69 ./adc_module.h
+[; ;./adc_module.h: 69: unsigned char channel_mapping[14] = {0, 1, 2, 3, 5, 0, 0, 0, 2, 3, 1, 4, 0, 5};
+[v _channel_mapping `uc ~T0 @X0 -> 14 `i e ]
+[i _channel_mapping
 :U ..
--> -> 68 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+-> -> 2 `i `uc
+-> -> 3 `i `uc
+-> -> 5 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 2 `i `uc
+-> -> 3 `i `uc
+-> -> 1 `i `uc
+-> -> 4 `i `uc
+-> -> 0 `i `uc
+-> -> 5 `i `uc
+..
+]
+"83 ./oled.h
+[; ;./oled.h: 83: static const unsigned char OLED_characters[] = {
+[v _OLED_characters `Cuc ~T0 @X0 -> 475 `i s ]
+[i _OLED_characters
+:U ..
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 95 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 7 `i `uc
+-> -> 0 `i `uc
+-> -> 7 `i `uc
+-> -> 0 `i `uc
+-> -> 20 `i `uc
+-> -> 127 `i `uc
+-> -> 20 `i `uc
+-> -> 127 `i `uc
+-> -> 20 `i `uc
+-> -> 36 `i `uc
+-> -> 42 `i `uc
+-> -> 127 `i `uc
+-> -> 42 `i `uc
+-> -> 18 `i `uc
+-> -> 35 `i `uc
+-> -> 19 `i `uc
+-> -> 8 `i `uc
+-> -> 100 `i `uc
+-> -> 98 `i `uc
+-> -> 54 `i `uc
+-> -> 73 `i `uc
+-> -> 86 `i `uc
+-> -> 32 `i `uc
+-> -> 80 `i `uc
+-> -> 0 `i `uc
+-> -> 8 `i `uc
+-> -> 7 `i `uc
+-> -> 3 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 28 `i `uc
+-> -> 34 `i `uc
+-> -> 65 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 65 `i `uc
+-> -> 34 `i `uc
+-> -> 28 `i `uc
+-> -> 0 `i `uc
+-> -> 42 `i `uc
+-> -> 28 `i `uc
+-> -> 127 `i `uc
+-> -> 28 `i `uc
+-> -> 42 `i `uc
+-> -> 8 `i `uc
+-> -> 8 `i `uc
+-> -> 62 `i `uc
+-> -> 8 `i `uc
+-> -> 8 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 112 `i `uc
+-> -> 48 `i `uc
+-> -> 0 `i `uc
+-> -> 8 `i `uc
+-> -> 8 `i `uc
+-> -> 8 `i `uc
+-> -> 8 `i `uc
+-> -> 8 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 96 `i `uc
+-> -> 96 `i `uc
+-> -> 0 `i `uc
+-> -> 32 `i `uc
+-> -> 16 `i `uc
+-> -> 8 `i `uc
+-> -> 4 `i `uc
+-> -> 2 `i `uc
+-> -> 62 `i `uc
+-> -> 81 `i `uc
+-> -> 73 `i `uc
 -> -> 69 `i `uc
+-> -> 62 `i `uc
+-> -> 0 `i `uc
+-> -> 66 `i `uc
+-> -> 127 `i `uc
+-> -> 64 `i `uc
+-> -> 0 `i `uc
+-> -> 114 `i `uc
+-> -> 73 `i `uc
+-> -> 73 `i `uc
+-> -> 73 `i `uc
+-> -> 70 `i `uc
+-> -> 33 `i `uc
+-> -> 65 `i `uc
+-> -> 73 `i `uc
+-> -> 77 `i `uc
+-> -> 51 `i `uc
+-> -> 24 `i `uc
+-> -> 20 `i `uc
+-> -> 18 `i `uc
+-> -> 127 `i `uc
+-> -> 16 `i `uc
+-> -> 39 `i `uc
+-> -> 69 `i `uc
+-> -> 69 `i `uc
+-> -> 69 `i `uc
+-> -> 57 `i `uc
+-> -> 60 `i `uc
+-> -> 74 `i `uc
+-> -> 73 `i `uc
+-> -> 73 `i `uc
+-> -> 49 `i `uc
+-> -> 65 `i `uc
+-> -> 33 `i `uc
+-> -> 17 `i `uc
+-> -> 9 `i `uc
+-> -> 7 `i `uc
+-> -> 54 `i `uc
+-> -> 73 `i `uc
+-> -> 73 `i `uc
+-> -> 73 `i `uc
+-> -> 54 `i `uc
+-> -> 70 `i `uc
+-> -> 73 `i `uc
+-> -> 73 `i `uc
+-> -> 41 `i `uc
+-> -> 30 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 20 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 64 `i `uc
+-> -> 52 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 8 `i `uc
+-> -> 20 `i `uc
+-> -> 34 `i `uc
+-> -> 65 `i `uc
+-> -> 20 `i `uc
+-> -> 20 `i `uc
+-> -> 20 `i `uc
+-> -> 20 `i `uc
+-> -> 20 `i `uc
+-> -> 0 `i `uc
+-> -> 65 `i `uc
+-> -> 34 `i `uc
+-> -> 20 `i `uc
+-> -> 8 `i `uc
+-> -> 2 `i `uc
+-> -> 1 `i `uc
+-> -> 89 `i `uc
+-> -> 9 `i `uc
+-> -> 6 `i `uc
+-> -> 62 `i `uc
+-> -> 65 `i `uc
+-> -> 93 `i `uc
+-> -> 89 `i `uc
+-> -> 78 `i `uc
+-> -> 124 `i `uc
+-> -> 18 `i `uc
+-> -> 17 `i `uc
+-> -> 18 `i `uc
+-> -> 124 `i `uc
+-> -> 127 `i `uc
+-> -> 73 `i `uc
+-> -> 73 `i `uc
+-> -> 73 `i `uc
+-> -> 54 `i `uc
+-> -> 62 `i `uc
+-> -> 65 `i `uc
+-> -> 65 `i `uc
+-> -> 65 `i `uc
+-> -> 34 `i `uc
+-> -> 127 `i `uc
+-> -> 65 `i `uc
+-> -> 65 `i `uc
+-> -> 65 `i `uc
+-> -> 62 `i `uc
+-> -> 127 `i `uc
+-> -> 73 `i `uc
+-> -> 73 `i `uc
+-> -> 73 `i `uc
+-> -> 65 `i `uc
+-> -> 127 `i `uc
+-> -> 9 `i `uc
+-> -> 9 `i `uc
+-> -> 9 `i `uc
+-> -> 1 `i `uc
+-> -> 62 `i `uc
+-> -> 65 `i `uc
+-> -> 65 `i `uc
+-> -> 81 `i `uc
+-> -> 115 `i `uc
+-> -> 127 `i `uc
+-> -> 8 `i `uc
+-> -> 8 `i `uc
+-> -> 8 `i `uc
+-> -> 127 `i `uc
+-> -> 0 `i `uc
+-> -> 65 `i `uc
+-> -> 127 `i `uc
+-> -> 65 `i `uc
+-> -> 0 `i `uc
+-> -> 32 `i `uc
+-> -> 64 `i `uc
+-> -> 65 `i `uc
+-> -> 63 `i `uc
+-> -> 1 `i `uc
+-> -> 127 `i `uc
+-> -> 8 `i `uc
+-> -> 20 `i `uc
+-> -> 34 `i `uc
+-> -> 65 `i `uc
+-> -> 127 `i `uc
+-> -> 64 `i `uc
+-> -> 64 `i `uc
+-> -> 64 `i `uc
+-> -> 64 `i `uc
+-> -> 127 `i `uc
+-> -> 2 `i `uc
+-> -> 28 `i `uc
+-> -> 2 `i `uc
+-> -> 127 `i `uc
+-> -> 127 `i `uc
+-> -> 4 `i `uc
+-> -> 8 `i `uc
+-> -> 16 `i `uc
+-> -> 127 `i `uc
+-> -> 62 `i `uc
+-> -> 65 `i `uc
+-> -> 65 `i `uc
+-> -> 65 `i `uc
+-> -> 62 `i `uc
+-> -> 127 `i `uc
+-> -> 9 `i `uc
+-> -> 9 `i `uc
+-> -> 9 `i `uc
+-> -> 6 `i `uc
+-> -> 62 `i `uc
+-> -> 65 `i `uc
+-> -> 81 `i `uc
+-> -> 33 `i `uc
+-> -> 94 `i `uc
+-> -> 127 `i `uc
+-> -> 9 `i `uc
+-> -> 25 `i `uc
+-> -> 41 `i `uc
+-> -> 70 `i `uc
+-> -> 38 `i `uc
+-> -> 73 `i `uc
+-> -> 73 `i `uc
+-> -> 73 `i `uc
+-> -> 50 `i `uc
+-> -> 3 `i `uc
+-> -> 1 `i `uc
+-> -> 127 `i `uc
+-> -> 1 `i `uc
+-> -> 3 `i `uc
+-> -> 63 `i `uc
+-> -> 64 `i `uc
+-> -> 64 `i `uc
+-> -> 64 `i `uc
+-> -> 63 `i `uc
+-> -> 31 `i `uc
+-> -> 32 `i `uc
+-> -> 64 `i `uc
+-> -> 32 `i `uc
+-> -> 31 `i `uc
+-> -> 63 `i `uc
+-> -> 64 `i `uc
+-> -> 56 `i `uc
+-> -> 64 `i `uc
+-> -> 63 `i `uc
+-> -> 99 `i `uc
+-> -> 20 `i `uc
+-> -> 8 `i `uc
+-> -> 20 `i `uc
+-> -> 99 `i `uc
+-> -> 3 `i `uc
+-> -> 4 `i `uc
+-> -> 120 `i `uc
+-> -> 4 `i `uc
+-> -> 3 `i `uc
+-> -> 97 `i `uc
+-> -> 89 `i `uc
+-> -> 73 `i `uc
+-> -> 77 `i `uc
+-> -> 67 `i `uc
+-> -> 0 `i `uc
+-> -> 127 `i `uc
+-> -> 65 `i `uc
+-> -> 65 `i `uc
+-> -> 65 `i `uc
+-> -> 2 `i `uc
+-> -> 4 `i `uc
+-> -> 8 `i `uc
+-> -> 16 `i `uc
+-> -> 32 `i `uc
+-> -> 0 `i `uc
+-> -> 65 `i `uc
+-> -> 65 `i `uc
+-> -> 65 `i `uc
+-> -> 127 `i `uc
+-> -> 4 `i `uc
+-> -> 2 `i `uc
+-> -> 1 `i `uc
+-> -> 2 `i `uc
+-> -> 4 `i `uc
+-> -> 64 `i `uc
+-> -> 64 `i `uc
+-> -> 64 `i `uc
+-> -> 64 `i `uc
+-> -> 64 `i `uc
+-> -> 0 `i `uc
+-> -> 3 `i `uc
+-> -> 7 `i `uc
+-> -> 8 `i `uc
+-> -> 0 `i `uc
+-> -> 32 `i `uc
+-> -> 84 `i `uc
+-> -> 84 `i `uc
+-> -> 56 `i `uc
+-> -> 64 `i `uc
+-> -> 127 `i `uc
+-> -> 40 `i `uc
+-> -> 68 `i `uc
+-> -> 68 `i `uc
+-> -> 56 `i `uc
+-> -> 56 `i `uc
+-> -> 68 `i `uc
+-> -> 68 `i `uc
+-> -> 68 `i `uc
+-> -> 40 `i `uc
+-> -> 56 `i `uc
+-> -> 68 `i `uc
+-> -> 68 `i `uc
+-> -> 40 `i `uc
+-> -> 127 `i `uc
+-> -> 56 `i `uc
+-> -> 84 `i `uc
+-> -> 84 `i `uc
+-> -> 84 `i `uc
+-> -> 24 `i `uc
+-> -> 0 `i `uc
+-> -> 8 `i `uc
+-> -> 126 `i `uc
+-> -> 9 `i `uc
+-> -> 2 `i `uc
+-> -> 12 `i `uc
+-> -> 82 `i `uc
+-> -> 82 `i `uc
+-> -> 74 `i `uc
+-> -> 60 `i `uc
+-> -> 127 `i `uc
+-> -> 8 `i `uc
+-> -> 4 `i `uc
+-> -> 4 `i `uc
+-> -> 120 `i `uc
+-> -> 0 `i `uc
+-> -> 68 `i `uc
+-> -> 125 `i `uc
+-> -> 64 `i `uc
+-> -> 0 `i `uc
+-> -> 32 `i `uc
+-> -> 64 `i `uc
+-> -> 64 `i `uc
+-> -> 61 `i `uc
+-> -> 0 `i `uc
+-> -> 127 `i `uc
+-> -> 16 `i `uc
+-> -> 40 `i `uc
+-> -> 68 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 65 `i `uc
+-> -> 127 `i `uc
+-> -> 64 `i `uc
+-> -> 0 `i `uc
+-> -> 124 `i `uc
+-> -> 4 `i `uc
+-> -> 120 `i `uc
+-> -> 4 `i `uc
+-> -> 120 `i `uc
+-> -> 124 `i `uc
+-> -> 8 `i `uc
+-> -> 4 `i `uc
+-> -> 4 `i `uc
+-> -> 120 `i `uc
+-> -> 56 `i `uc
+-> -> 68 `i `uc
+-> -> 68 `i `uc
+-> -> 68 `i `uc
+-> -> 56 `i `uc
+-> -> 124 `i `uc
+-> -> 24 `i `uc
+-> -> 36 `i `uc
+-> -> 36 `i `uc
+-> -> 24 `i `uc
+-> -> 24 `i `uc
+-> -> 36 `i `uc
+-> -> 36 `i `uc
+-> -> 24 `i `uc
+-> -> 124 `i `uc
+-> -> 124 `i `uc
+-> -> 8 `i `uc
+-> -> 4 `i `uc
+-> -> 4 `i `uc
+-> -> 8 `i `uc
+-> -> 72 `i `uc
+-> -> 84 `i `uc
+-> -> 84 `i `uc
+-> -> 84 `i `uc
+-> -> 36 `i `uc
+-> -> 4 `i `uc
+-> -> 4 `i `uc
+-> -> 63 `i `uc
+-> -> 68 `i `uc
+-> -> 36 `i `uc
+-> -> 60 `i `uc
+-> -> 64 `i `uc
+-> -> 64 `i `uc
+-> -> 32 `i `uc
+-> -> 124 `i `uc
+-> -> 28 `i `uc
+-> -> 32 `i `uc
+-> -> 64 `i `uc
+-> -> 32 `i `uc
+-> -> 28 `i `uc
+-> -> 60 `i `uc
+-> -> 64 `i `uc
+-> -> 48 `i `uc
+-> -> 64 `i `uc
+-> -> 60 `i `uc
+-> -> 68 `i `uc
+-> -> 40 `i `uc
+-> -> 16 `i `uc
+-> -> 40 `i `uc
+-> -> 68 `i `uc
+-> -> 76 `i `uc
+-> -> 80 `i `uc
+-> -> 80 `i `uc
+-> -> 80 `i `uc
+-> -> 60 `i `uc
+-> -> 68 `i `uc
+-> -> 100 `i `uc
+-> -> 84 `i `uc
+-> -> 76 `i `uc
+-> -> 68 `i `uc
+-> -> 0 `i `uc
+-> -> 8 `i `uc
+-> -> 54 `i `uc
+-> -> 65 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 119 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 65 `i `uc
+-> -> 54 `i `uc
+-> -> 8 `i `uc
+-> -> 0 `i `uc
+-> -> 2 `i `uc
+-> -> 1 `i `uc
+-> -> 2 `i `uc
+-> -> 4 `i `uc
+-> -> 2 `i `uc
+..
+]
+"181
+[; ;./oled.h: 181: static char OLED_buffer[128 * 32 / 8] = {
+[v _OLED_buffer `uc ~T0 @X0 -> 512 `i s ]
+[i _OLED_buffer
+:U ..
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 128 `i `uc
+-> -> 192 `i `uc
+-> -> 224 `i `uc
+-> -> 240 `i `uc
+-> -> 240 `i `uc
+-> -> 248 `i `uc
+-> -> 248 `i `uc
+-> -> 252 `i `uc
+-> -> 252 `i `uc
+-> -> 252 `i `uc
+-> -> 252 `i `uc
+-> -> 252 `i `uc
+-> -> 252 `i `uc
+-> -> 252 `i `uc
+-> -> 252 `i `uc
+-> -> 252 `i `uc
+-> -> 248 `i `uc
+-> -> 248 `i `uc
+-> -> 240 `i `uc
+-> -> 224 `i `uc
+-> -> 128 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 128 `i `uc
+-> -> 128 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 128 `i `uc
+-> -> 128 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 240 `i `uc
+-> -> 254 `i `uc
+-> -> 255 `i `uc
+-> -> 255 `i `uc
+-> -> 127 `i `uc
+-> -> 127 `i `uc
+-> -> 255 `i `uc
+-> -> 199 `i `uc
+-> -> 129 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+-> -> 7 `i `uc
+-> -> 15 `i `uc
+-> -> 63 `i `uc
+-> -> 255 `i `uc
+-> -> 255 `i `uc
+-> -> 199 `i `uc
+-> -> 1 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+-> -> 7 `i `uc
+-> -> 31 `i `uc
+-> -> 62 `i `uc
+-> -> 252 `i `uc
+-> -> 240 `i `uc
+-> -> 192 `i `uc
+-> -> 128 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 254 `i `uc
+-> -> 255 `i `uc
+-> -> 255 `i `uc
+-> -> 127 `i `uc
+-> -> 255 `i `uc
+-> -> 252 `i `uc
+-> -> 240 `i `uc
+-> -> 128 `i `uc
+-> -> 224 `i `uc
+-> -> 248 `i `uc
+-> -> 255 `i `uc
+-> -> 127 `i `uc
+-> -> 255 `i `uc
+-> -> 255 `i `uc
+-> -> 254 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 252 `i `uc
+-> -> 252 `i `uc
+-> -> 0 `i `uc
+-> -> 240 `i `uc
+-> -> 248 `i `uc
+-> -> 252 `i `uc
+-> -> 60 `i `uc
+-> -> 60 `i `uc
+-> -> 60 `i `uc
+-> -> 60 `i `uc
+-> -> 60 `i `uc
+-> -> 60 `i `uc
+-> -> 56 `i `uc
+-> -> 0 `i `uc
+-> -> 252 `i `uc
+-> -> 252 `i `uc
+-> -> 252 `i `uc
+-> -> 156 `i `uc
+-> -> 156 `i `uc
+-> -> 156 `i `uc
+-> -> 156 `i `uc
+-> -> 252 `i `uc
+-> -> 252 `i `uc
+-> -> 248 `i `uc
+-> -> 0 `i `uc
+-> -> 240 `i `uc
+-> -> 248 `i `uc
+-> -> 252 `i `uc
+-> -> 28 `i `uc
+-> -> 28 `i `uc
+-> -> 28 `i `uc
+-> -> 60 `i `uc
+-> -> 252 `i `uc
+-> -> 248 `i `uc
+-> -> 240 `i `uc
+-> -> 0 `i `uc
+-> -> 248 `i `uc
+-> -> 252 `i `uc
+-> -> 60 `i `uc
+-> -> 60 `i `uc
+-> -> 60 `i `uc
+-> -> 60 `i `uc
+-> -> 60 `i `uc
+-> -> 60 `i `uc
+-> -> 60 `i `uc
+-> -> 0 `i `uc
+-> -> 252 `i `uc
+-> -> 252 `i `uc
+-> -> 252 `i `uc
+-> -> 192 `i `uc
+-> -> 192 `i `uc
+-> -> 192 `i `uc
+-> -> 192 `i `uc
+-> -> 252 `i `uc
+-> -> 252 `i `uc
+-> -> 252 `i `uc
+-> -> 0 `i `uc
+-> -> 252 `i `uc
+-> -> 252 `i `uc
+-> -> 248 `i `uc
+-> -> 0 `i `uc
+-> -> 252 `i `uc
+-> -> 252 `i `uc
+-> -> 252 `i `uc
+-> -> 28 `i `uc
+-> -> 28 `i `uc
+-> -> 28 `i `uc
+-> -> 28 `i `uc
+-> -> 252 `i `uc
+-> -> 248 `i `uc
+-> -> 240 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 15 `i `uc
+-> -> 7 `i `uc
+-> -> 3 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 128 `i `uc
+-> -> 193 `i `uc
+-> -> 247 `i `uc
+-> -> 255 `i `uc
+-> -> 254 `i `uc
+-> -> 248 `i `uc
+-> -> 240 `i `uc
+-> -> 192 `i `uc
+-> -> 128 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 129 `i `uc
+-> -> 199 `i `uc
+-> -> 255 `i `uc
+-> -> 254 `i `uc
+-> -> 248 `i `uc
+-> -> 240 `i `uc
+-> -> 192 `i `uc
+-> -> 128 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 1 `i `uc
+-> -> 7 `i `uc
+-> -> 15 `i `uc
+-> -> 6 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 63 `i `uc
+-> -> 63 `i `uc
+-> -> 63 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 7 `i `uc
+-> -> 15 `i `uc
+-> -> 31 `i `uc
+-> -> 15 `i `uc
+-> -> 7 `i `uc
+-> -> 1 `i `uc
+-> -> 0 `i `uc
+-> -> 31 `i `uc
+-> -> 63 `i `uc
+-> -> 63 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 63 `i `uc
+-> -> 63 `i `uc
+-> -> 0 `i `uc
+-> -> 15 `i `uc
+-> -> 31 `i `uc
+-> -> 63 `i `uc
+-> -> 60 `i `uc
+-> -> 60 `i `uc
+-> -> 60 `i `uc
+-> -> 60 `i `uc
+-> -> 60 `i `uc
+-> -> 60 `i `uc
+-> -> 28 `i `uc
+-> -> 0 `i `uc
+-> -> 63 `i `uc
+-> -> 63 `i `uc
+-> -> 31 `i `uc
+-> -> 7 `i `uc
+-> -> 7 `i `uc
+-> -> 7 `i `uc
+-> -> 7 `i `uc
+-> -> 63 `i `uc
+-> -> 63 `i `uc
+-> -> 28 `i `uc
+-> -> 0 `i `uc
+-> -> 15 `i `uc
+-> -> 31 `i `uc
+-> -> 63 `i `uc
+-> -> 60 `i `uc
+-> -> 60 `i `uc
+-> -> 60 `i `uc
+-> -> 60 `i `uc
+-> -> 63 `i `uc
+-> -> 31 `i `uc
+-> -> 15 `i `uc
+-> -> 0 `i `uc
+-> -> 31 `i `uc
+-> -> 63 `i `uc
+-> -> 60 `i `uc
+-> -> 60 `i `uc
+-> -> 60 `i `uc
+-> -> 60 `i `uc
+-> -> 60 `i `uc
+-> -> 60 `i `uc
+-> -> 60 `i `uc
+-> -> 0 `i `uc
+-> -> 31 `i `uc
+-> -> 63 `i `uc
+-> -> 63 `i `uc
+-> -> 3 `i `uc
+-> -> 3 `i `uc
+-> -> 3 `i `uc
+-> -> 3 `i `uc
+-> -> 63 `i `uc
+-> -> 63 `i `uc
+-> -> 31 `i `uc
+-> -> 0 `i `uc
+-> -> 63 `i `uc
+-> -> 63 `i `uc
+-> -> 31 `i `uc
+-> -> 0 `i `uc
+-> -> 63 `i `uc
+-> -> 63 `i `uc
+-> -> 31 `i `uc
+-> -> 7 `i `uc
+-> -> 7 `i `uc
+-> -> 7 `i `uc
+-> -> 7 `i `uc
+-> -> 7 `i `uc
+-> -> 7 `i `uc
+-> -> 1 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 2 `i `uc
+-> -> 7 `i `uc
+-> -> 15 `i `uc
+-> -> 31 `i `uc
+-> -> 31 `i `uc
+-> -> 31 `i `uc
+-> -> 63 `i `uc
+-> -> 63 `i `uc
+-> -> 63 `i `uc
+-> -> 63 `i `uc
+-> -> 62 `i `uc
+-> -> 62 `i `uc
+-> -> 63 `i `uc
+-> -> 63 `i `uc
+-> -> 63 `i `uc
+-> -> 63 `i `uc
+-> -> 31 `i `uc
+-> -> 31 `i `uc
+-> -> 15 `i `uc
+-> -> 15 `i `uc
+-> -> 6 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
+-> -> 0 `i `uc
 -> -> 0 `i `uc
 -> -> 0 `i `uc
 -> -> 0 `i `uc
@@ -1150,376 +2086,114 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> -> 0 `i `uc
 ..
 ]
+"216
+[; ;./oled.h: 216: char _address = 0x78;
+[v __address `uc ~T0 @X0 1 e ]
+[i __address
+-> -> 120 `i `uc
+]
+"15 main.c
+[; ;main.c: 15: char receive_buffer;
+[v _receive_buffer `uc ~T0 @X0 1 e ]
+"18
+[; ;main.c: 18: float adc_result;
+[v _adc_result `f ~T0 @X0 1 e ]
+[v $root$_main `(v ~T0 @X0 0 e ]
+"20
+[; ;main.c: 20: void main(void)
+[v _main `(v ~T0 @X0 1 ef ]
 "21
-[; ;data_out.c: 21: char int_counter=0;
-[v _int_counter `uc ~T0 @X0 1 e ]
-[i _int_counter
--> -> 0 `i `uc
-]
-"22
-[; ;data_out.c: 22: char counter_max = 0;
-[v _counter_max `uc ~T0 @X0 1 e ]
-[i _counter_max
--> -> 0 `i `uc
-]
-"23
-[; ;data_out.c: 23: char counter_tx = 0;
-[v _counter_tx `uc ~T0 @X0 1 e ]
-[i _counter_tx
--> -> 0 `i `uc
-]
-"25
-[; ;data_out.c: 25: void send_data(void) {
-[v _send_data `(v ~T0 @X0 1 ef ]
+[; ;main.c: 21: {
 {
-[e :U _send_data ]
+[e :U _main ]
 [f ]
-"27
-[; ;data_out.c: 27:     counter_tx++;
-[e ++ _counter_tx -> -> 1 `i `uc ]
+"22
+[; ;main.c: 22:     IO_First_Init();
+[e ( _IO_First_Init ..  ]
+"23
+[; ;main.c: 23:     Configure_Clock();
+[e ( _Configure_Clock ..  ]
+"25
+[; ;main.c: 25:     Configure_ADC_Module();
+[e ( _Configure_ADC_Module ..  ]
+"26
+[; ;main.c: 26:     Configure_ADC_Channel(0);
+[e ( _Configure_ADC_Channel (1 -> -> 0 `i `uc ]
 "28
-[; ;data_out.c: 28:     if(counter_tx > (3 -1)){
-[e $ ! > -> _counter_tx `i - -> 3 `i -> 1 `i 715  ]
-{
+[; ;main.c: 28:     OLED_Init(0x3C);
+[e ( _OLED_Init (1 -> -> 60 `i `uc ]
 "29
-[; ;data_out.c: 29:         counter_tx = 0;
-[e = _counter_tx -> -> 0 `i `uc ]
+[; ;main.c: 29:     OLED_clear();
+[e ( _OLED_clear ..  ]
 "30
-[; ;data_out.c: 30:     }
-}
-[e :U 715 ]
+[; ;main.c: 30:     OLED_string("Hello World69!", 0, 0);
+[e ( _OLED_string (3 , , :s 1C -> -> 0 `i `s -> -> 0 `i `s ]
 "31
-[; ;data_out.c: 31:     out_buffer[(3 -1)] = counter_tx;
-[e = *U + &U _out_buffer * -> -> - -> 3 `i -> 1 `i `ui `ux -> -> # *U &U _out_buffer `ui `ux _counter_tx ]
+[; ;main.c: 31:     OLED_write();
+[e ( _OLED_write ..  ]
+"33
+[; ;main.c: 33:     init_data_out(9600);
+[e ( _init_data_out (1 -> -> 9600 `i `l ]
 "34
-[; ;data_out.c: 34:     for(char i=0;i<3;i++)
-{
-[v _i `uc ~T0 @X0 1 a ]
-[e = _i -> -> 0 `i `uc ]
-[e $ < -> _i `i -> 3 `i 716  ]
-[e $U 717  ]
-[e :U 716 ]
+[; ;main.c: 34:     init_timebase();
+[e ( _init_timebase ..  ]
 "35
-[; ;data_out.c: 35:     {
+[; ;main.c: 35:     while(1){
+[e :U 716 ]
 {
 "36
-[; ;data_out.c: 36:         write_raw(out_buffer[i]);
-[e ( _write_raw (1 *U + &U _out_buffer * -> _i `ux -> -> # *U &U _out_buffer `ui `ux ]
-"37
-[; ;data_out.c: 37:     }
-}
-[e ++ _i -> -> 1 `i `uc ]
-[e $ < -> _i `i -> 3 `i 716  ]
-[e :U 717 ]
-}
+[; ;main.c: 36:         adc_result = Get_Value_From_Channel(0) * 3.339/4096;
+[e = _adc_result -> / * -> ( _Get_Value_From_Channel (1 -> -> 0 `i `uc `d .3.339 -> -> 4096 `i `d `f ]
 "38
-[; ;data_out.c: 38: }
+[; ;main.c: 38:         LATCbits.LATC7 = 0;
+[e = . . _LATCbits 0 7 -> -> 0 `i `uc ]
+"39
+[; ;main.c: 39:         _delay((unsigned long)((1)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> -> 1 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"40
+[; ;main.c: 40:         LATCbits.LATC7 = 1;
+[e = . . _LATCbits 0 7 -> -> 1 `i `uc ]
+"41
+[; ;main.c: 41:         _delay((unsigned long)((1)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> -> 1 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"42
+[; ;main.c: 42:     }
+}
+[e :U 715 ]
+[e $U 716  ]
+[e :U 717 ]
+"46
+[; ;main.c: 46: }
 [e :UE 714 ]
 }
-"41
-[; ;data_out.c: 41: void write_raw(char ch){
-[v _write_raw `(v ~T0 @X0 1 ef1`uc ]
-{
-[e :U _write_raw ]
-[v _ch `uc ~T0 @X0 1 r1 ]
-[f ]
-"42
-[; ;data_out.c: 42:     while(!PIR1bits.TXIF);
-[e $U 720  ]
-[e :U 721 ]
-[e :U 720 ]
-[e $ ! != -> . . _PIR1bits 0 4 `i -> 0 `i 721  ]
-[e :U 722 ]
-"43
-[; ;data_out.c: 43:     TXREG=ch;
-[e = _TXREG -> _ch `uc ]
-"44
-[; ;data_out.c: 44: }
-[e :UE 719 ]
-}
-"47
-[; ;data_out.c: 47: void timebase_interrupt(void){
-[v _timebase_interrupt `(v ~T0 @X0 1 ef ]
-{
-[e :U _timebase_interrupt ]
-[f ]
-"48
-[; ;data_out.c: 48:     if(PIR1bits.TMR1IF==1)
-[e $ ! == -> . . _PIR1bits 0 0 `i -> 1 `i 724  ]
+[v $root$_timer `(v ~T0 @X0 0 e ]
 "49
-[; ;data_out.c: 49:     {
-{
+[; ;main.c: 49: void __attribute__((picinterrupt(("")))) timer(void)
+[v _timer `(v ~T1 @X0 1 ef ]
 "50
-[; ;data_out.c: 50:         PIR1bits.TMR1IF=0;
-[e = . . _PIR1bits 0 0 -> -> 0 `i `uc ]
+[; ;main.c: 50: {
+{
+[e :U _timer ]
+[f ]
 "51
-[; ;data_out.c: 51:         T1CONbits.TMR1ON=0;
-[e = . . _T1CONbits 0 0 -> -> 0 `i `uc ]
+[; ;main.c: 51:     timebase_interrupt();
+[e ( _timebase_interrupt ..  ]
 "53
-[; ;data_out.c: 53:         switch(100){
-[e $U 726  ]
+[; ;main.c: 53:     if(RCIF){
+[e $ ! _RCIF 719  ]
 {
 "54
-[; ;data_out.c: 54:             case 100:
-[e :U 727 ]
+[; ;main.c: 54:         receive_buffer = RC1REG;
+[e = _receive_buffer -> _RC1REG `uc ]
 "55
-[; ;data_out.c: 55:                 TMR1L=0;
-[e = _TMR1L -> -> 0 `i `uc ]
+[; ;main.c: 55:         RCIF = 0;
+[e = _RCIF -> -> 0 `i `b ]
 "56
-[; ;data_out.c: 56:                 TMR1H=54;
-[e = _TMR1H -> -> 54 `i `uc ]
+[; ;main.c: 56:     }
+}
+[e :U 719 ]
 "57
-[; ;data_out.c: 57:                 counter_max=4;
-[e = _counter_max -> -> 4 `i `uc ]
-"58
-[; ;data_out.c: 58:                 break;
-[e $U 725  ]
-"60
-[; ;data_out.c: 60:             case 25:
-[e :U 728 ]
-"61
-[; ;data_out.c: 61:                 TMR1L=48;
-[e = _TMR1L -> -> 48 `i `uc ]
-"62
-[; ;data_out.c: 62:                 TMR1H=78;
-[e = _TMR1H -> -> 78 `i `uc ]
-"63
-[; ;data_out.c: 63:                 counter_max=1;
-[e = _counter_max -> -> 1 `i `uc ]
-"64
-[; ;data_out.c: 64:                 break;
-[e $U 725  ]
-"66
-[; ;data_out.c: 66:             case 10:
-[e :U 729 ]
-"67
-[; ;data_out.c: 67:                 TMR1L=64;
-[e = _TMR1L -> -> 64 `i `uc ]
-"68
-[; ;data_out.c: 68:                 TMR1H=175;
-[e = _TMR1H -> -> 175 `i `uc ]
-"69
-[; ;data_out.c: 69:                 counter_max=1;
-[e = _counter_max -> -> 1 `i `uc ]
-"70
-[; ;data_out.c: 70:                 break;
-[e $U 725  ]
-"71
-[; ;data_out.c: 71:             default:
-[e :U 730 ]
-"72
-[; ;data_out.c: 72:                 TMR1L=0;
-[e = _TMR1L -> -> 0 `i `uc ]
-"73
-[; ;data_out.c: 73:                 TMR1H=61;
-[e = _TMR1H -> -> 61 `i `uc ]
-"74
-[; ;data_out.c: 74:                 counter_max=4;
-[e = _counter_max -> -> 4 `i `uc ]
-"75
-[; ;data_out.c: 75:                 break;
-[e $U 725  ]
-"76
-[; ;data_out.c: 76:         }
+[; ;main.c: 57: }
+[e :UE 718 ]
 }
-[e $U 725  ]
-[e :U 726 ]
-[e [\ -> 100 `i , $ -> 100 `i 727
- , $ -> 25 `i 728
- , $ -> 10 `i 729
- 730 ]
-[e :U 725 ]
-"78
-[; ;data_out.c: 78:         if(int_counter==counter_max)
-[e $ ! == -> _int_counter `i -> _counter_max `i 731  ]
-"79
-[; ;data_out.c: 79:         {
-{
-"80
-[; ;data_out.c: 80:             send_data();
-[e ( _send_data ..  ]
-"81
-[; ;data_out.c: 81:             int_counter=0;
-[e = _int_counter -> -> 0 `i `uc ]
-"82
-[; ;data_out.c: 82:         }
-}
-[e :U 731 ]
-"84
-[; ;data_out.c: 84:     int_counter++;
-[e ++ _int_counter -> -> 1 `i `uc ]
-"85
-[; ;data_out.c: 85:     T1CONbits.TMR1ON=1;
-[e = . . _T1CONbits 0 0 -> -> 1 `i `uc ]
-"87
-[; ;data_out.c: 87:     }
-}
-[e :U 724 ]
-"88
-[; ;data_out.c: 88: }
-[e :UE 723 ]
-}
-"91
-[; ;data_out.c: 91: void init_timebase(void){
-[v _init_timebase `(v ~T0 @X0 1 ef ]
-{
-[e :U _init_timebase ]
-[f ]
-"93
-[; ;data_out.c: 93:     TMR1L=0;
-[e = _TMR1L -> -> 0 `i `uc ]
-"94
-[; ;data_out.c: 94:     TMR1H=61;
-[e = _TMR1H -> -> 61 `i `uc ]
-"95
-[; ;data_out.c: 95:     T1CONbits.T1CKPS1=1;
-[e = . . _T1CONbits 0 5 -> -> 1 `i `uc ]
-"96
-[; ;data_out.c: 96:     T1CONbits.T1CKPS0=0;
-[e = . . _T1CONbits 0 4 -> -> 0 `i `uc ]
-"99
-[; ;data_out.c: 99:     T1CONbits.TMR1CS0=0;
-[e = . . _T1CONbits 0 6 -> -> 0 `i `uc ]
-"100
-[; ;data_out.c: 100:     T1CONbits.TMR1CS1=0;
-[e = . . _T1CONbits 0 7 -> -> 0 `i `uc ]
-"102
-[; ;data_out.c: 102:     T1CONbits.T1OSCEN=0;
-[e = . . _T1CONbits 0 3 -> -> 0 `i `uc ]
-"103
-[; ;data_out.c: 103:     T1CONbits.TMR1ON=0;
-[e = . . _T1CONbits 0 0 -> -> 0 `i `uc ]
-"104
-[; ;data_out.c: 104:     T1CONbits.TMR1ON=1;
-[e = . . _T1CONbits 0 0 -> -> 1 `i `uc ]
-"108
-[; ;data_out.c: 108:     INTCON=0x00;
-[e = _INTCON -> -> 0 `i `uc ]
-"109
-[; ;data_out.c: 109:     PIR1=0x00;
-[e = _PIR1 -> -> 0 `i `uc ]
-"110
-[; ;data_out.c: 110:     PIR2=0x00;
-[e = _PIR2 -> -> 0 `i `uc ]
-"111
-[; ;data_out.c: 111:     PIE1=0x00;
-[e = _PIE1 -> -> 0 `i `uc ]
-"112
-[; ;data_out.c: 112:     PIE2=0x00;
-[e = _PIE2 -> -> 0 `i `uc ]
-"114
-[; ;data_out.c: 114:     INTCONbits.GIE=1;
-[e = . . _INTCONbits 0 7 -> -> 1 `i `uc ]
-"115
-[; ;data_out.c: 115:     INTCONbits.PEIE=1;
-[e = . . _INTCONbits 0 6 -> -> 1 `i `uc ]
-"116
-[; ;data_out.c: 116:     PIE1bits.TMR1IE=1;
-[e = . . _PIE1bits 0 0 -> -> 1 `i `uc ]
-"117
-[; ;data_out.c: 117:     PIR1bits.TMR1IF=0;
-[e = . . _PIR1bits 0 0 -> -> 0 `i `uc ]
-"119
-[; ;data_out.c: 119: }
-[e :UE 732 ]
-}
-"122
-[; ;data_out.c: 122: void init_data_out(long baud_rate){
-[v _init_data_out `(v ~T0 @X0 1 ef1`l ]
-{
-[e :U _init_data_out ]
-[v _baud_rate `l ~T0 @X0 1 r1 ]
-[f ]
-"125
-[; ;data_out.c: 125:     switch(baud_rate)
-[e $U 735  ]
-"126
-[; ;data_out.c: 126:     {
-{
-"127
-[; ;data_out.c: 127:      case 9600:
-[e :U 736 ]
-"128
-[; ;data_out.c: 128:         SPBRG1=207;
-[e = _SPBRG1 -> -> 207 `i `uc ]
-"129
-[; ;data_out.c: 129:         break;
-[e $U 734  ]
-"130
-[; ;data_out.c: 130:      case 19200:
-[e :U 737 ]
-"131
-[; ;data_out.c: 131:         SPBRG1=103;
-[e = _SPBRG1 -> -> 103 `i `uc ]
-"132
-[; ;data_out.c: 132:         break;
-[e $U 734  ]
-"133
-[; ;data_out.c: 133:      case 57600:
-[e :U 738 ]
-"134
-[; ;data_out.c: 134:         SPBRG1=34;
-[e = _SPBRG1 -> -> 34 `i `uc ]
-"135
-[; ;data_out.c: 135:         break;
-[e $U 734  ]
-"136
-[; ;data_out.c: 136:      case 115200:
-[e :U 739 ]
-"137
-[; ;data_out.c: 137:         SPBRG1=16;
-[e = _SPBRG1 -> -> 16 `i `uc ]
-"138
-[; ;data_out.c: 138:         break;
-[e $U 734  ]
-"139
-[; ;data_out.c: 139:     }
-}
-[e $U 734  ]
-[e :U 735 ]
-[e [\ _baud_rate , $ -> -> 9600 `i `l 736
- , $ -> -> 19200 `i `l 737
- , $ -> 57600 `l 738
- , $ -> 115200 `l 739
- 734 ]
-[e :U 734 ]
-"141
-[; ;data_out.c: 141:     TXSTAbits.TX9=0;
-[e = . . _TXSTAbits 0 6 -> -> 0 `i `uc ]
-"142
-[; ;data_out.c: 142:     TXSTAbits.TXEN=1;
-[e = . . _TXSTAbits 0 5 -> -> 1 `i `uc ]
-"143
-[; ;data_out.c: 143:     TXSTAbits.SYNC=0;
-[e = . . _TXSTAbits 0 4 -> -> 0 `i `uc ]
-"144
-[; ;data_out.c: 144:     TXSTAbits.BRGH=1;
-[e = . . _TXSTAbits 0 2 -> -> 1 `i `uc ]
-"146
-[; ;data_out.c: 146:     BAUDCONbits.BRG16 = 0;
-[e = . . _BAUDCONbits 0 3 -> -> 0 `i `uc ]
-"149
-[; ;data_out.c: 149:     RCSTAbits.SPEN=1;
-[e = . . _RCSTAbits 0 7 -> -> 1 `i `uc ]
-"150
-[; ;data_out.c: 150:     RCSTAbits.RX9=0;
-[e = . . _RCSTAbits 0 6 -> -> 0 `i `uc ]
-"151
-[; ;data_out.c: 151:     RCSTAbits.CREN=1;
-[e = . . _RCSTAbits 0 4 -> -> 1 `i `uc ]
-"152
-[; ;data_out.c: 152:     RCSTAbits.ADDEN=0;
-[e = . . _RCSTAbits 0 3 -> -> 0 `i `uc ]
-"153
-[; ;data_out.c: 153:     TRISCbits.TRISC7 = 1;
-[e = . . _TRISCbits 0 7 -> -> 1 `i `uc ]
-"155
-[; ;data_out.c: 155:     PEIE = 1;
-[e = _PEIE -> -> 1 `i `b ]
-"158
-[; ;data_out.c: 158:     PIE1bits.RCIE=1;
-[e = . . _PIE1bits 0 5 -> -> 1 `i `uc ]
-"159
-[; ;data_out.c: 159: }
-[e :UE 733 ]
-}
+[a 1C 72 101 108 108 111 32 87 111 114 108 100 54 57 33 0 ]

@@ -1,4 +1,4 @@
-# 1 "main.c"
+# 1 "oled.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 288 "<built-in>" 3
@@ -6,141 +6,7 @@
 # 1 "<built-in>" 2
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "main.c" 2
-
-
-
-
-
-
-
-# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\xc.h" 1 3
-# 18 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\xc.h" 3
-extern const char __xc8_OPTIM_SPEED;
-
-extern double __fpnormalize(double);
-
-
-
-# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\xc8debug.h" 1 3
-
-
-
-# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\stdlib.h" 1 3
-
-
-
-# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\musl_xc8.h" 1 3
-# 4 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\stdlib.h" 2 3
-
-
-
-
-
-
-# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\features.h" 1 3
-# 10 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\stdlib.h" 2 3
-# 21 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\stdlib.h" 3
-# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\bits/alltypes.h" 1 3
-# 18 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef long int wchar_t;
-# 122 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef unsigned size_t;
-# 168 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef __int24 int24_t;
-# 204 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef __uint24 uint24_t;
-# 21 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\stdlib.h" 2 3
-
-
-int atoi (const char *);
-long atol (const char *);
-long long atoll (const char *);
-double atof (const char *);
-
-float strtof (const char *restrict, char **restrict);
-double strtod (const char *restrict, char **restrict);
-long double strtold (const char *restrict, char **restrict);
-
-
-
-long strtol (const char *restrict, char **restrict, int);
-unsigned long strtoul (const char *restrict, char **restrict, int);
-long long strtoll (const char *restrict, char **restrict, int);
-unsigned long long strtoull (const char *restrict, char **restrict, int);
-
-int rand (void);
-void srand (unsigned);
-
-          void abort (void);
-int atexit (void (*) (void));
-          void exit (int);
-          void _Exit (int);
-
-void *bsearch (const void *, const void *, size_t, size_t, int (*)(const void *, const void *));
-
-__attribute__((nonreentrant)) void qsort (void *, size_t, size_t, int (*)(const void *, const void *));
-
-int abs (int);
-long labs (long);
-long long llabs (long long);
-
-typedef struct { int quot, rem; } div_t;
-typedef struct { long quot, rem; } ldiv_t;
-typedef struct { long long quot, rem; } lldiv_t;
-
-div_t div (int, int);
-ldiv_t ldiv (long, long);
-lldiv_t lldiv (long long, long long);
-
-typedef struct { unsigned int quot, rem; } udiv_t;
-typedef struct { unsigned long quot, rem; } uldiv_t;
-udiv_t udiv (unsigned int, unsigned int);
-uldiv_t uldiv (unsigned long, unsigned long);
-
-
-
-
-
-size_t __ctype_get_mb_cur_max(void);
-# 4 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\xc8debug.h" 2 3
-
-
-
-
-
-
-
-
-#pragma intrinsic(__builtin_software_breakpoint)
-extern void __builtin_software_breakpoint(void);
-# 23 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\xc.h" 2 3
-
-
-
-
-# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\pic.h" 1 3
-
-
-
-
-# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\htc.h" 1 3
-
-
-
-# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\xc.h" 1 3
-# 4 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\htc.h" 2 3
-# 5 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\pic.h" 2 3
-
-
-
-
-
-
-
-
-# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\pic_chip_select.h" 1 3
-# 3134 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\pic_chip_select.h" 3
+# 1 "oled.c" 2
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\pic16lf1788.h" 1 3
 # 44 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\pic16lf1788.h" 3
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\__at.h" 1 3
@@ -10237,7 +10103,120 @@ extern volatile __bit nTO __attribute__((address(0x1C)));
 
 
 extern volatile __bit nWPUEN __attribute__((address(0x4AF)));
-# 3134 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\pic_chip_select.h" 2 3
+# 1 "oled.c" 2
+
+# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\htc.h" 1 3
+
+
+
+# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\xc.h" 1 3
+# 18 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\xc.h" 3
+extern const char __xc8_OPTIM_SPEED;
+
+extern double __fpnormalize(double);
+
+
+
+# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\xc8debug.h" 1 3
+
+
+
+# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\stdlib.h" 1 3
+
+
+
+# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\musl_xc8.h" 1 3
+# 4 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\stdlib.h" 2 3
+
+
+
+
+
+
+# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\features.h" 1 3
+# 10 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\stdlib.h" 2 3
+# 21 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\stdlib.h" 3
+# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\bits/alltypes.h" 1 3
+# 18 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef long int wchar_t;
+# 122 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef unsigned size_t;
+# 168 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef __int24 int24_t;
+# 204 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef __uint24 uint24_t;
+# 21 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\stdlib.h" 2 3
+
+
+int atoi (const char *);
+long atol (const char *);
+long long atoll (const char *);
+double atof (const char *);
+
+float strtof (const char *restrict, char **restrict);
+double strtod (const char *restrict, char **restrict);
+long double strtold (const char *restrict, char **restrict);
+
+
+
+long strtol (const char *restrict, char **restrict, int);
+unsigned long strtoul (const char *restrict, char **restrict, int);
+long long strtoll (const char *restrict, char **restrict, int);
+unsigned long long strtoull (const char *restrict, char **restrict, int);
+
+int rand (void);
+void srand (unsigned);
+
+          void abort (void);
+int atexit (void (*) (void));
+          void exit (int);
+          void _Exit (int);
+
+void *bsearch (const void *, const void *, size_t, size_t, int (*)(const void *, const void *));
+
+__attribute__((nonreentrant)) void qsort (void *, size_t, size_t, int (*)(const void *, const void *));
+
+int abs (int);
+long labs (long);
+long long llabs (long long);
+
+typedef struct { int quot, rem; } div_t;
+typedef struct { long quot, rem; } ldiv_t;
+typedef struct { long long quot, rem; } lldiv_t;
+
+div_t div (int, int);
+ldiv_t ldiv (long, long);
+lldiv_t lldiv (long long, long long);
+
+typedef struct { unsigned int quot, rem; } udiv_t;
+typedef struct { unsigned long quot, rem; } uldiv_t;
+udiv_t udiv (unsigned int, unsigned int);
+uldiv_t uldiv (unsigned long, unsigned long);
+
+
+
+
+
+size_t __ctype_get_mb_cur_max(void);
+# 4 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\xc8debug.h" 2 3
+
+
+
+
+
+
+
+
+#pragma intrinsic(__builtin_software_breakpoint)
+extern void __builtin_software_breakpoint(void);
+# 23 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\xc.h" 2 3
+
+
+
+
+# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\pic.h" 1 3
+# 13 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\pic.h" 3
+# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\pic_chip_select.h" 1 3
 # 13 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\pic.h" 2 3
 # 30 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\pic.h" 3
 #pragma intrinsic(__nop)
@@ -10274,7 +10253,210 @@ extern __bank0 unsigned char __resetbits;
 extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 27 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\xc.h" 2 3
-# 8 "main.c" 2
+# 4 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\htc.h" 2 3
+# 2 "oled.c" 2
+
+# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\string.h" 1 3
+# 25 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\string.h" 3
+# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\bits/alltypes.h" 1 3
+# 411 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef struct __locale_struct * locale_t;
+# 25 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\string.h" 2 3
+
+
+void *memcpy (void *restrict, const void *restrict, size_t);
+void *memmove (void *, const void *, size_t);
+void *memset (void *, int, size_t);
+int memcmp (const void *, const void *, size_t);
+void *memchr (const void *, int, size_t);
+
+char *strcpy (char *restrict, const char *restrict);
+char *strncpy (char *restrict, const char *restrict, size_t);
+
+char *strcat (char *restrict, const char *restrict);
+char *strncat (char *restrict, const char *restrict, size_t);
+
+int strcmp (const char *, const char *);
+int strncmp (const char *, const char *, size_t);
+
+int strcoll (const char *, const char *);
+size_t strxfrm (char *restrict, const char *restrict, size_t);
+
+char *strchr (const char *, int);
+char *strrchr (const char *, int);
+
+size_t strcspn (const char *, const char *);
+size_t strspn (const char *, const char *);
+char *strpbrk (const char *, const char *);
+char *strstr (const char *, const char *);
+char *strtok (char *restrict, const char *restrict);
+
+size_t strlen (const char *);
+
+char *strerror (int);
+# 65 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\string.h" 3
+char *strtok_r (char *restrict, const char *restrict, char **restrict);
+int strerror_r (int, char *, size_t);
+char *stpcpy(char *restrict, const char *restrict);
+char *stpncpy(char *restrict, const char *restrict, size_t);
+size_t strnlen (const char *, size_t);
+char *strdup (const char *);
+char *strndup (const char *, size_t);
+char *strsignal(int);
+char *strerror_l (int, locale_t);
+int strcoll_l (const char *, const char *, locale_t);
+size_t strxfrm_l (char *restrict, const char *restrict, size_t, locale_t);
+
+
+
+
+void *memccpy (void *restrict, const void *restrict, int, size_t);
+# 3 "oled.c" 2
+
+# 1 "./oled.h" 1
+# 83 "./oled.h"
+static const unsigned char OLED_characters[] = {
+        0x00, 0x00, 0x00, 0x00, 0x00,
+   0x00, 0x00, 0x5F, 0x00, 0x00,
+   0x00, 0x07, 0x00, 0x07, 0x00,
+   0x14, 0x7F, 0x14, 0x7F, 0x14,
+   0x24, 0x2A, 0x7F, 0x2A, 0x12,
+   0x23, 0x13, 0x08, 0x64, 0x62,
+   0x36, 0x49, 0x56, 0x20, 0x50,
+   0x00, 0x08, 0x07, 0x03, 0x00,
+   0x00, 0x1C, 0x22, 0x41, 0x00,
+   0x00, 0x41, 0x22, 0x1C, 0x00,
+   0x2A, 0x1C, 0x7F, 0x1C, 0x2A,
+   0x08, 0x08, 0x3E, 0x08, 0x08,
+   0x00, 0x00, 0x70, 0x30, 0x00,
+   0x08, 0x08, 0x08, 0x08, 0x08,
+   0x00, 0x00, 0x60, 0x60, 0x00,
+   0x20, 0x10, 0x08, 0x04, 0x02,
+   0x3E, 0x51, 0x49, 0x45, 0x3E,
+   0x00, 0x42, 0x7F, 0x40, 0x00,
+   0x72, 0x49, 0x49, 0x49, 0x46,
+   0x21, 0x41, 0x49, 0x4D, 0x33,
+   0x18, 0x14, 0x12, 0x7F, 0x10,
+   0x27, 0x45, 0x45, 0x45, 0x39,
+   0x3C, 0x4A, 0x49, 0x49, 0x31,
+   0x41, 0x21, 0x11, 0x09, 0x07,
+   0x36, 0x49, 0x49, 0x49, 0x36,
+   0x46, 0x49, 0x49, 0x29, 0x1E,
+   0x00, 0x00, 0x14, 0x00, 0x00,
+   0x00, 0x40, 0x34, 0x00, 0x00,
+   0x00, 0x08, 0x14, 0x22, 0x41,
+   0x14, 0x14, 0x14, 0x14, 0x14,
+   0x00, 0x41, 0x22, 0x14, 0x08,
+   0x02, 0x01, 0x59, 0x09, 0x06,
+   0x3E, 0x41, 0x5D, 0x59, 0x4E,
+   0x7C, 0x12, 0x11, 0x12, 0x7C,
+   0x7F, 0x49, 0x49, 0x49, 0x36,
+   0x3E, 0x41, 0x41, 0x41, 0x22,
+   0x7F, 0x41, 0x41, 0x41, 0x3E,
+   0x7F, 0x49, 0x49, 0x49, 0x41,
+   0x7F, 0x09, 0x09, 0x09, 0x01,
+   0x3E, 0x41, 0x41, 0x51, 0x73,
+   0x7F, 0x08, 0x08, 0x08, 0x7F,
+   0x00, 0x41, 0x7F, 0x41, 0x00,
+   0x20, 0x40, 0x41, 0x3F, 0x01,
+   0x7F, 0x08, 0x14, 0x22, 0x41,
+   0x7F, 0x40, 0x40, 0x40, 0x40,
+   0x7F, 0x02, 0x1C, 0x02, 0x7F,
+   0x7F, 0x04, 0x08, 0x10, 0x7F,
+   0x3E, 0x41, 0x41, 0x41, 0x3E,
+   0x7F, 0x09, 0x09, 0x09, 0x06,
+   0x3E, 0x41, 0x51, 0x21, 0x5E,
+   0x7F, 0x09, 0x19, 0x29, 0x46,
+   0x26, 0x49, 0x49, 0x49, 0x32,
+   0x03, 0x01, 0x7F, 0x01, 0x03,
+   0x3F, 0x40, 0x40, 0x40, 0x3F,
+   0x1F, 0x20, 0x40, 0x20, 0x1F,
+   0x3F, 0x40, 0x38, 0x40, 0x3F,
+   0x63, 0x14, 0x08, 0x14, 0x63,
+   0x03, 0x04, 0x78, 0x04, 0x03,
+   0x61, 0x59, 0x49, 0x4D, 0x43,
+   0x00, 0x7F, 0x41, 0x41, 0x41,
+   0x02, 0x04, 0x08, 0x10, 0x20,
+   0x00, 0x41, 0x41, 0x41, 0x7F,
+   0x04, 0x02, 0x01, 0x02, 0x04,
+   0x40, 0x40, 0x40, 0x40, 0x40,
+   0x00, 0x03, 0x07, 0x08, 0x00,
+   0x20, 0x54, 0x54, 0x38, 0x40,
+   0x7F, 0x28, 0x44, 0x44, 0x38,
+   0x38, 0x44, 0x44, 0x44, 0x28,
+   0x38, 0x44, 0x44, 0x28, 0x7F,
+   0x38, 0x54, 0x54, 0x54, 0x18,
+   0x00, 0x08, 0x7E, 0x09, 0x02,
+   0x0C, 0x52, 0x52, 0x4A, 0x3C,
+   0x7F, 0x08, 0x04, 0x04, 0x78,
+   0x00, 0x44, 0x7D, 0x40, 0x00,
+   0x20, 0x40, 0x40, 0x3D, 0x00,
+   0x7F, 0x10, 0x28, 0x44, 0x00,
+   0x00, 0x41, 0x7F, 0x40, 0x00,
+   0x7C, 0x04, 0x78, 0x04, 0x78,
+   0x7C, 0x08, 0x04, 0x04, 0x78,
+   0x38, 0x44, 0x44, 0x44, 0x38,
+   0x7C, 0x18, 0x24, 0x24, 0x18,
+   0x18, 0x24, 0x24, 0x18, 0x7C,
+   0x7C, 0x08, 0x04, 0x04, 0x08,
+   0x48, 0x54, 0x54, 0x54, 0x24,
+   0x04, 0x04, 0x3F, 0x44, 0x24,
+   0x3C, 0x40, 0x40, 0x20, 0x7C,
+   0x1C, 0x20, 0x40, 0x20, 0x1C,
+   0x3C, 0x40, 0x30, 0x40, 0x3C,
+   0x44, 0x28, 0x10, 0x28, 0x44,
+   0x4C, 0x50, 0x50, 0x50, 0x3C,
+   0x44, 0x64, 0x54, 0x4C, 0x44,
+   0x00, 0x08, 0x36, 0x41, 0x00,
+   0x00, 0x00, 0x77, 0x00, 0x00,
+   0x00, 0x41, 0x36, 0x08, 0x00,
+   0x02, 0x01, 0x02, 0x04, 0x02,
+};
+
+static char OLED_buffer[128 * 32 / 8] = {
+0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0xC0, 0xE0, 0xF0, 0xF0, 0xF8, 0xF8, 0xFC, 0xFC, 0xFC, 0xFC,
+0xFC, 0xFC, 0xFC, 0xFC, 0xFC, 0xF8, 0xF8, 0xF0, 0xE0, 0x80, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x80, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x80, 0x80,
+0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+0x00, 0x00, 0xF0, 0xFE, 0xFF, 0xFF, 0x7F, 0x7F, 0xFF, 0xC7, 0x81, 0x00, 0x00, 0x01, 0x07, 0x0F,
+0x3F, 0xFF, 0xFF, 0xC7, 0x01, 0x00, 0x00, 0x01, 0x07, 0x1F, 0x3E, 0xFC, 0xF0, 0xC0, 0x80, 0x00,
+0x00, 0x00, 0x00, 0xFE, 0xFF, 0xFF, 0x7F, 0xFF, 0xFC, 0xF0, 0x80, 0xE0, 0xF8, 0xFF, 0x7F, 0xFF,
+0xFF, 0xFE, 0x00, 0x00, 0xFC, 0xFC, 0x00, 0xF0, 0xF8, 0xFC, 0x3C, 0x3C, 0x3C, 0x3C, 0x3C, 0x3C,
+0x38, 0x00, 0xFC, 0xFC, 0xFC, 0x9C, 0x9C, 0x9C, 0x9C, 0xFC, 0xFC, 0xF8, 0x00, 0xF0, 0xF8, 0xFC,
+0x1C, 0x1C, 0x1C, 0x3C, 0xFC, 0xF8, 0xF0, 0x00, 0xF8, 0xFC, 0x3C, 0x3C, 0x3C, 0x3C, 0x3C, 0x3C,
+0x3C, 0x00, 0xFC, 0xFC, 0xFC, 0xC0, 0xC0, 0xC0, 0xC0, 0xFC, 0xFC, 0xFC, 0x00, 0xFC, 0xFC, 0xF8,
+0x00, 0xFC, 0xFC, 0xFC, 0x1C, 0x1C, 0x1C, 0x1C, 0xFC, 0xF8, 0xF0, 0x00, 0x00, 0x00, 0x00, 0x00,
+0x00, 0x00, 0x0F, 0x07, 0x03, 0x00, 0x00, 0x80, 0xC1, 0xF7, 0xFF, 0xFE, 0xF8, 0xF0, 0xC0, 0x80,
+0x00, 0x00, 0x81, 0xC7, 0xFF, 0xFE, 0xF8, 0xF0, 0xC0, 0x80, 0x00, 0x00, 0x01, 0x07, 0x0F, 0x06,
+0x00, 0x00, 0x00, 0x3F, 0x3F, 0x3F, 0x00, 0x00, 0x07, 0x0F, 0x1F, 0x0F, 0x07, 0x01, 0x00, 0x1F,
+0x3F, 0x3F, 0x00, 0x00, 0x3F, 0x3F, 0x00, 0x0F, 0x1F, 0x3F, 0x3C, 0x3C, 0x3C, 0x3C, 0x3C, 0x3C,
+0x1C, 0x00, 0x3F, 0x3F, 0x1F, 0x07, 0x07, 0x07, 0x07, 0x3F, 0x3F, 0x1C, 0x00, 0x0F, 0x1F, 0x3F,
+0x3C, 0x3C, 0x3C, 0x3C, 0x3F, 0x1F, 0x0F, 0x00, 0x1F, 0x3F, 0x3C, 0x3C, 0x3C, 0x3C, 0x3C, 0x3C,
+0x3C, 0x00, 0x1F, 0x3F, 0x3F, 0x03, 0x03, 0x03, 0x03, 0x3F, 0x3F, 0x1F, 0x00, 0x3F, 0x3F, 0x1F,
+0x00, 0x3F, 0x3F, 0x1F, 0x07, 0x07, 0x07, 0x07, 0x07, 0x07, 0x01, 0x00, 0x00, 0x00, 0x00, 0x00,
+0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0x07, 0x0F, 0x1F, 0x1F, 0x1F, 0x3F, 0x3F, 0x3F, 0x3F,
+0x3E, 0x3E, 0x3F, 0x3F, 0x3F, 0x3F, 0x1F, 0x1F, 0x0F, 0x0F, 0x06, 0x00, 0x00, 0x00, 0x00, 0x00,
+0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
+};
+
+char _address = 0x78;
+
+void OLED_Init(char address);
+void OLED_command(char command);
+void OLED_write(void);
+void OLED_clear(void);
+void OLED_char(char character, short x, short y);
+void OLED_string(char* str, short x, short y);
+# 4 "oled.c" 2
 
 # 1 "./bit_settings.h" 1
 # 18 "./bit_settings.h"
@@ -10296,139 +10478,115 @@ extern __bank0 __bit __timeout;
 #pragma config BORV = LO
 #pragma config LPBOR = OFF
 #pragma config LVP = ON
-# 9 "main.c" 2
-
-# 1 "./config.h" 1
-# 37 "./config.h"
-void IO_First_Init(void);
-void Configure_Clock(void);
-# 10 "main.c" 2
-
-# 1 "./data_out.h" 1
-# 31 "./data_out.h"
-# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\stdint.h" 1 3
-# 22 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\stdint.h" 3
-# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\bits/alltypes.h" 1 3
-# 127 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef unsigned long uintptr_t;
-# 142 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef long intptr_t;
-# 158 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef signed char int8_t;
+# 5 "oled.c" 2
 
 
 
 
-typedef short int16_t;
-# 173 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef long int32_t;
+void I2CInit(void){
 
-
-
-
-
-typedef long long int64_t;
-# 188 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef long long intmax_t;
-
-
-
-
-
-typedef unsigned char uint8_t;
-
-
-
-
-typedef unsigned short uint16_t;
-# 209 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef unsigned long uint32_t;
-
-
-
-
-
-typedef unsigned long long uint64_t;
-# 229 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef unsigned long long uintmax_t;
-# 22 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\stdint.h" 2 3
-
-
-typedef int8_t int_fast8_t;
-
-typedef int64_t int_fast64_t;
-
-
-typedef int8_t int_least8_t;
-typedef int16_t int_least16_t;
-
-typedef int24_t int_least24_t;
-
-typedef int32_t int_least32_t;
-
-typedef int64_t int_least64_t;
-
-
-typedef uint8_t uint_fast8_t;
-
-typedef uint64_t uint_fast64_t;
-
-
-typedef uint8_t uint_least8_t;
-typedef uint16_t uint_least16_t;
-
-typedef uint24_t uint_least24_t;
-
-typedef uint32_t uint_least32_t;
-
-typedef uint64_t uint_least64_t;
-# 139 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\stdint.h" 3
-# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\bits/stdint.h" 1 3
-typedef int32_t int_fast16_t;
-typedef int32_t int_fast32_t;
-typedef uint32_t uint_fast16_t;
-typedef uint32_t uint_fast32_t;
-# 139 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\stdint.h" 2 3
-# 31 "./data_out.h" 2
-
-
-
-
-void write_raw(char ch);
-void send_data(void);
-void init_data_out(long baud_rate);
-void init_timebase(void);
-void timebase_interrupt(void);
-# 11 "main.c" 2
-
-
-char receive_buffer;
-
-void main(void)
-{
-    IO_First_Init();
-    Configure_Clock();
-
-    init_data_out(9600);
-    init_timebase();
-
-    while(1){
-        LATCbits.LATC1 = 0;
-        _delay((unsigned long)((1)*(32000000/4000000.0)));
-        LATCbits.LATC1 = 1;
-        _delay((unsigned long)((1)*(32000000/4000000.0)));
-    }
-
-
-
+ SSPCON1 = 0b00101000;
+    SSPCON2 = 0x00;
+    SSPADD = (32000000/(4*400000))-1;
+    SSPSTAT = 0x00;
+    TRISCbits.TRISC3=1;
+    TRISCbits.TRISC4=1;
+}
+void I2CStart(){
+ SSPCON2bits.SEN = 1;while(SSPCON2bits.SEN);
+}
+void I2CStop(){
+ SSPCON2bits.PEN = 1;while(SSPCON2bits.PEN);
+}
+void I2CSend(char dat) {
+ SSPBUF = dat; while(SSP1STATbits.BF);
+ while ((SSPCON2 & 0b00011111 ) || ( SSPSTAT & 0b00000100 ) );
 }
 
-void __attribute__((picinterrupt(("")))) timer(void)
-{
-    timebase_interrupt();
+void OLED_Init(char address) {
 
-    if(RCIF){
-        receive_buffer = RC1REG;
-        RCIF = 0;
+    TRISCbits.TRISC3=1;
+    TRISCbits.TRISC4=1;
+
+    _address = address << 1;
+    I2CInit();
+    _delay((unsigned long)((1)*(32000000/4000000.0)));
+    OLED_command(0xAE);
+    OLED_command(0xD5);
+    OLED_command(0x80);
+    OLED_command(0xA8);
+    OLED_command(0x1F);
+    OLED_command(0xD3);
+    OLED_command(0x0);
+    OLED_command(0x40 | 0x0);
+    OLED_command(0x8D);
+    OLED_command(0xAF);
+    OLED_command(0x20);
+    OLED_command(0x00);
+    OLED_command(0xA0 | 0x1);
+    OLED_command(0xC8);
+    OLED_command(0xDA);
+    OLED_command(0x02);
+    OLED_command(0x81);
+    OLED_command(0x8F);
+    OLED_command(0xD9);
+    OLED_command(0xF1);
+    OLED_command(0xDB);
+    OLED_command(0x40);
+    OLED_command(0xA4);
+    OLED_command(0xA6);
+    OLED_command(0xAF);
+
+}
+void OLED_command(char command) {
+
+    I2CStart();
+    I2CSend(_address);
+    I2CSend(0x00);
+    I2CSend(command);
+    I2CStop();
+}
+# 115 "oled.c"
+void OLED_write(){
+   unsigned x;
+   OLED_command(0x21) ;
+   OLED_command(0x00);
+   OLED_command(127);
+   OLED_command(0x22);
+   OLED_command(0x00);
+   OLED_command(3);
+
+   I2CStart();
+   I2CSend(_address) ;
+   I2CSend(0x40) ;
+   for(x = 0; x < (128 * 32 / 8); x++)
+   {
+      I2CSend(OLED_buffer[x]);
+   }
+   I2CStop();
+}
+void OLED_clear(){
+    memset(OLED_buffer, 0, 128 * 32 / 8);
+}
+
+void OLED_char(char character, short x, short y) {
+    unsigned _y = y % 8;
+    short table_offset = (character-0x20)*5;
+    short offset = (y-_y)*16 + x;
+    char i = 0;
+    for(; i < 5; i++) OLED_buffer[i+offset] = OLED_characters[i+table_offset];
+}
+
+void OLED_string(char* str, short x, short y) {
+
+    short pos = 0;
+    char character = str[pos++];
+    short startx = x;
+    short starty = y;
+    while(character != '\0') {
+        OLED_char(character, startx, starty);
+        if(startx >= 123) starty++;
+        startx += 5;
+        character = str[pos++];
     }
 }

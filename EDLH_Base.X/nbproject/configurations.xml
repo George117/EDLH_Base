@@ -4,9 +4,11 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
+      <itemPath>adc_module.h</itemPath>
       <itemPath>bit_settings.h</itemPath>
       <itemPath>config.h</itemPath>
       <itemPath>data_out.h</itemPath>
+      <itemPath>oled.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -15,9 +17,11 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
+      <itemPath>adc_module.c</itemPath>
       <itemPath>config.c</itemPath>
-      <itemPath>main.c</itemPath>
       <itemPath>data_out.c</itemPath>
+      <itemPath>main.c</itemPath>
+      <itemPath>oled.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -27,6 +31,7 @@
   </logicalFolder>
   <sourceRootList>
     <Elem>.</Elem>
+    <Elem>../../PIC16LF1788_ADC/PIC16LF1788_ADC.X</Elem>
   </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
