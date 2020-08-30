@@ -9,6 +9,7 @@
       <itemPath>config.h</itemPath>
       <itemPath>data_out.h</itemPath>
       <itemPath>oled.h</itemPath>
+      <itemPath>edlh.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -22,6 +23,7 @@
       <itemPath>data_out.c</itemPath>
       <itemPath>main.c</itemPath>
       <itemPath>oled.c</itemPath>
+      <itemPath>edlh.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"

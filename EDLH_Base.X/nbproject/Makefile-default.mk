@@ -57,17 +57,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=adc_module.c config.c data_out.c main.c oled.c
+SOURCEFILES_QUOTED_IF_SPACED=adc_module.c config.c data_out.c main.c oled.c edlh.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/adc_module.p1 ${OBJECTDIR}/config.p1 ${OBJECTDIR}/data_out.p1 ${OBJECTDIR}/main.p1 ${OBJECTDIR}/oled.p1
-POSSIBLE_DEPFILES=${OBJECTDIR}/adc_module.p1.d ${OBJECTDIR}/config.p1.d ${OBJECTDIR}/data_out.p1.d ${OBJECTDIR}/main.p1.d ${OBJECTDIR}/oled.p1.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/adc_module.p1 ${OBJECTDIR}/config.p1 ${OBJECTDIR}/data_out.p1 ${OBJECTDIR}/main.p1 ${OBJECTDIR}/oled.p1 ${OBJECTDIR}/edlh.p1
+POSSIBLE_DEPFILES=${OBJECTDIR}/adc_module.p1.d ${OBJECTDIR}/config.p1.d ${OBJECTDIR}/data_out.p1.d ${OBJECTDIR}/main.p1.d ${OBJECTDIR}/oled.p1.d ${OBJECTDIR}/edlh.p1.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/adc_module.p1 ${OBJECTDIR}/config.p1 ${OBJECTDIR}/data_out.p1 ${OBJECTDIR}/main.p1 ${OBJECTDIR}/oled.p1
+OBJECTFILES=${OBJECTDIR}/adc_module.p1 ${OBJECTDIR}/config.p1 ${OBJECTDIR}/data_out.p1 ${OBJECTDIR}/main.p1 ${OBJECTDIR}/oled.p1 ${OBJECTDIR}/edlh.p1
 
 # Source Files
-SOURCEFILES=adc_module.c config.c data_out.c main.c oled.c
+SOURCEFILES=adc_module.c config.c data_out.c main.c oled.c edlh.c
 
 
 CFLAGS=
@@ -133,6 +133,14 @@ ${OBJECTDIR}/oled.p1: oled.c  nbproject/Makefile-${CND_CONF}.mk
 	@-${MV} ${OBJECTDIR}/oled.d ${OBJECTDIR}/oled.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/oled.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
+${OBJECTDIR}/edlh.p1: edlh.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/edlh.p1.d 
+	@${RM} ${OBJECTDIR}/edlh.p1 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1  -fno-short-double -fno-short-float -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx032 -Wl,--data-init -mno-keep-startup -mno-osccal -mno-resetbits -mno-save-resetbits -mno-download -mno-stackcall $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto     -o ${OBJECTDIR}/edlh.p1 edlh.c 
+	@-${MV} ${OBJECTDIR}/edlh.d ${OBJECTDIR}/edlh.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/edlh.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
 else
 ${OBJECTDIR}/adc_module.p1: adc_module.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}" 
@@ -173,6 +181,14 @@ ${OBJECTDIR}/oled.p1: oled.c  nbproject/Makefile-${CND_CONF}.mk
 	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -fno-short-double -fno-short-float -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx032 -Wl,--data-init -mno-keep-startup -mno-osccal -mno-resetbits -mno-save-resetbits -mno-download -mno-stackcall $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto     -o ${OBJECTDIR}/oled.p1 oled.c 
 	@-${MV} ${OBJECTDIR}/oled.d ${OBJECTDIR}/oled.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/oled.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/edlh.p1: edlh.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/edlh.p1.d 
+	@${RM} ${OBJECTDIR}/edlh.p1 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -fno-short-double -fno-short-float -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx032 -Wl,--data-init -mno-keep-startup -mno-osccal -mno-resetbits -mno-save-resetbits -mno-download -mno-stackcall $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto     -o ${OBJECTDIR}/edlh.p1 edlh.c 
+	@-${MV} ${OBJECTDIR}/edlh.d ${OBJECTDIR}/edlh.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/edlh.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
 endif
 
