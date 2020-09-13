@@ -95,15 +95,19 @@
 [v _init_data_out init_data_out `(v  1 e 1 0 ]
 "35 D:\Git\EDLH_Base\EDLH_Base.X\edlh.c
 [v _EDLH_Init EDLH_Init `(v  1 e 1 0 ]
-"44
+"53
 [v _EDLH_Display EDLH_Display `(v  1 e 1 0 ]
-"86
+"91
 [v _read_I_meas read_I_meas `(v  1 e 1 0 ]
-"111
+"116
 [v _read_V_meas read_V_meas `(v  1 e 1 0 ]
+"137
+[v _EDLH_TX_RST_HOLD EDLH_TX_RST_HOLD `(v  1 e 1 0 ]
+"143
+[v _EDLH_TX_RUN EDLH_TX_RUN `(v  1 e 1 0 ]
 "15 D:\Git\EDLH_Base\EDLH_Base.X\main.c
 [v _main main `(v  1 e 1 0 ]
-"44
+"46
 [v _timer timer `II(v  1 e 1 0 ]
 "9 D:\Git\EDLH_Base\EDLH_Base.X\oled.c
 [v _I2CInit I2CInit `(v  1 e 1 0 ]
@@ -127,21 +131,21 @@
 [v _OLED_string OLED_string `(v  1 e 1 0 ]
 "69 D:\Git\EDLH_Base\EDLH_Base.X/adc_module.h
 [v _channel_mapping channel_mapping `[14]uc  1 e 14 0 ]
-"40 D:\Git\EDLH_Base\EDLH_Base.X/edlh.h
+"42 D:\Git\EDLH_Base\EDLH_Base.X/edlh.h
 [v _receive_buffer receive_buffer `uc  1 e 1 0 ]
-"43
-[v _ampere ampere `DC[3]uc  1 e 3 0 ]
-"44
-[v _volt volt `DC[3]uc  1 e 3 0 ]
 "45
-[v _battery_volt_string battery_volt_string `DC[10]uc  1 e 10 0 ]
+[v _ampere ampere `DC[3]uc  1 e 3 0 ]
 "46
-[v _battery_curr_string battery_curr_string `DC[10]uc  1 e 10 0 ]
+[v _volt volt `DC[3]uc  1 e 3 0 ]
+"47
+[v _battery_volt_string battery_volt_string `DC[10]uc  1 e 10 0 ]
 "48
-[v _buffer buffer `[10]uc  1 e 10 0 ]
-"49
-[v _batt_current batt_current `[30]uc  1 e 30 0 ]
+[v _battery_curr_string battery_curr_string `DC[10]uc  1 e 10 0 ]
 "50
+[v _buffer buffer `[10]uc  1 e 10 0 ]
+"51
+[v _batt_current batt_current `[30]uc  1 e 30 0 ]
+"52
 [v _batt_voltage batt_voltage `[30]uc  1 e 30 0 ]
 "83 D:\Git\EDLH_Base\EDLH_Base.X/oled.h
 [v _OLED_characters OLED_characters `DC[475]uc  1 s 475 OLED_characters ]
@@ -322,20 +326,20 @@
 ]
 [u S108 . 1 `S96 1 . 1 0 `S105 1 . 1 0 ]
 [v _ADCON2bits ADCON2bits `VES108  1 e 1 @159 ]
-[s S545 . 1 `uc 1 LATC0 1 0 :1:0 
-`uc 1 LATC1 1 0 :1:1 
-`uc 1 LATC2 1 0 :1:2 
-`uc 1 LATC3 1 0 :1:3 
-`uc 1 LATC4 1 0 :1:4 
-`uc 1 LATC5 1 0 :1:5 
-`uc 1 LATC6 1 0 :1:6 
-`uc 1 LATC7 1 0 :1:7 
+[s S771 . 1 `uc 1 LATB0 1 0 :1:0 
+`uc 1 LATB1 1 0 :1:1 
+`uc 1 LATB2 1 0 :1:2 
+`uc 1 LATB3 1 0 :1:3 
+`uc 1 LATB4 1 0 :1:4 
+`uc 1 LATB5 1 0 :1:5 
+`uc 1 LATB6 1 0 :1:6 
+`uc 1 LATB7 1 0 :1:7 
 ]
-"2491
-[s S554 . 1 `uc 1 LATC 1 0 :8:0 
+"2421
+[s S780 . 1 `uc 1 LATB 1 0 :8:0 
 ]
-[u S556 . 1 `S545 1 . 1 0 `S554 1 . 1 0 ]
-[v _LATCbits LATCbits `VES556  1 e 1 @270 ]
+[u S782 . 1 `S771 1 . 1 0 `S780 1 . 1 0 ]
+[v _LATBbits LATBbits `VES782  1 e 1 @269 ]
 "3676
 [v _ANSELA ANSELA `VEuc  1 e 1 @396 ]
 "3741
@@ -394,7 +398,7 @@
 [v _SSPADD SSPADD `VEuc  1 e 1 @530 ]
 "5912
 [v _SSPSTAT SSPSTAT `VEuc  1 e 1 @532 ]
-[s S652 . 1 `uc 1 BF 1 0 :1:0 
+[s S624 . 1 `uc 1 BF 1 0 :1:0 
 `uc 1 UA 1 0 :1:1 
 `uc 1 R_nW 1 0 :1:2 
 `uc 1 S 1 0 :1:3 
@@ -404,13 +408,13 @@
 `uc 1 SMP 1 0 :1:7 
 ]
 "5929
-[u S661 . 1 `S652 1 . 1 0 ]
-[v _SSP1STATbits SSP1STATbits `VES661  1 e 1 @532 ]
+[u S633 . 1 `S624 1 . 1 0 ]
+[v _SSP1STATbits SSP1STATbits `VES633  1 e 1 @532 ]
 "6038
 [v _SSPCON1 SSPCON1 `VEuc  1 e 1 @533 ]
 "6304
 [v _SSPCON2 SSPCON2 `VEuc  1 e 1 @534 ]
-[s S630 . 1 `uc 1 SEN 1 0 :1:0 
+[s S602 . 1 `uc 1 SEN 1 0 :1:0 
 `uc 1 RSEN 1 0 :1:1 
 `uc 1 PEN 1 0 :1:2 
 `uc 1 RCEN 1 0 :1:3 
@@ -420,8 +424,8 @@
 `uc 1 GCEN 1 0 :1:7 
 ]
 "6376
-[u S639 . 1 `S630 1 . 1 0 ]
-[v _SSPCON2bits SSPCON2bits `VES639  1 e 1 @534 ]
+[u S611 . 1 `S602 1 . 1 0 ]
+[v _SSPCON2bits SSPCON2bits `VES611  1 e 1 @534 ]
 "18001
 [v _PEIE PEIE `VEb  1 e 0 @94 ]
 "19378
@@ -453,7 +457,7 @@
 "15 D:\Git\EDLH_Base\EDLH_Base.X\main.c
 [v _main main `(v  1 e 1 0 ]
 {
-"41
+"43
 } 0
 "91 D:\Git\EDLH_Base\EDLH_Base.X\data_out.c
 [v _init_timebase init_timebase `(v  1 e 1 0 ]
@@ -471,10 +475,22 @@
 {
 "31
 } 0
-"35 D:\Git\EDLH_Base\EDLH_Base.X\edlh.c
+"143 D:\Git\EDLH_Base\EDLH_Base.X\edlh.c
+[v _EDLH_TX_RUN EDLH_TX_RUN `(v  1 e 1 0 ]
+{
+"145
+} 0
+"137
+[v _EDLH_TX_RST_HOLD EDLH_TX_RST_HOLD `(v  1 e 1 0 ]
+{
+"139
+} 0
+"35
 [v _EDLH_Init EDLH_Init `(v  1 e 1 0 ]
 {
-"42
+"43
+[v EDLH_Init@counter counter `i  1 a 2 76 ]
+"51
 } 0
 "29 D:\Git\EDLH_Base\EDLH_Base.X\oled.c
 [v _OLED_Init OLED_Init `(v  1 e 1 0 ]
@@ -490,10 +506,10 @@
 {
 "17
 } 0
-"44 D:\Git\EDLH_Base\EDLH_Base.X\edlh.c
+"53 D:\Git\EDLH_Base\EDLH_Base.X\edlh.c
 [v _EDLH_Display EDLH_Display `(v  1 e 1 0 ]
 {
-"83
+"88
 } 0
 "3 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\strcat.c
 [v _strcat strcat `(*.39uc  1 e 1 0 ]
@@ -506,9 +522,9 @@
 [v _sprintf sprintf `(i  1 e 2 0 ]
 {
 [v sprintf@s s `*.5uc  1 a 1 wreg ]
-[s S1479 _IO_FILE 5 `*.5uc 1 buffer 1 0 `i 1 count 2 1 `i 1 limit 2 3 ]
+[s S1488 _IO_FILE 5 `*.5uc 1 buffer 1 0 `i 1 count 2 1 `i 1 limit 2 3 ]
 "13
-[v sprintf@f f `S1479  1 a 5 4 ]
+[v sprintf@f f `S1488  1 a 5 4 ]
 "12
 [v sprintf@ap ap `[1]*.5v  1 a 1 3 ]
 "9
@@ -521,36 +537,36 @@
 "1368 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\doprnt.c
 [v _vfprintf vfprintf `(i  1 e 2 0 ]
 {
-[s S994 _IO_FILE 0 ]
-[v vfprintf@fp fp `*.5S994  1 a 1 wreg ]
+[s S1003 _IO_FILE 0 ]
+[v vfprintf@fp fp `*.5S1003  1 a 1 wreg ]
 "1371
 [v vfprintf@cfmt cfmt `*.25uc  1 a 2 21 ]
 "1368
-[v vfprintf@fp fp `*.5S994  1 a 1 wreg ]
+[v vfprintf@fp fp `*.5S1003  1 a 1 wreg ]
 [v vfprintf@fmt fmt `*.25DCuc  1 p 2 15 ]
 [v vfprintf@ap ap `*.5*.5v  1 p 1 17 ]
 "1373
 "1368
-[v vfprintf@fp fp `*.5S994  1 a 1 20 ]
+[v vfprintf@fp fp `*.5S1003  1 a 1 20 ]
 "1382
 } 0
 "670
 [v _vfpfcnvrt vfpfcnvrt `(i  1 s 2 vfpfcnvrt ]
 {
-[s S994 _IO_FILE 0 ]
-[v vfpfcnvrt@fp fp `*.5S994  1 a 1 wreg ]
+[s S1003 _IO_FILE 0 ]
+[v vfpfcnvrt@fp fp `*.5S1003  1 a 1 wreg ]
 "676
 [v vfpfcnvrt@f f `d  1 a 4 6 ]
 "672
 [v vfpfcnvrt@ct ct `[3]uc  1 a 3 10 ]
 [v vfpfcnvrt@c c `uc  1 a 1 13 ]
 "670
-[v vfpfcnvrt@fp fp `*.5S994  1 a 1 wreg ]
+[v vfpfcnvrt@fp fp `*.5S1003  1 a 1 wreg ]
 [v vfpfcnvrt@fmt fmt `*.5*.25uc  1 p 1 72 ]
 [v vfpfcnvrt@ap ap `*.5*.5v  1 p 1 73 ]
 "680
 "670
-[v vfpfcnvrt@fp fp `*.5S994  1 a 1 14 ]
+[v vfpfcnvrt@fp fp `*.5S1003  1 a 1 14 ]
 "1365
 } 0
 "3 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\strncmp.c
@@ -571,8 +587,8 @@
 "319 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\doprnt.c
 [v _efgtoa efgtoa `(i  1 s 2 efgtoa ]
 {
-[s S994 _IO_FILE 0 ]
-[v efgtoa@fp fp `*.5S994  1 a 1 wreg ]
+[s S1003 _IO_FILE 0 ]
+[v efgtoa@fp fp `*.5S1003  1 a 1 wreg ]
 "323
 [v efgtoa@u u `d  1 a 4 68 ]
 [v efgtoa@g g `d  1 a 4 60 ]
@@ -595,12 +611,12 @@
 [v efgtoa@mode mode `uc  1 a 1 49 ]
 [v efgtoa@nmode nmode `uc  1 a 1 46 ]
 "319
-[v efgtoa@fp fp `*.5S994  1 a 1 wreg ]
+[v efgtoa@fp fp `*.5S1003  1 a 1 wreg ]
 [v efgtoa@f f `d  1 p 4 10 ]
 [v efgtoa@c c `uc  1 p 1 14 ]
 "326
 "319
-[v efgtoa@fp fp `*.5S994  1 a 1 41 ]
+[v efgtoa@fp fp `*.5S1003  1 a 1 41 ]
 "503
 } 0
 "4 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\tolower.c
@@ -630,18 +646,18 @@
 "72 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\doprnt.c
 [v _pad pad `(i  1 s 2 pad ]
 {
-[s S994 _IO_FILE 0 ]
-[v pad@fp fp `*.5S994  1 a 1 wreg ]
+[s S1003 _IO_FILE 0 ]
+[v pad@fp fp `*.5S1003  1 a 1 wreg ]
 "74
 [v pad@w w `i  1 a 2 22 ]
 [v pad@i i `i  1 a 2 20 ]
 "72
-[v pad@fp fp `*.5S994  1 a 1 wreg ]
+[v pad@fp fp `*.5S1003  1 a 1 wreg ]
 [v pad@buf buf `*.6uc  1 p 1 16 ]
 [v pad@p p `i  1 p 2 17 ]
 "77
 "72
-[v pad@fp fp `*.5S994  1 a 1 24 ]
+[v pad@fp fp `*.5S1003  1 a 1 24 ]
 "95
 } 0
 "5 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\strlen.c
@@ -663,8 +679,8 @@
 [v fputs@c c `uc  1 a 1 12 ]
 "8
 [v fputs@s s `*.6DCuc  1 a 1 wreg ]
-[s S1479 _IO_FILE 5 `*.5uc 1 buffer 1 0 `i 1 count 2 1 `i 1 limit 2 3 ]
-[v fputs@fp fp `*.5S1479  1 p 1 8 ]
+[s S1488 _IO_FILE 5 `*.5uc 1 buffer 1 0 `i 1 count 2 1 `i 1 limit 2 3 ]
+[v fputs@fp fp `*.5S1488  1 p 1 8 ]
 "13
 [v fputs@s s `*.6DCuc  1 a 1 15 ]
 "19
@@ -673,8 +689,8 @@
 [v _fputc fputc `(i  1 e 2 0 ]
 {
 [v fputc@c c `i  1 p 2 0 ]
-[s S1479 _IO_FILE 5 `*.5uc 1 buffer 1 0 `i 1 count 2 1 `i 1 limit 2 3 ]
-[v fputc@fp fp `*.5S1479  1 p 1 2 ]
+[s S1488 _IO_FILE 5 `*.5uc 1 buffer 1 0 `i 1 count 2 1 `i 1 limit 2 3 ]
+[v fputc@fp fp `*.5S1488  1 p 1 2 ]
 "21
 } 0
 "7 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\putch.c
@@ -685,9 +701,9 @@
 "3 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\floorf.c
 [v _floorf floorf `(f  1 e 4 0 ]
 {
-[u S1406 . 4 `f 1 f 4 0 `ul 1 i 4 0 ]
+[u S1415 . 4 `f 1 f 4 0 `ul 1 i 4 0 ]
 "5
-[v floorf@u u `S1406  1 a 4 6 ]
+[v floorf@u u `S1415  1 a 4 6 ]
 "7
 [v floorf@m m `ul  1 a 4 0 ]
 "6
@@ -695,21 +711,21 @@
 "3
 [v floorf@x x `f  1 p 4 66 ]
 "4
-[v floorf@F524 F524 `S1406  1 s 4 F524 ]
+[v floorf@F524 F524 `S1415  1 s 4 F524 ]
 "27
 } 0
 "4 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\__fpclassifyf.c
 [v ___fpclassifyf __fpclassifyf `(i  1 e 2 0 ]
 {
-[u S1406 . 4 `f 1 f 4 0 `ul 1 i 4 0 ]
+[u S1415 . 4 `f 1 f 4 0 `ul 1 i 4 0 ]
 "6
-[v ___fpclassifyf@u u `S1406  1 a 4 12 ]
+[v ___fpclassifyf@u u `S1415  1 a 4 12 ]
 "7
 [v ___fpclassifyf@e e `i  1 a 2 10 ]
 "4
 [v ___fpclassifyf@x x `f  1 p 4 0 ]
 "5
-[v ___fpclassifyf@F463 F463 `S1406  1 s 4 F463 ]
+[v ___fpclassifyf@F463 F463 `S1415  1 s 4 F463 ]
 "11
 } 0
 "43 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\fltol.c
@@ -795,12 +811,12 @@
 [v isdigit@c c `i  1 p 2 0 ]
 "8
 } 0
-"111 D:\Git\EDLH_Base\EDLH_Base.X\edlh.c
+"116 D:\Git\EDLH_Base\EDLH_Base.X\edlh.c
 [v _read_V_meas read_V_meas `(v  1 e 1 0 ]
 {
-"113
+"118
 [v read_V_meas@rez_adc rez_adc `ui  1 a 2 72 ]
-"129
+"134
 } 0
 "8 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
 [v ___fldiv __fldiv `(d  1 e 4 0 ]
@@ -822,12 +838,12 @@
 [v ___fldiv@b b `d  1 p 4 44 ]
 "185
 } 0
-"86 D:\Git\EDLH_Base\EDLH_Base.X\edlh.c
+"91 D:\Git\EDLH_Base\EDLH_Base.X\edlh.c
 [v _read_I_meas read_I_meas `(v  1 e 1 0 ]
 {
-"88
+"93
 [v read_I_meas@rez_adc rez_adc `ui  1 a 2 70 ]
-"109
+"114
 } 0
 "10 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\xxtofl.c
 [v ___xxtofl __xxtofl `(d  1 e 4 0 ]
@@ -847,17 +863,17 @@
 "8 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
 [v ___flmul __flmul `(d  1 e 4 0 ]
 {
-[s S1264 . 4 `uc 1 a 1 0 `uc 1 b 1 1 `uc 1 c 1 2 `uc 1 d 1 3 ]
+[s S1273 . 4 `uc 1 a 1 0 `uc 1 b 1 1 `uc 1 c 1 2 `uc 1 d 1 3 ]
 "13
-[s S1269 . 4 `i 1 wordA 2 0 `i 1 wordB 2 2 ]
-[u S1272 . 4 `l 1 i 4 0 `d 1 f 4 0 `S1264 1 fAsBytes 4 0 `S1269 1 fAsWords 4 0 ]
-[v ___flmul@prod prod `S1272  1 a 4 34 ]
+[s S1278 . 4 `i 1 wordA 2 0 `i 1 wordB 2 2 ]
+[u S1281 . 4 `l 1 i 4 0 `d 1 f 4 0 `S1273 1 fAsBytes 4 0 `S1278 1 fAsWords 4 0 ]
+[v ___flmul@prod prod `S1281  1 a 4 34 ]
 "12
 [v ___flmul@grs grs `ul  1 a 4 29 ]
-[s S1341 . 2 `uc 1 a 1 0 `uc 1 b 1 1 ]
+[s S1350 . 2 `uc 1 a 1 0 `uc 1 b 1 1 ]
 "14
-[u S1344 . 2 `i 1 i 2 0 `ui 1 n 2 0 `S1341 1 nAsBytes 2 0 ]
-[v ___flmul@temp temp `S1344  1 a 2 38 ]
+[u S1353 . 2 `i 1 i 2 0 `ui 1 n 2 0 `S1350 1 nAsBytes 2 0 ]
+[v ___flmul@temp temp `S1353  1 a 2 38 ]
 "10
 [v ___flmul@bexp bexp `uc  1 a 1 33 ]
 "11
@@ -1032,10 +1048,10 @@
 [v Configure_ADC_Channel@channel channel `uc  1 a 1 1 ]
 "56
 } 0
-"44 D:\Git\EDLH_Base\EDLH_Base.X\main.c
+"46 D:\Git\EDLH_Base\EDLH_Base.X\main.c
 [v _timer timer `II(v  1 e 1 0 ]
 {
-"52
+"54
 } 0
 "47 D:\Git\EDLH_Base\EDLH_Base.X\data_out.c
 [v _timebase_interrupt timebase_interrupt `(v  1 e 1 0 ]

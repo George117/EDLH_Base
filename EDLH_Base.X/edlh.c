@@ -11,10 +11,10 @@
 #include "oled.h"
 #include "adc_module.h"
 
-#define vcc     3.31
+#define vcc     3.30
 
 //determined empirically
-#define zero_amps_level 1.669//(vcc/2)
+#define zero_amps_level 1.660//(vcc/2)
 
 #define quanta_4096 (vcc/4096)
 
@@ -39,13 +39,19 @@ void EDLH_Init(void)
     OLED_string("EDLH Reporting..", 0, 0);
     OLED_write();
     __delay_ms(1000);
+    
+    for(int counter = 0; counter < 100; counter++){
+        // measure the battery current
+        read_I_meas();
+
+        // measure the battery voltage
+        read_V_meas();
+    }
+    
 }
 
 void EDLH_Display(void)
 {
-    
-
-    
     // clear the frame buffer
     OLED_clear();
 
@@ -78,8 +84,7 @@ void EDLH_Display(void)
 
     // write to display
     OLED_write();
-
-
+    
 }
 
 
@@ -126,4 +131,15 @@ void read_V_meas(void)
 
     //calculate the voltage
     instant_batt_voltage = ((U_meas_samples[0] * quanta_4096)/0.1276785714285714);
+}
+
+// keep esp8266 in reset for the startup
+void EDLH_TX_RST_HOLD(void){
+    RST_8266 = 0;
+}
+
+
+// let esp8266 to run
+void EDLH_TX_RUN(void){
+    RST_8266 = 1;
 }

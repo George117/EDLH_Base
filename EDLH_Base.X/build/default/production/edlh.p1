@@ -15,11 +15,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 "92 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic.h
 [v __delay `JF6101 ~T0 @X0 0 e ]
 [p i __delay ]
-"54 ./edlh.h
-[; ;./edlh.h: 54: void read_I_meas(void);
+"56 ./edlh.h
+[; ;./edlh.h: 56: void read_I_meas(void);
 [v _read_I_meas `(v ~T0 @X0 0 ef ]
-"55
-[; ;./edlh.h: 55: void read_V_meas(void);
+"57
+[; ;./edlh.h: 57: void read_V_meas(void);
 [v _read_V_meas `(v ~T0 @X0 0 ef ]
 "29 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\c99\string.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\c99\string.h: 29: void *memset (void *, int, size_t);
@@ -61,6 +61,21 @@ Version 4.0 HI-TECH Software Intermediate Code
 "33 edlh.c
 [; ;edlh.c: 33: extern char out_buffer[10];
 [v _out_buffer `uc ~T0 @X0 -> 0 `x e ]
+"2407 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16lf1788.h
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16lf1788.h: 2407:     struct {
+[s S131 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S131 . LATB0 LATB1 LATB2 LATB3 LATB4 LATB5 LATB6 LATB7 ]
+"2417
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16lf1788.h: 2417:     struct {
+[s S132 :8 `uc 1 ]
+[n S132 . LATB ]
+"2406
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16lf1788.h: 2406: typedef union {
+[u S130 `S131 1 `S132 1 ]
+[n S130 . . . ]
+"2421
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16lf1788.h: 2421: extern volatile LATBbits_t LATBbits __attribute__((address(0x10D)));
+[v _LATBbits `VS130 ~T0 @X0 0 e@269 ]
 "18 ./bit_settings.h
 [p x FOSC = INTOSC ]
 "19
@@ -1062,14 +1077,14 @@ Version 4.0 HI-TECH Software Intermediate Code
 "15595
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16lf1788.h: 15595: __asm("TOSH equ 0FEFh");
 [; <" TOSH equ 0FEFh ;# ">
-"40 ./edlh.h
-[; ;./edlh.h: 40: char receive_buffer;
+"42 ./edlh.h
+[; ;./edlh.h: 42: char receive_buffer;
 [v _receive_buffer `uc ~T0 @X0 1 e ]
-"41
-[; ;./edlh.h: 41: float adc_result;
-[v _adc_result `f ~T0 @X0 1 e ]
 "43
-[; ;./edlh.h: 43: const char ampere[] = " A";
+[; ;./edlh.h: 43: float adc_result;
+[v _adc_result `f ~T0 @X0 1 e ]
+"45
+[; ;./edlh.h: 45: const char ampere[] = " A";
 [v _ampere `Cuc ~T0 @X0 -> 3 `i e ]
 [i _ampere
 :U ..
@@ -1078,8 +1093,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> 0 `c
 ..
 ]
-"44
-[; ;./edlh.h: 44: const char volt[] = " V";
+"46
+[; ;./edlh.h: 46: const char volt[] = " V";
 [v _volt `Cuc ~T0 @X0 -> 3 `i e ]
 [i _volt
 :U ..
@@ -1088,8 +1103,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> 0 `c
 ..
 ]
-"45
-[; ;./edlh.h: 45: const char battery_volt_string[] = "Voltage: ";
+"47
+[; ;./edlh.h: 47: const char battery_volt_string[] = "Voltage: ";
 [v _battery_volt_string `Cuc ~T0 @X0 -> 10 `i e ]
 [i _battery_volt_string
 :U ..
@@ -1105,8 +1120,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> 0 `c
 ..
 ]
-"46
-[; ;./edlh.h: 46: const char battery_curr_string[] = "Current: ";
+"48
+[; ;./edlh.h: 48: const char battery_curr_string[] = "Current: ";
 [v _battery_curr_string `Cuc ~T0 @X0 -> 10 `i e ]
 [i _battery_curr_string
 :U ..
@@ -1122,14 +1137,14 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> 0 `c
 ..
 ]
-"48
-[; ;./edlh.h: 48: char buffer[10];
-[v _buffer `uc ~T0 @X0 -> 10 `i e ]
-"49
-[; ;./edlh.h: 49: char batt_current[30];
-[v _batt_current `uc ~T0 @X0 -> 30 `i e ]
 "50
-[; ;./edlh.h: 50: char batt_voltage[30];
+[; ;./edlh.h: 50: char buffer[10];
+[v _buffer `uc ~T0 @X0 -> 10 `i e ]
+"51
+[; ;./edlh.h: 51: char batt_current[30];
+[v _batt_current `uc ~T0 @X0 -> 30 `i e ]
+"52
+[; ;./edlh.h: 52: char batt_voltage[30];
 [v _batt_voltage `uc ~T0 @X0 -> 30 `i e ]
 "83 ./oled.h
 [; ;./oled.h: 83: static const unsigned char OLED_characters[] = {
@@ -2216,164 +2231,212 @@ Version 4.0 HI-TECH Software Intermediate Code
 "41
 [; ;edlh.c: 41:     _delay((unsigned long)((1000)*(32000000/4000.0)));
 [e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
-"42
-[; ;edlh.c: 42: }
+"43
+[; ;edlh.c: 43:     for(int counter = 0; counter < 100; counter++){
+{
+[v _counter `i ~T0 @X0 1 a ]
+[e = _counter -> 0 `i ]
+[e $ < _counter -> 100 `i 718  ]
+[e $U 719  ]
+[e :U 718 ]
+{
+"45
+[; ;edlh.c: 45:         read_I_meas();
+[e ( _read_I_meas ..  ]
+"48
+[; ;edlh.c: 48:         read_V_meas();
+[e ( _read_V_meas ..  ]
+"49
+[; ;edlh.c: 49:     }
+}
+[e ++ _counter -> 1 `i ]
+[e $ < _counter -> 100 `i 718  ]
+[e :U 719 ]
+}
+"51
+[; ;edlh.c: 51: }
 [e :UE 717 ]
 }
-"44
-[; ;edlh.c: 44: void EDLH_Display(void)
+"53
+[; ;edlh.c: 53: void EDLH_Display(void)
 [v _EDLH_Display `(v ~T0 @X0 1 ef ]
-"45
-[; ;edlh.c: 45: {
+"54
+[; ;edlh.c: 54: {
 {
 [e :U _EDLH_Display ]
 [f ]
-"50
-[; ;edlh.c: 50:     OLED_clear();
-[e ( _OLED_clear ..  ]
-"53
-[; ;edlh.c: 53:     read_I_meas();
-[e ( _read_I_meas ..  ]
 "56
-[; ;edlh.c: 56:     read_V_meas();
-[e ( _read_V_meas ..  ]
+[; ;edlh.c: 56:     OLED_clear();
+[e ( _OLED_clear ..  ]
 "59
-[; ;edlh.c: 59:     memset(buffer, 0, 3);
-[e ( _memset (3 , , -> &U _buffer `*v -> 0 `i -> -> 3 `i `ui ]
-"60
-[; ;edlh.c: 60:     memset(batt_current, 0, 6);
-[e ( _memset (3 , , -> &U _batt_current `*v -> 0 `i -> -> 6 `i `ui ]
-"61
-[; ;edlh.c: 61:     memset(batt_voltage, 0, 6);
-[e ( _memset (3 , , -> &U _batt_voltage `*v -> 0 `i -> -> 6 `i `ui ]
-"64
-[; ;edlh.c: 64:     sprintf(buffer, "%1.2f", instant_batt_current);
-[e ( _sprintf (1 , (. , &U _buffer :s 2C -> _instant_batt_current `d ]
+[; ;edlh.c: 59:     read_I_meas();
+[e ( _read_I_meas ..  ]
+"62
+[; ;edlh.c: 62:     read_V_meas();
+[e ( _read_V_meas ..  ]
 "65
-[; ;edlh.c: 65:     strcpy(batt_current,battery_curr_string);
-[e ( _strcpy (2 , &U _batt_current &U _battery_curr_string ]
+[; ;edlh.c: 65:     memset(buffer, 0, 3);
+[e ( _memset (3 , , -> &U _buffer `*v -> 0 `i -> -> 3 `i `ui ]
 "66
-[; ;edlh.c: 66:     strcat(batt_current,buffer);
-[e ( _strcat (2 , &U _batt_current -> &U _buffer `*Cuc ]
+[; ;edlh.c: 66:     memset(batt_current, 0, 6);
+[e ( _memset (3 , , -> &U _batt_current `*v -> 0 `i -> -> 6 `i `ui ]
 "67
-[; ;edlh.c: 67:     strcat(batt_current,ampere);
-[e ( _strcat (2 , &U _batt_current &U _ampere ]
+[; ;edlh.c: 67:     memset(batt_voltage, 0, 6);
+[e ( _memset (3 , , -> &U _batt_voltage `*v -> 0 `i -> -> 6 `i `ui ]
 "70
-[; ;edlh.c: 70:     sprintf(buffer, "%1.2f", instant_batt_voltage);
-[e ( _sprintf (1 , (. , &U _buffer :s 3C -> _instant_batt_voltage `d ]
+[; ;edlh.c: 70:     sprintf(buffer, "%1.2f", instant_batt_current);
+[e ( _sprintf (1 , (. , &U _buffer :s 2C -> _instant_batt_current `d ]
 "71
-[; ;edlh.c: 71:     strcpy(batt_voltage,battery_volt_string);
-[e ( _strcpy (2 , &U _batt_voltage &U _battery_volt_string ]
+[; ;edlh.c: 71:     strcpy(batt_current,battery_curr_string);
+[e ( _strcpy (2 , &U _batt_current &U _battery_curr_string ]
 "72
-[; ;edlh.c: 72:     strcat(batt_voltage,buffer);
-[e ( _strcat (2 , &U _batt_voltage -> &U _buffer `*Cuc ]
+[; ;edlh.c: 72:     strcat(batt_current,buffer);
+[e ( _strcat (2 , &U _batt_current -> &U _buffer `*Cuc ]
 "73
-[; ;edlh.c: 73:     strcat(batt_voltage,volt);
-[e ( _strcat (2 , &U _batt_voltage &U _volt ]
+[; ;edlh.c: 73:     strcat(batt_current,ampere);
+[e ( _strcat (2 , &U _batt_current &U _ampere ]
 "76
-[; ;edlh.c: 76:     OLED_string(batt_voltage,0,0);
-[e ( _OLED_string (3 , , &U _batt_voltage -> -> 0 `i `s -> -> 0 `i `s ]
+[; ;edlh.c: 76:     sprintf(buffer, "%1.2f", instant_batt_voltage);
+[e ( _sprintf (1 , (. , &U _buffer :s 3C -> _instant_batt_voltage `d ]
 "77
-[; ;edlh.c: 77:     OLED_string(batt_current,0,8);
-[e ( _OLED_string (3 , , &U _batt_current -> -> 0 `i `s -> -> 8 `i `s ]
-"80
-[; ;edlh.c: 80:     OLED_write();
-[e ( _OLED_write ..  ]
+[; ;edlh.c: 77:     strcpy(batt_voltage,battery_volt_string);
+[e ( _strcpy (2 , &U _batt_voltage &U _battery_volt_string ]
+"78
+[; ;edlh.c: 78:     strcat(batt_voltage,buffer);
+[e ( _strcat (2 , &U _batt_voltage -> &U _buffer `*Cuc ]
+"79
+[; ;edlh.c: 79:     strcat(batt_voltage,volt);
+[e ( _strcat (2 , &U _batt_voltage &U _volt ]
+"82
+[; ;edlh.c: 82:     OLED_string(batt_voltage,0,0);
+[e ( _OLED_string (3 , , &U _batt_voltage -> -> 0 `i `s -> -> 0 `i `s ]
 "83
-[; ;edlh.c: 83: }
-[e :UE 718 ]
-}
+[; ;edlh.c: 83:     OLED_string(batt_current,0,8);
+[e ( _OLED_string (3 , , &U _batt_current -> -> 0 `i `s -> -> 8 `i `s ]
 "86
-[; ;edlh.c: 86: void read_I_meas(void)
+[; ;edlh.c: 86:     OLED_write();
+[e ( _OLED_write ..  ]
+"88
+[; ;edlh.c: 88: }
+[e :UE 721 ]
+}
+"91
+[; ;edlh.c: 91: void read_I_meas(void)
 [v _read_I_meas `(v ~T0 @X0 1 ef ]
-"87
-[; ;edlh.c: 87: {
+"92
+[; ;edlh.c: 92: {
 {
 [e :U _read_I_meas ]
 [f ]
-"88
-[; ;edlh.c: 88:     unsigned int rez_adc = 0;
+"93
+[; ;edlh.c: 93:     unsigned int rez_adc = 0;
 [v _rez_adc `ui ~T0 @X0 1 a ]
 [e = _rez_adc -> -> 0 `i `ui ]
-"91
-[; ;edlh.c: 91:     ADCON0bits.GO = 1;
+"96
+[; ;edlh.c: 96:     ADCON0bits.GO = 1;
 [e = . . _ADCON0bits 2 1 -> -> 1 `i `uc ]
-"92
-[; ;edlh.c: 92:     while(ADCON0bits.GO == 1){};
-[e $U 720  ]
-[e :U 721 ]
+"97
+[; ;edlh.c: 97:     while(ADCON0bits.GO == 1){};
+[e $U 723  ]
+[e :U 724 ]
 {
 }
-[e :U 720 ]
-[e $ == -> . . _ADCON0bits 2 1 `i -> 1 `i 721  ]
-[e :U 722 ]
-"95
-[; ;edlh.c: 95:     rez_adc = Get_Value_From_Channel(1);
-[e = _rez_adc -> ( _Get_Value_From_Channel (1 -> -> 1 `i `uc `ui ]
-"98
-[; ;edlh.c: 98:     I_meas_samples[0] = (rez_adc + I_meas_samples[1] + I_meas_samples[2] + I_meas_samples[3]) / 4;
-[e = *U + &U _I_meas_samples * -> -> -> 0 `i `ui `ux -> -> # *U &U _I_meas_samples `ui `ux / + + + _rez_adc *U + &U _I_meas_samples * -> -> -> 1 `i `ui `ux -> -> # *U &U _I_meas_samples `ui `ux *U + &U _I_meas_samples * -> -> -> 2 `i `ui `ux -> -> # *U &U _I_meas_samples `ui `ux *U + &U _I_meas_samples * -> -> -> 3 `i `ui `ux -> -> # *U &U _I_meas_samples `ui `ux -> -> 4 `i `ui ]
-"99
-[; ;edlh.c: 99:     I_meas_samples[3] = I_meas_samples[2];
-[e = *U + &U _I_meas_samples * -> -> -> 3 `i `ui `ux -> -> # *U &U _I_meas_samples `ui `ux *U + &U _I_meas_samples * -> -> -> 2 `i `ui `ux -> -> # *U &U _I_meas_samples `ui `ux ]
+[e :U 723 ]
+[e $ == -> . . _ADCON0bits 2 1 `i -> 1 `i 724  ]
+[e :U 725 ]
 "100
-[; ;edlh.c: 100:     I_meas_samples[2] = I_meas_samples[1];
-[e = *U + &U _I_meas_samples * -> -> -> 2 `i `ui `ux -> -> # *U &U _I_meas_samples `ui `ux *U + &U _I_meas_samples * -> -> -> 1 `i `ui `ux -> -> # *U &U _I_meas_samples `ui `ux ]
-"101
-[; ;edlh.c: 101:     I_meas_samples[1] = I_meas_samples[0];
-[e = *U + &U _I_meas_samples * -> -> -> 1 `i `ui `ux -> -> # *U &U _I_meas_samples `ui `ux *U + &U _I_meas_samples * -> -> -> 0 `i `ui `ux -> -> # *U &U _I_meas_samples `ui `ux ]
+[; ;edlh.c: 100:     rez_adc = Get_Value_From_Channel(1);
+[e = _rez_adc -> ( _Get_Value_From_Channel (1 -> -> 1 `i `uc `ui ]
+"103
+[; ;edlh.c: 103:     I_meas_samples[0] = (rez_adc + I_meas_samples[1] + I_meas_samples[2] + I_meas_samples[3]) / 4;
+[e = *U + &U _I_meas_samples * -> -> -> 0 `i `ui `ux -> -> # *U &U _I_meas_samples `ui `ux / + + + _rez_adc *U + &U _I_meas_samples * -> -> -> 1 `i `ui `ux -> -> # *U &U _I_meas_samples `ui `ux *U + &U _I_meas_samples * -> -> -> 2 `i `ui `ux -> -> # *U &U _I_meas_samples `ui `ux *U + &U _I_meas_samples * -> -> -> 3 `i `ui `ux -> -> # *U &U _I_meas_samples `ui `ux -> -> 4 `i `ui ]
 "104
-[; ;edlh.c: 104:     out_buffer[0] = I_meas_samples[0] >> 4;
-[e = *U + &U _out_buffer * -> -> -> 0 `i `ui `ux -> -> # *U &U _out_buffer `ui `ux -> >> *U + &U _I_meas_samples * -> -> -> 0 `i `ui `ux -> -> # *U &U _I_meas_samples `ui `ux -> 4 `i `uc ]
+[; ;edlh.c: 104:     I_meas_samples[3] = I_meas_samples[2];
+[e = *U + &U _I_meas_samples * -> -> -> 3 `i `ui `ux -> -> # *U &U _I_meas_samples `ui `ux *U + &U _I_meas_samples * -> -> -> 2 `i `ui `ux -> -> # *U &U _I_meas_samples `ui `ux ]
 "105
-[; ;edlh.c: 105:     out_buffer[1] = I_meas_samples[0] & 0xF;
-[e = *U + &U _out_buffer * -> -> -> 1 `i `ui `ux -> -> # *U &U _out_buffer `ui `ux -> & *U + &U _I_meas_samples * -> -> -> 0 `i `ui `ux -> -> # *U &U _I_meas_samples `ui `ux -> -> 15 `i `ui `uc ]
-"108
-[; ;edlh.c: 108:     instant_batt_current = ((((I_meas_samples[0] * (3.31/4096)) - 1.669) * 10 ));
-[e = _instant_batt_current -> * - * -> *U + &U _I_meas_samples * -> -> -> 0 `i `ui `ux -> -> # *U &U _I_meas_samples `ui `ux `d / .3.31 -> -> 4096 `i `d .1.669 -> -> 10 `i `d `f ]
+[; ;edlh.c: 105:     I_meas_samples[2] = I_meas_samples[1];
+[e = *U + &U _I_meas_samples * -> -> -> 2 `i `ui `ux -> -> # *U &U _I_meas_samples `ui `ux *U + &U _I_meas_samples * -> -> -> 1 `i `ui `ux -> -> # *U &U _I_meas_samples `ui `ux ]
+"106
+[; ;edlh.c: 106:     I_meas_samples[1] = I_meas_samples[0];
+[e = *U + &U _I_meas_samples * -> -> -> 1 `i `ui `ux -> -> # *U &U _I_meas_samples `ui `ux *U + &U _I_meas_samples * -> -> -> 0 `i `ui `ux -> -> # *U &U _I_meas_samples `ui `ux ]
 "109
-[; ;edlh.c: 109: }
-[e :UE 719 ]
+[; ;edlh.c: 109:     out_buffer[0] = I_meas_samples[0] >> 4;
+[e = *U + &U _out_buffer * -> -> -> 0 `i `ui `ux -> -> # *U &U _out_buffer `ui `ux -> >> *U + &U _I_meas_samples * -> -> -> 0 `i `ui `ux -> -> # *U &U _I_meas_samples `ui `ux -> 4 `i `uc ]
+"110
+[; ;edlh.c: 110:     out_buffer[1] = I_meas_samples[0] & 0xF;
+[e = *U + &U _out_buffer * -> -> -> 1 `i `ui `ux -> -> # *U &U _out_buffer `ui `ux -> & *U + &U _I_meas_samples * -> -> -> 0 `i `ui `ux -> -> # *U &U _I_meas_samples `ui `ux -> -> 15 `i `ui `uc ]
+"113
+[; ;edlh.c: 113:     instant_batt_current = ((((I_meas_samples[0] * (3.30/4096)) - 1.660) * 10 ));
+[e = _instant_batt_current -> * - * -> *U + &U _I_meas_samples * -> -> -> 0 `i `ui `ux -> -> # *U &U _I_meas_samples `ui `ux `d / .3.30 -> -> 4096 `i `d .1.660 -> -> 10 `i `d `f ]
+"114
+[; ;edlh.c: 114: }
+[e :UE 722 ]
 }
-"111
-[; ;edlh.c: 111: void read_V_meas(void)
+"116
+[; ;edlh.c: 116: void read_V_meas(void)
 [v _read_V_meas `(v ~T0 @X0 1 ef ]
-"112
-[; ;edlh.c: 112: {
+"117
+[; ;edlh.c: 117: {
 {
 [e :U _read_V_meas ]
 [f ]
-"113
-[; ;edlh.c: 113:     unsigned int rez_adc = 0;
+"118
+[; ;edlh.c: 118:     unsigned int rez_adc = 0;
 [v _rez_adc `ui ~T0 @X0 1 a ]
 [e = _rez_adc -> -> 0 `i `ui ]
-"115
-[; ;edlh.c: 115:     rez_adc = Get_Value_From_Channel(0);
-[e = _rez_adc -> ( _Get_Value_From_Channel (1 -> -> 0 `i `uc `ui ]
-"118
-[; ;edlh.c: 118:     U_meas_samples[0] = (rez_adc + U_meas_samples[1] + U_meas_samples[2] + U_meas_samples[3]) / 4;
-[e = *U + &U _U_meas_samples * -> -> -> 0 `i `ui `ux -> -> # *U &U _U_meas_samples `ui `ux / + + + _rez_adc *U + &U _U_meas_samples * -> -> -> 1 `i `ui `ux -> -> # *U &U _U_meas_samples `ui `ux *U + &U _U_meas_samples * -> -> -> 2 `i `ui `ux -> -> # *U &U _U_meas_samples `ui `ux *U + &U _U_meas_samples * -> -> -> 3 `i `ui `ux -> -> # *U &U _U_meas_samples `ui `ux -> -> 4 `i `ui ]
-"119
-[; ;edlh.c: 119:     U_meas_samples[3] = U_meas_samples[2];
-[e = *U + &U _U_meas_samples * -> -> -> 3 `i `ui `ux -> -> # *U &U _U_meas_samples `ui `ux *U + &U _U_meas_samples * -> -> -> 2 `i `ui `ux -> -> # *U &U _U_meas_samples `ui `ux ]
 "120
-[; ;edlh.c: 120:     U_meas_samples[2] = U_meas_samples[1];
-[e = *U + &U _U_meas_samples * -> -> -> 2 `i `ui `ux -> -> # *U &U _U_meas_samples `ui `ux *U + &U _U_meas_samples * -> -> -> 1 `i `ui `ux -> -> # *U &U _U_meas_samples `ui `ux ]
-"121
-[; ;edlh.c: 121:     U_meas_samples[1] = U_meas_samples[0];
-[e = *U + &U _U_meas_samples * -> -> -> 1 `i `ui `ux -> -> # *U &U _U_meas_samples `ui `ux *U + &U _U_meas_samples * -> -> -> 0 `i `ui `ux -> -> # *U &U _U_meas_samples `ui `ux ]
+[; ;edlh.c: 120:     rez_adc = Get_Value_From_Channel(0);
+[e = _rez_adc -> ( _Get_Value_From_Channel (1 -> -> 0 `i `uc `ui ]
+"123
+[; ;edlh.c: 123:     U_meas_samples[0] = (rez_adc + U_meas_samples[1] + U_meas_samples[2] + U_meas_samples[3]) / 4;
+[e = *U + &U _U_meas_samples * -> -> -> 0 `i `ui `ux -> -> # *U &U _U_meas_samples `ui `ux / + + + _rez_adc *U + &U _U_meas_samples * -> -> -> 1 `i `ui `ux -> -> # *U &U _U_meas_samples `ui `ux *U + &U _U_meas_samples * -> -> -> 2 `i `ui `ux -> -> # *U &U _U_meas_samples `ui `ux *U + &U _U_meas_samples * -> -> -> 3 `i `ui `ux -> -> # *U &U _U_meas_samples `ui `ux -> -> 4 `i `ui ]
 "124
-[; ;edlh.c: 124:     out_buffer[2] = U_meas_samples[0] >> 4;
-[e = *U + &U _out_buffer * -> -> -> 2 `i `ui `ux -> -> # *U &U _out_buffer `ui `ux -> >> *U + &U _U_meas_samples * -> -> -> 0 `i `ui `ux -> -> # *U &U _U_meas_samples `ui `ux -> 4 `i `uc ]
+[; ;edlh.c: 124:     U_meas_samples[3] = U_meas_samples[2];
+[e = *U + &U _U_meas_samples * -> -> -> 3 `i `ui `ux -> -> # *U &U _U_meas_samples `ui `ux *U + &U _U_meas_samples * -> -> -> 2 `i `ui `ux -> -> # *U &U _U_meas_samples `ui `ux ]
 "125
-[; ;edlh.c: 125:     out_buffer[3] = U_meas_samples[0] & 0xF;
-[e = *U + &U _out_buffer * -> -> -> 3 `i `ui `ux -> -> # *U &U _out_buffer `ui `ux -> & *U + &U _U_meas_samples * -> -> -> 0 `i `ui `ux -> -> # *U &U _U_meas_samples `ui `ux -> -> 15 `i `ui `uc ]
-"128
-[; ;edlh.c: 128:     instant_batt_voltage = ((U_meas_samples[0] * (3.31/4096))/0.1276785714285714);
-[e = _instant_batt_voltage -> / * -> *U + &U _U_meas_samples * -> -> -> 0 `i `ui `ux -> -> # *U &U _U_meas_samples `ui `ux `d / .3.31 -> -> 4096 `i `d .0.1276785714285714 `f ]
+[; ;edlh.c: 125:     U_meas_samples[2] = U_meas_samples[1];
+[e = *U + &U _U_meas_samples * -> -> -> 2 `i `ui `ux -> -> # *U &U _U_meas_samples `ui `ux *U + &U _U_meas_samples * -> -> -> 1 `i `ui `ux -> -> # *U &U _U_meas_samples `ui `ux ]
+"126
+[; ;edlh.c: 126:     U_meas_samples[1] = U_meas_samples[0];
+[e = *U + &U _U_meas_samples * -> -> -> 1 `i `ui `ux -> -> # *U &U _U_meas_samples `ui `ux *U + &U _U_meas_samples * -> -> -> 0 `i `ui `ux -> -> # *U &U _U_meas_samples `ui `ux ]
 "129
-[; ;edlh.c: 129: }
-[e :UE 723 ]
+[; ;edlh.c: 129:     out_buffer[2] = U_meas_samples[0] >> 4;
+[e = *U + &U _out_buffer * -> -> -> 2 `i `ui `ux -> -> # *U &U _out_buffer `ui `ux -> >> *U + &U _U_meas_samples * -> -> -> 0 `i `ui `ux -> -> # *U &U _U_meas_samples `ui `ux -> 4 `i `uc ]
+"130
+[; ;edlh.c: 130:     out_buffer[3] = U_meas_samples[0] & 0xF;
+[e = *U + &U _out_buffer * -> -> -> 3 `i `ui `ux -> -> # *U &U _out_buffer `ui `ux -> & *U + &U _U_meas_samples * -> -> -> 0 `i `ui `ux -> -> # *U &U _U_meas_samples `ui `ux -> -> 15 `i `ui `uc ]
+"133
+[; ;edlh.c: 133:     instant_batt_voltage = ((U_meas_samples[0] * (3.30/4096))/0.1276785714285714);
+[e = _instant_batt_voltage -> / * -> *U + &U _U_meas_samples * -> -> -> 0 `i `ui `ux -> -> # *U &U _U_meas_samples `ui `ux `d / .3.30 -> -> 4096 `i `d .0.1276785714285714 `f ]
+"134
+[; ;edlh.c: 134: }
+[e :UE 726 ]
+}
+"137
+[; ;edlh.c: 137: void EDLH_TX_RST_HOLD(void){
+[v _EDLH_TX_RST_HOLD `(v ~T0 @X0 1 ef ]
+{
+[e :U _EDLH_TX_RST_HOLD ]
+[f ]
+"138
+[; ;edlh.c: 138:     LATBbits.LATB0 = 0;
+[e = . . _LATBbits 0 0 -> -> 0 `i `uc ]
+"139
+[; ;edlh.c: 139: }
+[e :UE 727 ]
+}
+"143
+[; ;edlh.c: 143: void EDLH_TX_RUN(void){
+[v _EDLH_TX_RUN `(v ~T0 @X0 1 ef ]
+{
+[e :U _EDLH_TX_RUN ]
+[f ]
+"144
+[; ;edlh.c: 144:     LATBbits.LATB0 = 1;
+[e = . . _LATBbits 0 0 -> -> 1 `i `uc ]
+"145
+[; ;edlh.c: 145: }
+[e :UE 728 ]
 }
 [p f _sprintf 8495104 ]
 [a 2C 37 49 46 50 102 0 ]

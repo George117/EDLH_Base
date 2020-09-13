@@ -33,7 +33,9 @@
 
 #include <xc.h> // include processor files - each processor file is guarded. 
 
-#define resolution 3.339/4096
+#define resolution 3.30/4096
+
+#define RST_8266 LATBbits.LATB0
 
 extern char out_buffer[10];
 
@@ -53,6 +55,12 @@ void EDLH_Display(void);
 void EDLH_Init(void);
 void read_I_meas(void);
 void read_V_meas(void);
+
+// keep esp8266 in reset for the startup
+void EDLH_TX_RST_HOLD(void);
+
+// let esp8266 to run
+void EDLH_TX_RUN(void);
 
 #ifdef	__cplusplus
 extern "C" {

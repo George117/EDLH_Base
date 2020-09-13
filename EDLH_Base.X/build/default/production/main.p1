@@ -3,7 +3,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 "37 ./config.h
 [; ;./config.h: 37: void IO_First_Init(void);
 [v _IO_First_Init `(v ~T0 @X0 0 ef ]
-"38
+"60 ./edlh.h
+[; ;./edlh.h: 60: void EDLH_TX_RST_HOLD(void);
+[v _EDLH_TX_RST_HOLD `(v ~T0 @X0 0 ef ]
+"38 ./config.h
 [; ;./config.h: 38: void Configure_Clock(void);
 [v _Configure_Clock `(v ~T0 @X0 0 ef ]
 "36 ./adc_module.h
@@ -18,31 +21,15 @@ Version 4.0 HI-TECH Software Intermediate Code
 "38
 [; ;./data_out.h: 38: void init_timebase(void);
 [v _init_timebase `(v ~T0 @X0 0 ef ]
-"53 ./edlh.h
-[; ;./edlh.h: 53: void EDLH_Init(void);
+"55 ./edlh.h
+[; ;./edlh.h: 55: void EDLH_Init(void);
 [v _EDLH_Init `(v ~T0 @X0 0 ef ]
-"52
-[; ;./edlh.h: 52: void EDLH_Display(void);
+"54
+[; ;./edlh.h: 54: void EDLH_Display(void);
 [v _EDLH_Display `(v ~T0 @X0 0 ef ]
-"2477 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16lf1788.h
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16lf1788.h: 2477:     struct {
-[s S131 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S131 . LATC0 LATC1 LATC2 LATC3 LATC4 LATC5 LATC6 LATC7 ]
-"2487
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16lf1788.h: 2487:     struct {
-[s S132 :8 `uc 1 ]
-[n S132 . LATC ]
-"2476
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16lf1788.h: 2476: typedef union {
-[u S130 `S131 1 `S132 1 ]
-[n S130 . . . ]
-"2491
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic16lf1788.h: 2491: extern volatile LATCbits_t LATCbits __attribute__((address(0x10E)));
-[v _LATCbits `VS130 ~T0 @X0 0 e@270 ]
-[v F5616 `(v ~T0 @X0 1 tf1`ul ]
-"92 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic.h
-[v __delay `JF5616 ~T0 @X0 0 e ]
-[p i __delay ]
+"63
+[; ;./edlh.h: 63: void EDLH_TX_RUN(void);
+[v _EDLH_TX_RUN `(v ~T0 @X0 0 ef ]
 [t ~ __interrupt . k ]
 [t T1 __interrupt ]
 "39 ./data_out.h
@@ -1076,14 +1063,14 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> -> 5 `i `uc
 ..
 ]
-"40 ./edlh.h
-[; ;./edlh.h: 40: char receive_buffer;
+"42 ./edlh.h
+[; ;./edlh.h: 42: char receive_buffer;
 [v _receive_buffer `uc ~T0 @X0 1 e ]
-"41
-[; ;./edlh.h: 41: float adc_result;
-[v _adc_result `f ~T0 @X0 1 e ]
 "43
-[; ;./edlh.h: 43: const char ampere[] = " A";
+[; ;./edlh.h: 43: float adc_result;
+[v _adc_result `f ~T0 @X0 1 e ]
+"45
+[; ;./edlh.h: 45: const char ampere[] = " A";
 [v _ampere `Cuc ~T0 @X0 -> 3 `i e ]
 [i _ampere
 :U ..
@@ -1092,8 +1079,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> 0 `c
 ..
 ]
-"44
-[; ;./edlh.h: 44: const char volt[] = " V";
+"46
+[; ;./edlh.h: 46: const char volt[] = " V";
 [v _volt `Cuc ~T0 @X0 -> 3 `i e ]
 [i _volt
 :U ..
@@ -1102,8 +1089,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> 0 `c
 ..
 ]
-"45
-[; ;./edlh.h: 45: const char battery_volt_string[] = "Voltage: ";
+"47
+[; ;./edlh.h: 47: const char battery_volt_string[] = "Voltage: ";
 [v _battery_volt_string `Cuc ~T0 @X0 -> 10 `i e ]
 [i _battery_volt_string
 :U ..
@@ -1119,8 +1106,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> 0 `c
 ..
 ]
-"46
-[; ;./edlh.h: 46: const char battery_curr_string[] = "Current: ";
+"48
+[; ;./edlh.h: 48: const char battery_curr_string[] = "Current: ";
 [v _battery_curr_string `Cuc ~T0 @X0 -> 10 `i e ]
 [i _battery_curr_string
 :U ..
@@ -1136,14 +1123,14 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> 0 `c
 ..
 ]
-"48
-[; ;./edlh.h: 48: char buffer[10];
-[v _buffer `uc ~T0 @X0 -> 10 `i e ]
-"49
-[; ;./edlh.h: 49: char batt_current[30];
-[v _batt_current `uc ~T0 @X0 -> 30 `i e ]
 "50
-[; ;./edlh.h: 50: char batt_voltage[30];
+[; ;./edlh.h: 50: char buffer[10];
+[v _buffer `uc ~T0 @X0 -> 10 `i e ]
+"51
+[; ;./edlh.h: 51: char batt_current[30];
+[v _batt_current `uc ~T0 @X0 -> 30 `i e ]
+"52
+[; ;./edlh.h: 52: char batt_voltage[30];
 [v _batt_voltage `uc ~T0 @X0 -> 30 `i e ]
 [v $root$_main `(v ~T0 @X0 0 e ]
 "15 main.c
@@ -1157,86 +1144,80 @@ Version 4.0 HI-TECH Software Intermediate Code
 "17
 [; ;main.c: 17:     IO_First_Init();
 [e ( _IO_First_Init ..  ]
-"18
-[; ;main.c: 18:     Configure_Clock();
-[e ( _Configure_Clock ..  ]
-"20
-[; ;main.c: 20:     Configure_ADC_Module();
-[e ( _Configure_ADC_Module ..  ]
+"19
+[; ;main.c: 19:     EDLH_TX_RST_HOLD();
+[e ( _EDLH_TX_RST_HOLD ..  ]
 "21
-[; ;main.c: 21:     Configure_ADC_Channel(0);
-[e ( _Configure_ADC_Channel (1 -> -> 0 `i `uc ]
-"22
-[; ;main.c: 22:     Configure_ADC_Channel(1);
-[e ( _Configure_ADC_Channel (1 -> -> 1 `i `uc ]
-"24
-[; ;main.c: 24:     init_data_out(9600);
-[e ( _init_data_out (1 -> -> 9600 `i `l ]
+[; ;main.c: 21:     Configure_Clock();
+[e ( _Configure_Clock ..  ]
 "25
-[; ;main.c: 25:     init_timebase();
-[e ( _init_timebase ..  ]
+[; ;main.c: 25:     Configure_ADC_Module();
+[e ( _Configure_ADC_Module ..  ]
+"26
+[; ;main.c: 26:     Configure_ADC_Channel(0);
+[e ( _Configure_ADC_Channel (1 -> -> 0 `i `uc ]
 "27
-[; ;main.c: 27:     EDLH_Init();
-[e ( _EDLH_Init ..  ]
-"28
-[; ;main.c: 28:     EDLH_Display();
-[e ( _EDLH_Display ..  ]
+[; ;main.c: 27:     Configure_ADC_Channel(1);
+[e ( _Configure_ADC_Channel (1 -> -> 1 `i `uc ]
+"29
+[; ;main.c: 29:     init_data_out(19200);
+[e ( _init_data_out (1 -> -> 19200 `i `l ]
 "30
-[; ;main.c: 30:     while(1){
+[; ;main.c: 30:     init_timebase();
+[e ( _init_timebase ..  ]
+"32
+[; ;main.c: 32:     EDLH_Init();
+[e ( _EDLH_Init ..  ]
+"33
+[; ;main.c: 33:     EDLH_Display();
+[e ( _EDLH_Display ..  ]
+"35
+[; ;main.c: 35:     EDLH_TX_RUN();
+[e ( _EDLH_TX_RUN ..  ]
+"37
+[; ;main.c: 37:     while(1){
 [e :U 716 ]
 {
-"31
-[; ;main.c: 31:         EDLH_Display();
+"38
+[; ;main.c: 38:         EDLH_Display();
 [e ( _EDLH_Display ..  ]
-"32
-[; ;main.c: 32:         LATCbits.LATC7 = 0;
-[e = . . _LATCbits 0 7 -> -> 0 `i `uc ]
-"33
-[; ;main.c: 33:         _delay((unsigned long)((1)*(32000000/4000.0)));
-[e ( __delay (1 -> * -> -> 1 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
-"34
-[; ;main.c: 34:         LATCbits.LATC7 = 1;
-[e = . . _LATCbits 0 7 -> -> 1 `i `uc ]
-"35
-[; ;main.c: 35:         _delay((unsigned long)((10)*(32000000/4000.0)));
-[e ( __delay (1 -> * -> -> 10 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
-"37
-[; ;main.c: 37:     }
+"39
+[; ;main.c: 39:     }
 }
 [e :U 715 ]
 [e $U 716  ]
 [e :U 717 ]
-"41
-[; ;main.c: 41: }
+"43
+[; ;main.c: 43: }
 [e :UE 714 ]
 }
 [v $root$_timer `(v ~T0 @X0 0 e ]
-"44
-[; ;main.c: 44: void __attribute__((picinterrupt(("")))) timer(void)
+"46
+[; ;main.c: 46: void __attribute__((picinterrupt(("")))) timer(void)
 [v _timer `(v ~T1 @X0 1 ef ]
-"45
-[; ;main.c: 45: {
+"47
+[; ;main.c: 47: {
 {
 [e :U _timer ]
 [f ]
-"46
-[; ;main.c: 46:     timebase_interrupt();
-[e ( _timebase_interrupt ..  ]
 "48
-[; ;main.c: 48:     if(RCIF){
+[; ;main.c: 48:     timebase_interrupt();
+[e ( _timebase_interrupt ..  ]
+"50
+[; ;main.c: 50:     if(RCIF){
 [e $ ! _RCIF 719  ]
 {
-"49
-[; ;main.c: 49:         receive_buffer = RC1REG;
-[e = _receive_buffer -> _RC1REG `uc ]
-"50
-[; ;main.c: 50:         RCIF = 0;
-[e = _RCIF -> -> 0 `i `b ]
 "51
-[; ;main.c: 51:     }
+[; ;main.c: 51:         receive_buffer = RC1REG;
+[e = _receive_buffer -> _RC1REG `uc ]
+"52
+[; ;main.c: 52:         RCIF = 0;
+[e = _RCIF -> -> 0 `i `b ]
+"53
+[; ;main.c: 53:     }
 }
 [e :U 719 ]
-"52
-[; ;main.c: 52: }
+"54
+[; ;main.c: 54: }
 [e :UE 718 ]
 }

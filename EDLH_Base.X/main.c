@@ -15,25 +15,27 @@
 void main(void) 
 {
     IO_First_Init();
+    
+    EDLH_TX_RST_HOLD();
+    
     Configure_Clock();    
+    
+    
     
     Configure_ADC_Module();
     Configure_ADC_Channel(AN0);
     Configure_ADC_Channel(AN1);
     
-    init_data_out(9600);
+    init_data_out(19200);
     init_timebase();
     
     EDLH_Init();
     EDLH_Display();
     
-    while(1){
-        EDLH_Display();
-        LATCbits.LATC7 = 0;
-        __delay_ms(1);
-        LATCbits.LATC7 = 1;
-        __delay_ms(10);
+    EDLH_TX_RUN();
     
+    while(1){
+        EDLH_Display();    
     }
     
     

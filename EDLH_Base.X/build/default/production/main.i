@@ -10412,7 +10412,7 @@ void timebase_interrupt(void);
 # 12 "main.c" 2
 
 # 1 "./edlh.h" 1
-# 38 "./edlh.h"
+# 40 "./edlh.h"
 extern char out_buffer[10];
 
 char receive_buffer;
@@ -10431,31 +10431,39 @@ void EDLH_Display(void);
 void EDLH_Init(void);
 void read_I_meas(void);
 void read_V_meas(void);
+
+
+void EDLH_TX_RST_HOLD(void);
+
+
+void EDLH_TX_RUN(void);
 # 13 "main.c" 2
 
 
 void main(void)
 {
     IO_First_Init();
+
+    EDLH_TX_RST_HOLD();
+
     Configure_Clock();
+
+
 
     Configure_ADC_Module();
     Configure_ADC_Channel(0);
     Configure_ADC_Channel(1);
 
-    init_data_out(9600);
+    init_data_out(19200);
     init_timebase();
 
     EDLH_Init();
     EDLH_Display();
 
+    EDLH_TX_RUN();
+
     while(1){
         EDLH_Display();
-        LATCbits.LATC7 = 0;
-        _delay((unsigned long)((1)*(32000000/4000.0)));
-        LATCbits.LATC7 = 1;
-        _delay((unsigned long)((10)*(32000000/4000.0)));
-
     }
 
 

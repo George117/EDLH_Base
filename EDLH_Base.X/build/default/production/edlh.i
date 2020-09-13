@@ -10501,7 +10501,7 @@ extern __bank0 __bit __timeout;
 # 9 "edlh.c" 2
 
 # 1 "./edlh.h" 1
-# 38 "./edlh.h"
+# 40 "./edlh.h"
 extern char out_buffer[10];
 
 char receive_buffer;
@@ -10520,6 +10520,12 @@ void EDLH_Display(void);
 void EDLH_Init(void);
 void read_I_meas(void);
 void read_V_meas(void);
+
+
+void EDLH_TX_RST_HOLD(void);
+
+
+void EDLH_TX_RUN(void);
 # 10 "edlh.c" 2
 
 # 1 "./oled.h" 1
@@ -10692,13 +10698,19 @@ void EDLH_Init(void)
     OLED_string("EDLH Reporting..", 0, 0);
     OLED_write();
     _delay((unsigned long)((1000)*(32000000/4000.0)));
+
+    for(int counter = 0; counter < 100; counter++){
+
+        read_I_meas();
+
+
+        read_V_meas();
+    }
+
 }
 
 void EDLH_Display(void)
 {
-
-
-
 
     OLED_clear();
 
@@ -10732,7 +10744,6 @@ void EDLH_Display(void)
 
     OLED_write();
 
-
 }
 
 
@@ -10758,7 +10769,7 @@ void read_I_meas(void)
     out_buffer[1] = I_meas_samples[0] & 0xF;
 
 
-    instant_batt_current = ((((I_meas_samples[0] * (3.31/4096)) - 1.669) * 10 ));
+    instant_batt_current = ((((I_meas_samples[0] * (3.30/4096)) - 1.660) * 10 ));
 }
 
 void read_V_meas(void)
@@ -10778,5 +10789,16 @@ void read_V_meas(void)
     out_buffer[3] = U_meas_samples[0] & 0xF;
 
 
-    instant_batt_voltage = ((U_meas_samples[0] * (3.31/4096))/0.1276785714285714);
+    instant_batt_voltage = ((U_meas_samples[0] * (3.30/4096))/0.1276785714285714);
+}
+
+
+void EDLH_TX_RST_HOLD(void){
+    LATBbits.LATB0 = 0;
+}
+
+
+
+void EDLH_TX_RUN(void){
+    LATBbits.LATB0 = 1;
 }
