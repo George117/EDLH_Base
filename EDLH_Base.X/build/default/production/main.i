@@ -10454,7 +10454,7 @@ void main(void)
         LATCbits.LATC7 = 0;
         _delay((unsigned long)((1)*(32000000/4000.0)));
         LATCbits.LATC7 = 1;
-        _delay((unsigned long)((100)*(32000000/4000.0)));
+        _delay((unsigned long)((10)*(32000000/4000.0)));
 
     }
 

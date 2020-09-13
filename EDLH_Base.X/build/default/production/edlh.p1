@@ -15,7 +15,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 "92 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic.h
 [v __delay `JF6101 ~T0 @X0 0 e ]
 [p i __delay ]
-"55 ./edlh.h
+"54 ./edlh.h
+[; ;./edlh.h: 54: void read_I_meas(void);
+[v _read_I_meas `(v ~T0 @X0 0 ef ]
+"55
 [; ;./edlh.h: 55: void read_V_meas(void);
 [v _read_V_meas `(v ~T0 @X0 0 ef ]
 "29 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\c99\string.h
@@ -2225,6 +2228,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 "50
 [; ;edlh.c: 50:     OLED_clear();
 [e ( _OLED_clear ..  ]
+"53
+[; ;edlh.c: 53:     read_I_meas();
+[e ( _read_I_meas ..  ]
 "56
 [; ;edlh.c: 56:     read_V_meas();
 [e ( _read_V_meas ..  ]
@@ -2237,9 +2243,21 @@ Version 4.0 HI-TECH Software Intermediate Code
 "61
 [; ;edlh.c: 61:     memset(batt_voltage, 0, 6);
 [e ( _memset (3 , , -> &U _batt_voltage `*v -> 0 `i -> -> 6 `i `ui ]
+"64
+[; ;edlh.c: 64:     sprintf(buffer, "%1.2f", instant_batt_current);
+[e ( _sprintf (1 , (. , &U _buffer :s 2C -> _instant_batt_current `d ]
+"65
+[; ;edlh.c: 65:     strcpy(batt_current,battery_curr_string);
+[e ( _strcpy (2 , &U _batt_current &U _battery_curr_string ]
+"66
+[; ;edlh.c: 66:     strcat(batt_current,buffer);
+[e ( _strcat (2 , &U _batt_current -> &U _buffer `*Cuc ]
+"67
+[; ;edlh.c: 67:     strcat(batt_current,ampere);
+[e ( _strcat (2 , &U _batt_current &U _ampere ]
 "70
 [; ;edlh.c: 70:     sprintf(buffer, "%1.2f", instant_batt_voltage);
-[e ( _sprintf (1 , (. , &U _buffer :s 2C -> _instant_batt_voltage `d ]
+[e ( _sprintf (1 , (. , &U _buffer :s 3C -> _instant_batt_voltage `d ]
 "71
 [; ;edlh.c: 71:     strcpy(batt_voltage,battery_volt_string);
 [e ( _strcpy (2 , &U _batt_voltage &U _battery_volt_string ]
@@ -2252,6 +2270,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 "76
 [; ;edlh.c: 76:     OLED_string(batt_voltage,0,0);
 [e ( _OLED_string (3 , , &U _batt_voltage -> -> 0 `i `s -> -> 0 `i `s ]
+"77
+[; ;edlh.c: 77:     OLED_string(batt_current,0,8);
+[e ( _OLED_string (3 , , &U _batt_current -> -> 0 `i `s -> -> 8 `i `s ]
 "80
 [; ;edlh.c: 80:     OLED_write();
 [e ( _OLED_write ..  ]
@@ -2299,8 +2320,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;edlh.c: 101:     I_meas_samples[1] = I_meas_samples[0];
 [e = *U + &U _I_meas_samples * -> -> -> 1 `i `ui `ux -> -> # *U &U _I_meas_samples `ui `ux *U + &U _I_meas_samples * -> -> -> 0 `i `ui `ux -> -> # *U &U _I_meas_samples `ui `ux ]
 "108
-[; ;edlh.c: 108:     instant_batt_current = ((((I_meas_samples[0] * (3.3/4096)) - (3.3/2)) * 10 ) * 1.05 ) + 0.05 ;
-[e = _instant_batt_current -> + * * - * -> *U + &U _I_meas_samples * -> -> -> 0 `i `ui `ux -> -> # *U &U _I_meas_samples `ui `ux `d / .3.3 -> -> 4096 `i `d / .3.3 -> -> 2 `i `d -> -> 10 `i `d .1.05 .0.05 `f ]
+[; ;edlh.c: 108:     instant_batt_current = ((((I_meas_samples[0] * (3.31/4096)) - 1.669) * 10 ));
+[e = _instant_batt_current -> * - * -> *U + &U _I_meas_samples * -> -> -> 0 `i `ui `ux -> -> # *U &U _I_meas_samples `ui `ux `d / .3.31 -> -> 4096 `i `d .1.669 -> -> 10 `i `d `f ]
 "109
 [; ;edlh.c: 109: }
 [e :UE 719 ]
@@ -2333,12 +2354,13 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;edlh.c: 121:     U_meas_samples[1] = U_meas_samples[0];
 [e = *U + &U _U_meas_samples * -> -> -> 1 `i `ui `ux -> -> # *U &U _U_meas_samples `ui `ux *U + &U _U_meas_samples * -> -> -> 0 `i `ui `ux -> -> # *U &U _U_meas_samples `ui `ux ]
 "128
-[; ;edlh.c: 128:     instant_batt_voltage = ((U_meas_samples[0] * (3.3/4096))/0.1276785714285714);
-[e = _instant_batt_voltage -> / * -> *U + &U _U_meas_samples * -> -> -> 0 `i `ui `ux -> -> # *U &U _U_meas_samples `ui `ux `d / .3.3 -> -> 4096 `i `d .0.1276785714285714 `f ]
+[; ;edlh.c: 128:     instant_batt_voltage = ((U_meas_samples[0] * (3.31/4096))/0.1276785714285714);
+[e = _instant_batt_voltage -> / * -> *U + &U _U_meas_samples * -> -> -> 0 `i `ui `ux -> -> # *U &U _U_meas_samples `ui `ux `d / .3.31 -> -> 4096 `i `d .0.1276785714285714 `f ]
 "129
 [; ;edlh.c: 129: }
 [e :UE 723 ]
 }
 [p f _sprintf 8495104 ]
 [a 2C 37 49 46 50 102 0 ]
+[a 3C 37 49 46 50 102 0 ]
 [a 1C 69 68 76 72 32 82 101 112 111 114 116 105 110 103 46 46 0 ]

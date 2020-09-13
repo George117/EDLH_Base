@@ -32,7 +32,7 @@ void main(void)
         LATCbits.LATC7 = 0;
         __delay_ms(1);
         LATCbits.LATC7 = 1;
-        __delay_ms(100);
+        __delay_ms(10);
     
     }
     

@@ -10703,7 +10703,7 @@ void EDLH_Display(void)
     OLED_clear();
 
 
-
+    read_I_meas();
 
 
     read_V_meas();
@@ -10712,7 +10712,14 @@ void EDLH_Display(void)
     memset(buffer, 0, 3);
     memset(batt_current, 0, 6);
     memset(batt_voltage, 0, 6);
-# 70 "edlh.c"
+
+
+    sprintf(buffer, "%1.2f", instant_batt_current);
+    strcpy(batt_current,battery_curr_string);
+    strcat(batt_current,buffer);
+    strcat(batt_current,ampere);
+
+
     sprintf(buffer, "%1.2f", instant_batt_voltage);
     strcpy(batt_voltage,battery_volt_string);
     strcat(batt_voltage,buffer);
@@ -10720,7 +10727,7 @@ void EDLH_Display(void)
 
 
     OLED_string(batt_voltage,0,0);
-
+    OLED_string(batt_current,0,8);
 
 
     OLED_write();
@@ -10751,7 +10758,7 @@ void read_I_meas(void)
 
 
 
-    instant_batt_current = ((((I_meas_samples[0] * (3.3/4096)) - (3.3/2)) * 10 ) * 1.05 ) + 0.05 ;
+    instant_batt_current = ((((I_meas_samples[0] * (3.31/4096)) - 1.669) * 10 ));
 }
 
 void read_V_meas(void)
@@ -10771,5 +10778,5 @@ void read_V_meas(void)
 
 
 
-    instant_batt_voltage = ((U_meas_samples[0] * (3.3/4096))/0.1276785714285714);
+    instant_batt_voltage = ((U_meas_samples[0] * (3.31/4096))/0.1276785714285714);
 }

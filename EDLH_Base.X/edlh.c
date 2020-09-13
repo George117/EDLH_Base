@@ -11,10 +11,10 @@
 #include "oled.h"
 #include "adc_module.h"
 
-#define vcc     3.3
+#define vcc     3.31
 
 //determined empirically
-#define zero_amps_level (vcc/2)
+#define zero_amps_level 1.669//(vcc/2)
 
 #define quanta_4096 (vcc/4096)
 
@@ -50,7 +50,7 @@ void EDLH_Display(void)
     OLED_clear();
 
     // measure the battery current
-   // read_I_meas();
+    read_I_meas();
 
     // measure the battery voltage
     read_V_meas();
@@ -60,11 +60,11 @@ void EDLH_Display(void)
     memset(batt_current, 0, 6);
     memset(batt_voltage, 0, 6);
 
-//    // batt current convert from number to string
-//    sprintf(buffer, "%1.1f", instant_batt_current);
-//    strcpy(batt_current,battery_curr_string);
-//    strcat(batt_current,buffer);
-//    strcat(batt_current,ampere);
+    // batt current convert from number to string
+    sprintf(buffer, "%1.2f", instant_batt_current);
+    strcpy(batt_current,battery_curr_string);
+    strcat(batt_current,buffer);
+    strcat(batt_current,ampere);
 
      // five volt supply convert from number to string
     sprintf(buffer, "%1.2f", instant_batt_voltage);
@@ -74,7 +74,7 @@ void EDLH_Display(void)
 
     // populate the frame buffer
     OLED_string(batt_voltage,0,0);
-   // OLED_string(batt_current,0,8);
+    OLED_string(batt_current,0,8);
 
     // write to display
     OLED_write();
@@ -105,7 +105,7 @@ void read_I_meas(void)
   //  out_buffer[1] = I_meas_samples[0] & 0x03;
  
     //calculate the current
-    instant_batt_current = ((((I_meas_samples[0] * quanta_4096) - zero_amps_level)/*Current value*/ * 10/*-> A*/) * 1.05/*curve correction*/) + 0.05/*offset*/;
+    instant_batt_current = ((((I_meas_samples[0] * quanta_4096) - zero_amps_level)/*Current value*/ * 10/*-> A*/));
 }
 
 void read_V_meas(void)
