@@ -11,7 +11,7 @@
 
 //define the number of bytes to send, maximum of 10
 //take into account the counter
-#define bytes_to_send 3
+#define bytes_to_send 5
 
 //define the sendperiod of the data output:
 //available: 100ms,25ms,10ms 

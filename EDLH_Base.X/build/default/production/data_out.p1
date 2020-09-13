@@ -1178,8 +1178,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;data_out.c: 27:     counter_tx++;
 [e ++ _counter_tx -> -> 1 `i `uc ]
 "28
-[; ;data_out.c: 28:     if(counter_tx > (3 -1)){
-[e $ ! > -> _counter_tx `i - -> 3 `i -> 1 `i 715  ]
+[; ;data_out.c: 28:     if(counter_tx > (5 -1)){
+[e $ ! > -> _counter_tx `i - -> 5 `i -> 1 `i 715  ]
 {
 "29
 [; ;data_out.c: 29:         counter_tx = 0;
@@ -1189,14 +1189,14 @@ Version 4.0 HI-TECH Software Intermediate Code
 }
 [e :U 715 ]
 "31
-[; ;data_out.c: 31:     out_buffer[(3 -1)] = counter_tx;
-[e = *U + &U _out_buffer * -> -> - -> 3 `i -> 1 `i `ui `ux -> -> # *U &U _out_buffer `ui `ux _counter_tx ]
+[; ;data_out.c: 31:     out_buffer[(5 -1)] = counter_tx;
+[e = *U + &U _out_buffer * -> -> - -> 5 `i -> 1 `i `ui `ux -> -> # *U &U _out_buffer `ui `ux _counter_tx ]
 "34
-[; ;data_out.c: 34:     for(char i=0;i<3;i++)
+[; ;data_out.c: 34:     for(char i=0;i<5;i++)
 {
 [v _i `uc ~T0 @X0 1 a ]
 [e = _i -> -> 0 `i `uc ]
-[e $ < -> _i `i -> 3 `i 716  ]
+[e $ < -> _i `i -> 5 `i 716  ]
 [e $U 717  ]
 [e :U 716 ]
 "35
@@ -1209,7 +1209,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;data_out.c: 37:     }
 }
 [e ++ _i -> -> 1 `i `uc ]
-[e $ < -> _i `i -> 3 `i 716  ]
+[e $ < -> _i `i -> 5 `i 716  ]
 [e :U 717 ]
 }
 "38

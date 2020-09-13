@@ -101,8 +101,8 @@ void read_I_meas(void)
     I_meas_samples[1] = I_meas_samples[0];
     
     //populate byte 0 and 1 of data output
-   // out_buffer[0] = I_meas_samples[0] >> 2;
-  //  out_buffer[1] = I_meas_samples[0] & 0x03;
+    out_buffer[0] = I_meas_samples[0] >> 4;
+    out_buffer[1] = I_meas_samples[0] & 0xF;
  
     //calculate the current
     instant_batt_current = ((((I_meas_samples[0] * quanta_4096) - zero_amps_level)/*Current value*/ * 10/*-> A*/));
@@ -121,8 +121,8 @@ void read_V_meas(void)
     U_meas_samples[1] = U_meas_samples[0];
     
     //populate byte 2 and 3 of data output
-   // out_buffer[2] = U_meas_samples[0] >> 2;
-   // out_buffer[3] = U_meas_samples[0] & 0x03;
+    out_buffer[2] = U_meas_samples[0] >> 4;
+    out_buffer[3] = U_meas_samples[0] & 0xF;
 
     //calculate the voltage
     instant_batt_voltage = ((U_meas_samples[0] * quanta_4096)/0.1276785714285714);

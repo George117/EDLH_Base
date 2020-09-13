@@ -10406,13 +10406,13 @@ char counter_tx = 0;
 void send_data(void) {
 
     counter_tx++;
-    if(counter_tx > (3 -1)){
+    if(counter_tx > (5 -1)){
         counter_tx = 0;
     }
-    out_buffer[(3 -1)] = counter_tx;
+    out_buffer[(5 -1)] = counter_tx;
 
 
-    for(char i=0;i<3;i++)
+    for(char i=0;i<5;i++)
     {
         write_raw(out_buffer[i]);
     }

@@ -10754,8 +10754,8 @@ void read_I_meas(void)
     I_meas_samples[1] = I_meas_samples[0];
 
 
-
-
+    out_buffer[0] = I_meas_samples[0] >> 4;
+    out_buffer[1] = I_meas_samples[0] & 0xF;
 
 
     instant_batt_current = ((((I_meas_samples[0] * (3.31/4096)) - 1.669) * 10 ));
@@ -10774,8 +10774,8 @@ void read_V_meas(void)
     U_meas_samples[1] = U_meas_samples[0];
 
 
-
-
+    out_buffer[2] = U_meas_samples[0] >> 4;
+    out_buffer[3] = U_meas_samples[0] & 0xF;
 
 
     instant_batt_voltage = ((U_meas_samples[0] * (3.31/4096))/0.1276785714285714);
